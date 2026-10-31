@@ -1,5 +1,7 @@
 # OpenHisto website
 
+Created and maintained by **Abteen Arab**.
+
 This repository contains our documentation, component catalogue and research
 pages for OpenHisto. We build it as a static Sphinx site using the released
 PyData Sphinx Theme, with our own templates, styles and browser interactions.

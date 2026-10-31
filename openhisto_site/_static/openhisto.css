@@ -79,6 +79,7 @@ body:is(.oh-landing, .oh-catalogue-page, .oh-research-page) .bd-main .bd-content
 .oh-hero { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 64px; padding-block: 64px 58px; }
 .oh-hero-copy { min-width: 0; }
 .oh-hero h1 { color: var(--oh-ink); font-size: clamp(39px, 3.8vw, 52px); font-weight: 600; letter-spacing: -1.4px; line-height: 1.14; margin: 19px 0 21px; padding: 0; max-width: 530px; }
+.oh-hero-authorship { color: var(--oh-accent); font-size: 16px; line-height: 1.6; margin: -7px 0 18px; }
 .oh-hero-description { color: var(--oh-ink); font-size: 19px; line-height: 1.65; margin: 0 0 16px; }
 .oh-hero-detail { color: var(--oh-muted); font-size: 15px; line-height: 1.8; margin: 0 0 25px; }
 .oh-hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 24px; }

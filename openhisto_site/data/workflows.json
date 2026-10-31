@@ -1,0 +1,93 @@
+[
+  {
+    "id": "datasets",
+    "module": "openhisto.default_datasets",
+    "title": "Dataset discovery and acquisition",
+    "description": "Discover public slides with explicit selections and keep native formats, source records and verification evidence together.",
+    "input": "TCGA, CAMELYON16, KPMP or approved local BRACS inputs",
+    "output": "Native slides, metadata and a reusable acquisition plan",
+    "docs": "reference/datasets",
+    "label": "acquisition",
+    "filename": "acquire.py",
+    "note": "Explicit selections",
+    "code": "from openhisto.default_datasets import discover\n\nplan = discover(\"TCGA\", {\n    \"projects\": [\"TCGA-KIRC\"],\n    \"diagnostic_only\": True,\n    \"limit\": 5,\n})\nplan.save(\"tcga-plan.json\")\n"
+  },
+  {
+    "id": "patches",
+    "module": "openhisto.patch_extraction",
+    "title": "Whole-slide patch extraction",
+    "description": "Extract at a declared magnification, filter foreground and carry each patch\u2019s level-zero coordinates into one compact archive.",
+    "input": "A native whole-slide image",
+    "output": "An indexed .h5 archive with pixels and geometry",
+    "docs": "reference/patch-extraction",
+    "label": "patch extraction",
+    "filename": "extract.py",
+    "note": "One archive per slide",
+    "code": "from openhisto.patch_extraction import (\n    ExtractionConfig, extract_grid,\n)\n\nsummary = extract_grid(\n    \"slide.svs\", \"patches.h5\",\n    ExtractionConfig(\n        patch_size=512, target_mag=20,\n    ),\n)\n"
+  },
+  {
+    "id": "stain",
+    "module": "openhisto.stain_transfer",
+    "title": "Stain normalization and transfer",
+    "description": "Use classical stain methods or explicitly supplied GAN checkpoints. Normalized archives keep patch ordering and spatial geometry.",
+    "input": "Images, manifests or patch archives + a target reference",
+    "output": "Normalized images or an aligned patch archive",
+    "docs": "reference/normalization",
+    "label": "stain normalization",
+    "filename": "normalize.py",
+    "note": "Training-only references in benchmarks",
+    "code": "from openhisto.stain_transfer import (\n    DomainSpec, TransferConfig, normalize,\n)\n\nnormalize(\n    \"patches.h5\", \"normalized.h5\",\n    DomainSpec(\n        method=\"reinhard\",\n        references=(\"reference.png\",),\n    ),\n    TransferConfig(device=\"cpu\"),\n)\n"
+  },
+  {
+    "id": "features",
+    "module": "openhisto.feature_encoder",
+    "title": "Patch feature extraction",
+    "description": "Select a model explicitly, encode ordered patch vectors and inspect them through a standard AnnData file. Compatible reruns reuse completed work.",
+    "input": "Patch archives or explicit CSV/JSONL image manifests",
+    "output": "A standard .h5ad with features and patch metadata",
+    "docs": "reference/features",
+    "label": "feature encoding",
+    "filename": "encode.py",
+    "note": "Selected model weights may download",
+    "code": "from openhisto.feature_encoder import (\n    EncodeConfig, encode_slide,\n)\n\nreport = encode_slide(\n    \"patches.h5\", \"slide.h5ad\",\n    models=[\"phikon_v2\"],\n    config=EncodeConfig(\n        device=\"cpu\", batch_size=1,\n    ),\n)\n"
+  },
+  {
+    "id": "segmentation",
+    "module": "openhisto.segmentation",
+    "title": "Semantic segmentation",
+    "description": "Work with binary or multiclass masks, native image geometry and supported exports. Automatic, prompted and embedding-conditioned backends have distinct contracts.",
+    "input": "Images with explicitly encoded masks, prompts or embeddings",
+    "output": "Predictions, evaluation metrics and model artifacts",
+    "docs": "reference/segmentation",
+    "label": "segmentation",
+    "filename": "inspect_segmentation.py",
+    "note": "Inspect before selecting a backend",
+    "code": "from openhisto.segmentation import list_models\n\n# Catalogue inspection does not train a model.\nfor model in list_models():\n    print(model[\"name\"])\n\n# Choose ModelConfig, Sample and TrainConfig\n# for your data and the backend contract.\n"
+  },
+  {
+    "id": "vla",
+    "module": "openhisto.vlas",
+    "title": "Vision-language patch descriptions",
+    "description": "Connect supported pathology vision-language models through isolated workers. Preserve generated text, patch identities and runtime provenance.",
+    "input": "Patch archives or image manifests + an explicit prompt",
+    "output": "Raw descriptions and per-patch execution metadata",
+    "docs": "reference/vla",
+    "label": "vision-language",
+    "filename": "inspect_vlas.py",
+    "note": "Model environments are separate",
+    "code": "from openhisto.vlas import list_models\n\n# Inspect access and runtime requirements.\nfor model in list_models():\n    print(model[\"model_id\"])\n\n# Actual inference requires the selected\n# checkpoint and its model interpreter.\n"
+  },
+  {
+    "id": "mil",
+    "module": "openhisto.mil",
+    "title": "Slide-level learning",
+    "description": "Choose a native bag, graph or hierarchy backbone, attach classification or survival heads, or fit classical models on frozen slide representations.",
+    "input": "Native feature bags, spatial graphs or aligned hierarchies",
+    "output": "Slide representations and task-head predictions",
+    "docs": "reference/heads",
+    "label": "MIL and task heads",
+    "filename": "learn.py",
+    "note": "Current shared MIL APIs use CPU float32",
+    "code": "from openhisto.mil.models.code_bases import (\n    create_model,\n)\n\nbackbone = create_model(\n    \"abmil\",\n    input_dim=1024,\n    num_classes=3,\n)\n\n# Attach a task head for classification\n# or survival, using the documented API.\n"
+  }
+]

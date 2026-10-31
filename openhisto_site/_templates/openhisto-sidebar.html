@@ -1,0 +1,16 @@
+<nav class="oh-doc-nav" aria-label="Documentation sections">
+  <p class="oh-doc-nav-label">Start here</p>
+  <ul>
+    {% for page, label in [('content/index', 'Overview'), ('content/install', 'Installation'), ('content/quickstart', 'Quickstart'), ('content/workflows', 'Workflow guide'), ('content/visualization', 'Visualization'), ('content/reference', 'APIs and sources')] %}
+    <li><a href="{{ pathto(page) }}"{% if oh_page == page %} aria-current="page"{% endif %}>{{ label }}</a></li>
+    {% endfor %}
+  </ul>
+  <p class="oh-doc-nav-label">Package reference</p>
+  <ul>
+    {% for page, label in [('index', 'Reference overview'), ('package', 'Package and environments'), ('datasets', 'Dataset acquisition'), ('patch-extraction', 'Patch extraction'), ('normalization', 'Stain normalization'), ('features', 'Feature encoding'), ('segmentation', 'Segmentation'), ('vla', 'Vision-language'), ('mil', 'MIL backbones'), ('heads', 'Neural heads'), ('classifiers', 'Classical classifiers'), ('survival', 'Survival heads'), ('mil-coverage', 'MIL verification'), ('heads-coverage', 'Head verification'), ('head-bindings', 'Representation contracts')] %}
+    {% set route = 'reference/' + page %}
+    <li><a href="{{ pathto(route) }}"{% if oh_page == route %} aria-current="page"{% endif %}>{{ label }}</a></li>
+    {% endfor %}
+  </ul>
+  <a class="oh-doc-catalogue" href="{{ pathto('catalogue') }}">Explore model catalogue ↗</a>
+</nav>

@@ -1,0 +1,40 @@
+name: Website checks
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: website-checks-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-check:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: openhisto_site/requirements-site.lock.txt
+      - name: Install pinned website dependencies
+        run: python -m pip install -r openhisto_site/requirements-site.lock.txt
+      - name: Build committed website snapshots
+        run: python openhisto_site/tools/site.py build
+      - name: Check the published artifact
+        run: python openhisto_site/tools/site.py check
+      - name: Retain HTML for review
+        uses: actions/upload-artifact@v4
+        with:
+          name: openhisto-website-html
+          path: openhisto_site/_build/html/
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 7

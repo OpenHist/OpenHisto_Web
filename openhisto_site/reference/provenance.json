@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "source_repository": "https://github.com/OpenHist/OpenHistology_Package",
+  "source_ref": "01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0",
+  "source_access": "private repository; access required",
+  "generation": "Markdown source only; no package imports or example execution",
+  "guides": [
+    {
+      "source": "README.md",
+      "page": "package.md",
+      "title": "Package overview",
+      "source_sha256": "a99b382c6fc84558288eac9a17a7728955e3923be11cd06d3c07656656181c8c",
+      "page_sha256": "1119c48fbaa217f957373cbe5059214083dc99025f7938fd31f730656c77e773"
+    },
+    {
+      "source": "src/openhisto/default_datasets/README.md",
+      "page": "datasets.md",
+      "title": "Datasets",
+      "source_sha256": "65c27a1bf3891e0de007ad9a1cfd02010e6b6f24a201ee0aeaa8ed52b0a7a8dd",
+      "page_sha256": "4aeb0a89a1b8e8f69a65638233e4fbab1967a902062a630d8ea2e75cbcbd1d7b"
+    },
+    {
+      "source": "src/openhisto/patch_extraction/README.md",
+      "page": "patch-extraction.md",
+      "title": "Patch extraction",
+      "source_sha256": "762306f6ccb6e377d3b64fa383c435fe81182ea7dbc1cc139602ea71262fbd50",
+      "page_sha256": "6f7426d3b447066ab459d7a7015ebf97a80fd96ae6f7015ce3df8c45c3cdb713"
+    },
+    {
+      "source": "src/openhisto/stain_transfer/README.md",
+      "page": "normalization.md",
+      "title": "Normalization and stain transfer",
+      "source_sha256": "0f86aea3b69df481e939c83994543b66123ca02c725427870e7ca1b715d48560",
+      "page_sha256": "3593f351296cc1520f99d7076d8ba99b1a2d6f1be14d3b8678864b575a7dcba1"
+    },
+    {
+      "source": "src/openhisto/feature_encoder/README.md",
+      "page": "features.md",
+      "title": "Feature encoding",
+      "source_sha256": "5d1535e0b8ff00037c572c8c4f8a8d7bad2a35277709741f7e89d067383eeffe",
+      "page_sha256": "6b689eff6864edc9a7113880fe007dd6872ff0c1cd7347e8ca605ad1c4c32ca1"
+    },
+    {
+      "source": "src/openhisto/segmentation/README.md",
+      "page": "segmentation.md",
+      "title": "Semantic segmentation",
+      "source_sha256": "ad4b73dc95d28288a4ff53d02584287afe181867c2fe62e07294769e8058ddca",
+      "page_sha256": "f2e688d3895f3e47a50360ae6553afac4618d6bca66e507feda0db0ddbe37953"
+    },
+    {
+      "source": "src/openhisto/vlas/README.md",
+      "page": "vla.md",
+      "title": "Vision-language descriptions",
+      "source_sha256": "f9291c368aa9dc8940dc361b54b628d849a8c2878bdb7be1b16d9741955579bd",
+      "page_sha256": "ec87defc6cc1e93ff50fd7bfd12bf40aaaa3fdc4fa1853bf7dbb5a13a5da9971"
+    },
+    {
+      "source": "src/openhisto/mil/models/code_bases/README.md",
+      "page": "mil.md",
+      "title": "MIL backbones",
+      "source_sha256": "9ef7b4730c19c6b648c62fdc001f076b297b8d014b502f35cce00e7d8b83f076",
+      "page_sha256": "6dd322ded0b53bef7619222cadff9238a65f8578b26d6ca2e26e8b91e801ddee"
+    },
+    {
+      "source": "src/openhisto/mil/heads/README.md",
+      "page": "heads.md",
+      "title": "Classification and survival heads",
+      "source_sha256": "3d58b9b3569e9ed09728907b2bf502907af995573195aa13028b32df1beb8c7f",
+      "page_sha256": "ef713e66fb2f51b1a9b73b1f43e91f3185e064b156ea6625e4c04312c67225d7"
+    },
+    {
+      "source": "src/openhisto/mil/classification/README.md",
+      "page": "classifiers.md",
+      "title": "Classifiers",
+      "source_sha256": "5fe463828841e6ac89e9de3a02c46f9e20e3a188ee8aba6eebb4dbee04d54c52",
+      "page_sha256": "fd7f78fff050e45f959a1f1131e340618968c976df50e265dbef7de12d94ee2c"
+    },
+    {
+      "source": "src/openhisto/mil/survival/README.md",
+      "page": "survival.md",
+      "title": "Survival heads",
+      "source_sha256": "76622443b03ca9bbdf9d459252e219141983761dcd99520161f3c9bc9b0da1de",
+      "page_sha256": "bad41ce2a2ad7424e75910da72f3a25940e4b33f45a17b13d6dfa6764835a450"
+    },
+    {
+      "source": "src/openhisto/mil/models/code_bases/COVERAGE.md",
+      "page": "mil-coverage.md",
+      "title": "MIL verification coverage",
+      "source_sha256": "940021c1bfbce733cf31c74f47f51a90b5e361e8b30d0cc5bcf65ac3c2f0ee6b",
+      "page_sha256": "7b2e588fa7d70d5a016de2808f79749623f02d242041a0dd96b272d4f63f2510"
+    },
+    {
+      "source": "src/openhisto/mil/heads/COVERAGE.md",
+      "page": "heads-coverage.md",
+      "title": "Head verification coverage",
+      "source_sha256": "c0266277147174a4b3478280b6b45adbe353972b1a5dd3d3567af5a04396fb0f",
+      "page_sha256": "af11e448f986650964ce97a15d4156b405f8223e7d925019c106281b7734badf"
+    },
+    {
+      "source": "src/openhisto/mil/heads/README_BINDINGS.md",
+      "page": "head-bindings.md",
+      "title": "MIL representation bindings",
+      "source_sha256": "b6120ae2df035a72ec374726f5779f6f1c18c2133052e4875000b8cac8601f36",
+      "page_sha256": "2f7ce91596e777f0ff78c40d1613938b36fd9a775123dba704d3ff25b32480aa"
+    }
+  ]
+}

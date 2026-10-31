@@ -1,0 +1,46 @@
+{
+  "projects": [
+    {
+      "id": "end-to-end-benchmark",
+      "title": "OpenHisto end-to-end benchmark",
+      "category": "Method evaluation",
+      "status": "In progress",
+      "summary": "We use TCGA renal slides and official PanNuke folds to study connected pathology workflows, from image preparation and representations to classification, survival, segmentation and VLM-derived labels.",
+      "detail": "research/benchmark",
+      "cohorts": [
+        "TCGA renal histology",
+        "PanNuke nuclei annotations"
+      ],
+      "tags": [
+        "Classification",
+        "Risk & survival",
+        "Segmentation",
+        "VLM labels"
+      ],
+      "progress": "Our CPU campaign is preparing slides and features. Full scientific comparisons will follow the predefined study protocol.",
+      "links": [],
+      "resources": [
+        {
+          "label": "TCGA \u00b7 NCI Genomic Data Commons",
+          "url": "https://gdc.cancer.gov/about-data/gdc-data-processing/resources-tcga-users"
+        },
+        {
+          "label": "TCGA-CDR \u00b7 PanCanAtlas",
+          "url": "https://gdc.cancer.gov/about-data/publications/pancanatlas"
+        },
+        {
+          "label": "PanNuke \u00b7 Official dataset",
+          "url": "https://warwick.ac.uk/fac/cross_fac/tia/data/pannuke/"
+        }
+      ],
+      "actions": [
+        {
+          "label": "Paper (in-progress)"
+        },
+        {
+          "label": "Project code (coming-soon)"
+        }
+      ]
+    }
+  ]
+}

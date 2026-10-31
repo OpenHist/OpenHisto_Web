@@ -1,0 +1,50 @@
+{% extends "!layout.html" %}
+
+{% block body_tag %}
+<body class="oh-site {% if pagename == 'index' %}oh-landing{% elif pagename == 'catalogue' %}oh-catalogue-page{% elif pagename == 'research' or pagename.startswith('research/') %}oh-research-page{% if pagename.startswith('research/') %} oh-study-page{% endif %}{% else %}oh-docs{% endif %}" data-default-mode="{{ default_mode }}">
+{% endblock %}
+
+{% block docs_navbar %}
+<header id="pst-header" class="bd-header oh-header d-print-none">
+  <div class="oh-nav-inner">
+    <a class="oh-brand" href="{{ pathto('index') }}" aria-label="OpenHisto home">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M3 5h10v10H3zM17 3h10v10H17zM5 19h10v10H5zM19 17h10v10H19z" fill="currentColor"/><path d="M5 7h6v6H5zM19 5h6v6H19zM7 21h6v6H7zM21 19h6v6H21z" fill="var(--oh-surface)" opacity=".45"/></svg>
+      <span>OpenHisto<small>Computational pathology</small></span>
+    </a>
+    <nav class="oh-nav-links" aria-label="Main navigation">
+      <a href="{{ pathto('content/index') }}" {% if pagename.startswith('content/') or pagename.startswith('reference/') %}aria-current="page"{% endif %}>Documentation</a>
+      <a href="{{ pathto('catalogue') }}" {% if pagename == 'catalogue' %}aria-current="page"{% endif %}>Model catalogue</a>
+      <a href="{{ pathto('research') }}" {% if pagename == 'research' or pagename.startswith('research/') %}aria-current="page"{% endif %}>Research &amp; applications</a>
+    </nav>
+    <div class="oh-nav-actions">
+      <span class="oh-version">v{{ oh_version }}</span>
+      <button class="oh-search search-button search-button__button pst-js-only" aria-label="Search documentation" title="Search documentation">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.3"/><path d="m12.5 12.5 4.2 4.2"/></svg><span>Search</span><kbd>⌘ K</kbd>
+      </button>
+      {% include "components/theme-switcher.html" %}
+      <button class="oh-mobile-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="oh-mobile-nav"><span></span><span></span></button>
+    </div>
+  </div>
+  <nav id="oh-mobile-nav" class="oh-mobile-nav" aria-label="Mobile navigation" hidden>
+    <a href="{{ pathto('content/index') }}">Documentation</a>
+    <a href="{{ pathto('content/install') }}">Installation</a>
+    <a href="{{ pathto('content/quickstart') }}">Quickstart</a>
+    <a href="{{ pathto('catalogue') }}">Model catalogue</a>
+    <a href="{{ pathto('research') }}">Research &amp; applications</a>
+    <a href="{{ pathto('reference/index') }}">API &amp; module reference</a>
+  </nav>
+</header>
+{% if pagename not in ['index', 'catalogue', 'research'] and not pagename.startswith('research/') %}
+<div class="oh-mobile-docbar"><button class="sidebar-toggle primary-toggle" aria-label="Toggle documentation contents"><i class="fa-solid fa-bars" aria-hidden="true"></i> Documentation contents</button></div>
+{% endif %}
+{% endblock %}
+
+{% block footer %}
+<footer class="oh-footer">
+  <div class="oh-footer-inner">
+    <div><a class="oh-footer-brand" href="{{ pathto('index') }}">OpenHisto</a><p>Python tools for computational pathology.</p></div>
+    <nav aria-label="Footer navigation"><a href="{{ pathto('content/install') }}">Get started</a><a href="{{ pathto('reference/index') }}">Reference</a><a href="{{ pathto('research') }}">Research &amp; applications</a><a href="https://github.com/OpenHist/OpenHistology_Package" target="_blank" rel="noopener noreferrer">Package source ↗</a></nav>
+    <div class="oh-footer-bottom"><span>© 2026 Abteen Arab · MIT for original code</span><span>Documentation with Sphinx &amp; the PyData theme</span></div>
+  </div>
+</footer>
+{% endblock %}

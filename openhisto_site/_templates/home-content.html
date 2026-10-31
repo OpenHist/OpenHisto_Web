@@ -1,0 +1,86 @@
+<div class="oh-home">
+  <section class="oh-hero oh-wrap" aria-labelledby="oh-hero-title">
+    <div class="oh-hero-copy">
+      <div class="oh-eyebrow">OpenHisto · Research software</div>
+      <h1 id="oh-hero-title">One package for computational pathology</h1>
+      <p class="oh-hero-description">From whole-slide images to classification, risk and survival modelling, segmentation, vision-language analysis and visualization.</p>
+      <p class="oh-hero-detail">We bring slide preparation, pathology foundation models and downstream analysis into one modular Python workflow.</p>
+      <a class="oh-scope-link" href="#analysis">Explore the analysis capabilities <span aria-hidden="true">↓</span></a>
+      <div class="oh-hero-actions">
+        <a class="oh-button oh-button-primary" href="{{ pathto('content/quickstart') }}">Quickstart <span aria-hidden="true">→</span></a>
+        <a class="oh-button oh-button-secondary" href="{{ pathto('reference/index') }}">Package reference</a>
+      </div>
+      <div class="oh-install" aria-label="Example installation from a package checkout">
+        <code>pip install -e ".[patch-extraction-opencv]"</code>
+        <button data-copy-target="oh-install-command" aria-label="Copy installation command"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="7" y="7" width="9" height="10" rx="1.5"/><path d="M12 7V3H3v10h4"/></svg></button>
+        <span id="oh-install-command" hidden>python -m pip install -e ".[patch-extraction-opencv]"</span>
+      </div>
+      <div class="oh-install-note">Python 3.12+ <span>·</span> Install from a package checkout</div>
+    </div>
+    <figure class="oh-research-figure" aria-labelledby="oh-figure-caption">
+      <div class="oh-figure-title"><span>Pathology analysis across scales</span><span>WORKFLOW OVERVIEW</span></div>
+      <div class="oh-figure-images">
+        <div class="oh-figure-panel"><div class="oh-figure-label"><b>A</b> Tissue patches</div><div class="oh-tissue-image"><img src="{{ pathto('_static/tissue-schematic.svg', 1) }}" alt="Schematic tissue divided into a regular extraction grid"/><div class="oh-patch-grid" aria-hidden="true"></div></div><p>RGB pixels + spatial coordinates</p></div>
+        <div class="oh-figure-panel"><div class="oh-figure-label"><b>B</b> Semantic regions</div><img class="oh-mask-image" src="{{ pathto('_static/mask-schematic.svg', 1) }}" alt="Schematic typed nucleus regions, illustrating segmentation output structure"/><p>Aligned labels + mask geometry</p></div>
+      </div>
+      <div class="oh-figure-matrix"><div><span class="oh-figure-label"><b>C</b> Patch representations</span><p>Ordered feature vectors<br><code>AnnData · .h5ad</code></p></div><div class="oh-heatmap" aria-hidden="true">{% for i in range(80) %}<span style="--v: {{ ((i * 37 + 19) % 100) / 100 }}"></span>{% endfor %}</div></div>
+      <div class="oh-figure-outcomes"><strong>Classification</strong><strong>Risk &amp; survival</strong><strong>Segmentation</strong><strong>VLM descriptions</strong><strong>Visual analysis</strong></div>
+      <figcaption id="oh-figure-caption">Workflow schematic. Images and feature vectors are illustrative, not model output. We retain patch identities and spatial context across analysis tasks.</figcaption>
+    </figure>
+  </section>
+
+  <section class="oh-numbers oh-wrap" aria-label="Package capabilities">
+    <div><strong>7</strong><span>Workflow modules</span></div><div><strong>34</strong><span>MIL backbone profiles</span></div><div><strong>8</strong><span>Feature encoder profiles</span></div><div><strong>6</strong><span>Segmentation backends</span></div>
+  </section>
+
+  <section class="oh-analysis oh-wrap" id="analysis" aria-labelledby="oh-analysis-title">
+    <div class="oh-section-intro"><div><div class="oh-eyebrow">Complete analysis workflow</div><h2 id="oh-analysis-title">From image preparation to scientific questions</h2></div><p>We support multiple analysis tasks within the same package, with reusable patches, features and spatial metadata.</p></div>
+    <div class="oh-task-grid">
+      <a href="{{ pathto('reference/heads') }}"><span>01 · PREDICTION</span><h3>Classification</h3><p>Binary and multiclass tasks using MIL backbones, neural heads and eleven classical classifiers.</p><strong>Classification methods →</strong></a>
+      <a href="{{ pathto('reference/survival') }}"><span>02 · TIME-TO-EVENT ANALYSIS</span><h3>Risk &amp; survival</h3><p>Cox relative risk, discrete hazards and training-calibrated survival estimates with linear or MLP heads.</p><strong>Survival methods →</strong></a>
+      <a href="{{ pathto('reference/segmentation') }}"><span>03 · SPATIAL STRUCTURE</span><h3>Segmentation</h3><p>Train, evaluate and predict semantic masks, with automatic, prompted and embedding-conditioned backends.</p><strong>Segmentation workflows →</strong></a>
+      <a href="{{ pathto('reference/vla') }}"><span>04 · IMAGE AND LANGUAGE</span><h3>Vision-language models</h3><p>Generate prompt-conditioned patch descriptions through our pathology VLM integrations. Profile-specific access and readiness are documented.</p><strong>VLM integrations →</strong></a>
+      <a href="{{ pathto('content/visualization') }}"><span>05 · VISUAL INTERPRETATION</span><h3>Visualization</h3><p>Inspect segmentation palettes, overlays and annotation exports. We plan to add a unified slide and attention viewer.</p><strong>Visual outputs and roadmap →</strong></a>
+      <a href="{{ pathto('content/workflows') }}"><span>06 · DATA AND REPRESENTATIONS</span><h3>Preparation &amp; features</h3><p>Acquire slides, extract multiscale patches, normalize stain and encode pathology representations for downstream tasks.</p><strong>Data preparation workflows →</strong></a>
+    </div>
+  </section>
+
+  <section class="oh-workflow oh-wrap" id="workflow" aria-labelledby="oh-workflow-title">
+    <div class="oh-section-intro"><div><div class="oh-eyebrow">Methods and interfaces</div><h2 id="oh-workflow-title">Workflow modules</h2></div><p>Inspect each module’s inputs, outputs and Python interface. Use stages independently or connect them within an experiment.</p></div>
+    <div class="oh-stage-tabs" role="tablist" aria-label="Explore workflow stages">
+      {% for key, name in [('datasets','Acquire'),('patches','Extract'),('stain','Normalize'),('features','Encode'),('segmentation','Segment'),('vla','Describe'),('mil','Learn')] %}<button type="button" role="tab" id="oh-tab-{{ key }}" aria-controls="oh-panel-{{ key }}" aria-selected="{{ 'true' if key == 'patches' else 'false' }}" tabindex="{{ '0' if key == 'patches' else '-1' }}" data-stage="{{ key }}"><span>{{ loop.index }}</span>{{ name }}</button>{% endfor %}
+    </div>
+    {% for item in oh_workflows %}
+    <div class="oh-stage-panel" id="oh-panel-{{ item.id }}" role="tabpanel" aria-labelledby="oh-tab-{{ item.id }}" {% if item.id != 'patches' %}hidden{% endif %}>
+      <div class="oh-stage-copy"><span class="oh-module-name">{{ item.module }}</span><h3>{{ item.title }}</h3><p>{{ item.description }}</p><dl><div><dt>Input</dt><dd>{{ item.input }}</dd></div><div><dt>Output</dt><dd>{{ item.output }}</dd></div></dl><a class="oh-text-link" href="{{ pathto(item.docs) }}">{{ item.label | capitalize }} documentation <span aria-hidden="true">→</span></a></div>
+      <div class="oh-code-window"><div class="oh-code-bar"><span>{{ item.filename }}</span><button class="oh-code-copy" data-copy-code aria-label="Copy {{ item.label }} example">Copy code</button></div><div class="oh-code-body" tabindex="0" role="region" aria-label="{{ item.label | e }} Python example">{{ item.highlighted | safe }}</div><div class="oh-code-foot"><span>Python API</span><span>{{ item.note }}</span></div></div>
+    </div>
+    {% endfor %}
+    <p class="oh-workflow-note">Segmentation and vision-language workflows can use patches directly. The overview does not prescribe a single execution sequence.</p>
+  </section>
+
+  <section class="oh-principles">
+    <div class="oh-wrap oh-principles-inner"><div class="oh-principles-heading"><div class="oh-eyebrow">Data and reproducibility</div><h2>Representations and provenance</h2><p>Documented formats connect image processing with downstream models while retaining the information needed to inspect an experiment.</p><a class="oh-text-link" href="{{ pathto('content/workflows') }}">Read the workflow guide <span aria-hidden="true">→</span></a></div>
+      <div class="oh-principle-list">
+        <div><span class="oh-principle-index">01</span><div><h3>Indexed patch archives</h3><p>Pixels, magnification, level-zero coordinates and valid bounds are stored in an HDF5 archive per slide.</p></div></div>
+        <div><span class="oh-principle-index">02</span><div><h3>Explicit model inputs</h3><p>Feature bags, spatial graphs and aligned hierarchies have distinct contracts. Model access and runtime requirements are documented by profile.</p></div></div>
+        <div><span class="oh-principle-index">03</span><div><h3>Ordered feature storage</h3><p>AnnData stores feature vectors with patch metadata. Compatible reruns reuse completed vectors and retain their source identities.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="oh-models oh-wrap" aria-labelledby="oh-models-title">
+    <div class="oh-section-intro"><div><div class="oh-eyebrow">Supported components</div><h2 id="oh-models-title">Model and method catalogue</h2></div><a class="oh-text-link" href="{{ pathto('catalogue') }}">Browse {{ oh_catalogue.summary.total }} components <span aria-hidden="true">→</span></a></div>
+    <div class="oh-family-grid">{% for category, label in oh_category_names.items() %}<a href="{{ pathto('catalogue') }}?category={{ category }}"><strong>{{ label }}</strong><span>{{ oh_catalogue.categories[category] | length }} profiles <span aria-hidden="true">→</span></span></a>{% endfor %}</div>
+    <p class="oh-models-note">Catalogue inclusion describes a supported interface. Checkpoint access, model terms and scientific validation are separate considerations.</p>
+  </section>
+
+  <section class="oh-applications-band" aria-labelledby="oh-applications-title">
+    <div class="oh-wrap oh-applications">
+      <div class="oh-section-intro"><div><div class="oh-eyebrow">OpenHisto in use</div><h2 id="oh-applications-title">Research &amp; applications</h2></div><a class="oh-text-link" href="{{ pathto('research') }}">Explore our projects <span aria-hidden="true">→</span></a></div>
+      <article class="oh-application-card"><div class="oh-application-meta"><span>01 · METHOD EVALUATION</span><strong>In progress</strong><p>TCGA renal histology<br>PanNuke annotations</p></div><div><h3><a href="{{ pathto('research/benchmark') }}">OpenHisto end-to-end benchmark</a></h3><p>We are using OpenHisto to study renal subtype classification, survival modelling, nuclei segmentation and VLM-derived labels. Our first campaign is preparing slides and features on CPU.</p><p class="oh-project-detail">A reproducible application of the package, with its own cohorts, protocol and evaluation results as they become available.</p><a class="oh-text-link" href="{{ pathto('research/benchmark') }}">Study protocol and progress <span aria-hidden="true">→</span></a></div></article>
+    </div>
+  </section>
+
+  <section class="oh-resources oh-wrap" aria-labelledby="oh-resources-title"><div><div class="oh-eyebrow">Documentation</div><h2 id="oh-resources-title">Getting started</h2><p>Begin with a synthetic archive, then configure a workflow for your data.</p></div><div class="oh-resource-links"><a href="{{ pathto('content/install') }}"><strong>Installation</strong><span>Environments and optional dependencies →</span></a><a href="{{ pathto('content/quickstart') }}"><strong>Offline quickstart</strong><span>Write and inspect a synthetic patch archive →</span></a><a href="{{ pathto('content/reference') }}"><strong>APIs and sources</strong><span>Package interfaces and upstream references →</span></a></div></section>
+</div>

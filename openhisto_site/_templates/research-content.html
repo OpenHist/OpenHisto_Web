@@ -1,0 +1,31 @@
+<div class="oh-research oh-wrap">
+  <section class="oh-research-heading" aria-labelledby="oh-research-title">
+    <div class="oh-eyebrow">OpenHisto in use</div>
+    <h1 id="oh-research-title">Research &amp; applications</h1>
+    <p>Studies and projects built with OpenHisto. We share the scientific questions, workflows and resources behind our work here.</p>
+  </section>
+  <section class="oh-research-projects" aria-label="Research projects">
+    {% for project in oh_applications.projects %}
+    <article class="oh-research-project" id="project-{{ project.id }}" data-project-id="{{ project.id }}">
+      <div class="oh-research-project-overview">
+        <div class="oh-eyebrow">{{ project.category }}</div>
+        <span class="oh-project-status">{{ project.status }}</span>
+        <div class="oh-project-cohorts">{% for cohort in project.cohorts %}<span>{{ cohort }}</span>{% endfor %}</div>
+        <div class="oh-project-tasks">{% for tag in project.tags %}<span>{{ tag }}</span>{% endfor %}</div>
+      </div>
+      <div class="oh-research-project-body">
+        <h2><a href="{{ pathto(project.detail) }}">{{ project.title }}</a></h2>
+        <p>{{ project.summary }}</p>
+        <p class="oh-research-progress">{{ project.progress }}</p>
+        <div class="oh-research-project-links">
+          {% for action in project.actions %}<button type="button" class="oh-button oh-button-secondary" disabled aria-disabled="true">{{ action.label }}</button>{% endfor %}
+          {% for link in project.links %}<a class="oh-button oh-button-secondary" href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.label }} <span aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span></a>{% endfor %}
+        </div>
+        {% if project.access_note %}<p class="oh-research-access">{{ project.access_note }}</p>{% endif %}
+        <div class="oh-research-resources"><h3>Dataset resources</h3><div>{% for link in project.resources %}<a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.label }} <span aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span></a>{% endfor %}</div></div>
+      </div>
+    </article>
+    {% endfor %}
+  </section>
+  <div class="oh-research-closing"><p>We will add further applications, publications and reproducible project resources as our work develops.</p><a class="oh-text-link" href="{{ pathto('catalogue') }}">Explore the model and method catalogue <span aria-hidden="true">→</span></a></div>
+</div>

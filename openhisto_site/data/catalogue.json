@@ -1,0 +1,2916 @@
+{
+  "schema_version": 1,
+  "generated_from": {
+    "repository": "https://github.com/OpenHist/OpenHistology_Package",
+    "commit": "01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0",
+    "package_version": "0.1.0",
+    "method": "static AST/JSON/TOML inspection; no package imports, model loads, network or credential lookup",
+    "source_sha256": {
+      "pyproject.toml": "f209ea0ece1f743ce0535f49bd76166ec9f26d7ed1e2526069cd74ffa1be3bab",
+      "src/openhisto/__init__.py": "a2e88b535a9ad6b8a8526a3e72d1ac672eb4ecc186925c4fd813ecd5ca976568",
+      "src/openhisto/default_datasets/README.md": "65c27a1bf3891e0de007ad9a1cfd02010e6b6f24a201ee0aeaa8ed52b0a7a8dd",
+      "src/openhisto/default_datasets/models.py": "3763c9ad1a8d5f81623fcc14e7719017852003637b8174ca027aac40da9a9b96",
+      "src/openhisto/default_datasets/pipeline.py": "0922b20c852b67fe4bca8f85c8f37ddc412f7bd6f522c8a6dd5dab91a05c249a",
+      "src/openhisto/feature_encoder/README.md": "5d1535e0b8ff00037c572c8c4f8a8d7bad2a35277709741f7e89d067383eeffe",
+      "src/openhisto/feature_encoder/config.py": "a0127dbf0d2bd624a95251bdc78260d6d8dd652f96496bde49c28236b8027007",
+      "src/openhisto/feature_encoder/pipeline.py": "cfdf91fd8dd7485b862d10a6ccfc11e02c94f445e2ff34571b34b959a393b6e4",
+      "src/openhisto/feature_encoder/registry.py": "27bf9a55517217db5d7c8fd97a8ce8488fa67f5d333dce4be8d8ace25c7f3c2b",
+      "src/openhisto/mil/classification/__init__.py": "2cec14a361ef44529a221bab95f172828be1eeb858c04b64c37df724f993b90f",
+      "src/openhisto/mil/classification/classical.py": "5c9ef8d0bae9bf93792f608cf13b624263b41602a0866f7b31e0c0000305e38f",
+      "src/openhisto/mil/classification/neural.py": "c8b35e9fa3748efa54415da402da5afb5c9d1e4a07cbf122da7ba2a3db18eb78",
+      "src/openhisto/mil/heads/README.md": "3d58b9b3569e9ed09728907b2bf502907af995573195aa13028b32df1beb8c7f",
+      "src/openhisto/mil/heads/attachment.py": "5ee6ce5e9e7e45b4a9b58dde77e90c00ef08083930dffdd0fcac9ca8bbf2207c",
+      "src/openhisto/mil/heads/bindings.py": "a769d8ba81b35b62736d9757044dbc9c2e2d576315b88dc6b163201d83677ce8",
+      "src/openhisto/mil/models/code_bases/README.md": "9ef7b4730c19c6b648c62fdc001f076b297b8d014b502f35cce00e7d8b83f076",
+      "src/openhisto/mil/models/code_bases/compat/sources/acmil.json": "889d163e0ece2a75eb093b7c3d99378e5722426233eac02be969cd2cfdbf7119",
+      "src/openhisto/mil/models/code_bases/compat/sources/asmil.json": "a9577534a54e0423418f58a886ccf8b77e29a095509edca2b3b029b29faf72a5",
+      "src/openhisto/mil/models/code_bases/compat/sources/attention_deep_mil.json": "9fadfcbd39c2a15f197c0942973f72c737f71aa5b120c0439d10956790f171a1",
+      "src/openhisto/mil/models/code_bases/compat/sources/caprmil.json": "3276d197b144542170c95737a36b4c0c87511e983263793b2f8f38a4cd355cfb",
+      "src/openhisto/mil/models/code_bases/compat/sources/clam.json": "6f4df3d4c76d4db8084f8f4857fc6a830faab1ae67ec27c27551b8d182c7cd48",
+      "src/openhisto/mil/models/code_bases/compat/sources/cs_mil.json": "d3db75c1b6afc67b71edaade4b5ee76bcc9fbbcce40ee15ccd4add69f5c8f843",
+      "src/openhisto/mil/models/code_bases/compat/sources/dgr_mil.json": "81f0145a655c9e6605df05ac2546095c5d0342aa15ffe64233c9b8ea2bc25ab7",
+      "src/openhisto/mil/models/code_bases/compat/sources/dsmil.json": "f5b64274c73e0a1419e8d88c80b11b86256b6718fed6ee7a4e133a70baa736dc",
+      "src/openhisto/mil/models/code_bases/compat/sources/dtfd_mil.json": "3908dd8a2f7f35acbb5997ec9a1bbd68471af3bc465facba6ef23568c4991d65",
+      "src/openhisto/mil/models/code_bases/compat/sources/gfr_mil.json": "1785b9b177ec468166ac770dcbdd9ec37df5b57095d3e7368669c8f31ccf86c9",
+      "src/openhisto/mil/models/code_bases/compat/sources/h2_mil.json": "8383856ca1f62dcd72bb49931f1c63ff7b1d824de2d7c407aa16476a8e3d0842",
+      "src/openhisto/mil/models/code_bases/compat/sources/hag_mil.json": "cedd617a10ac4ac0d917549708beca3bb9ea8619a07e7041c0dd0d62924739b6",
+      "src/openhisto/mil/models/code_bases/compat/sources/hipt.json": "e4e3f9487562d19804a5ac63154dffd96ba40aab94ff351fcc31a8bc96309040",
+      "src/openhisto/mil/models/code_bases/compat/sources/ilra.json": "d8113dea5e47ffe51cab77f3dd0a6535a80b40ffa41f0e227cff19474170bafe",
+      "src/openhisto/mil/models/code_bases/compat/sources/lin_mil.json": "12183e14349bc7d898dfab3c32b3a691e501497195a51ad7052f7f1a2000c264",
+      "src/openhisto/mil/models/code_bases/compat/sources/mamba_mil.json": "a2e3f5a6855ae55e1a829ed386e53c3513a9d7b24d624684244a113918feedd3",
+      "src/openhisto/mil/models/code_bases/compat/sources/mhim_mil.json": "1b37657469a0fcf7e970760e64a728094a994dde101d07608384d2937a00077b",
+      "src/openhisto/mil/models/code_bases/compat/sources/mhim_mil_v1.json": "c69ba70addfd37c94c8ee28bf9b54976e08bb002eb1d9a37447bdff1e57baf67",
+      "src/openhisto/mil/models/code_bases/compat/sources/nnmil.json": "419b63cdce92981383bd1a2b5d1cb8b6fa07de98e2a8a8882e94805be2fe66fc",
+      "src/openhisto/mil/models/code_bases/compat/sources/panther.json": "def48b8f22e7260764970b64ec1b5060df56180387c71eb21e4d170a5c7bf07b",
+      "src/openhisto/mil/models/code_bases/compat/sources/patch_gcn.json": "3bbeed288064a5d1af79256e8ee60e9ce1202b3d00abc7f8af144e885f6c527f",
+      "src/openhisto/mil/models/code_bases/compat/sources/resgat.json": "ba468c3024c6ca62e64159e9284563932c90bd10ae9b24dee5adecfabb22f806",
+      "src/openhisto/mil/models/code_bases/compat/sources/rrt_mil.json": "457d685951212b9af24b794a5705f13465d74b47d8bb5a4750149bcb7806c46f",
+      "src/openhisto/mil/models/code_bases/compat/sources/slidegraph.json": "5b60df76e76eb5742d9ec9e51981f9bac6eaa75d07017592e1312c3d27f237cf",
+      "src/openhisto/mil/models/code_bases/compat/sources/tad_graph.json": "83df2666d39ad3a5a4da3d66111ce9ab2dadf6cb24fa9f179c979397fd50aff5",
+      "src/openhisto/mil/models/code_bases/compat/sources/transmil.json": "7ac8af90763674b065dfc5daf5ff97d3a26ce8dedff5927958fa858c336e779b",
+      "src/openhisto/mil/models/code_bases/compat/sources/varpool.json": "5b8a1ee392d2f6bd0b340b83d24f358d7ef6928b55ec4fb66cc777f4ea702fe6",
+      "src/openhisto/mil/models/code_bases/compat/sources/wikg.json": "03e554af7ebf57891ac496614c7146d72d67c545017633446274722a96905c3d",
+      "src/openhisto/mil/models/code_bases/compat/sources/zoommil.json": "5c7f853ce4a57c6d3d4a66a2a23359a7f71346dca45cff9a95426c5610b3a5c8",
+      "src/openhisto/mil/models/code_bases/registry.py": "d5edae0c94e28395c28aee9f7a068275925b776aef8004bced9c5a98bbba0665",
+      "src/openhisto/mil/survival/README.md": "76622443b03ca9bbdf9d459252e219141983761dcd99520161f3c9bc9b0da1de",
+      "src/openhisto/mil/survival/__init__.py": "45999f9c47b094cbc9b27ba99e8184282629e8e9b272eab02dde83e8c5b74d1e",
+      "src/openhisto/mil/survival/heads.py": "30c75f63406cfb60f0ce8bf4188a83301ecd8951425b7c0866d1e455daece8e9",
+      "src/openhisto/segmentation/README.md": "ad4b73dc95d28288a4ff53d02584287afe181867c2fe62e07294769e8058ddca",
+      "src/openhisto/segmentation/config.py": "8b55bcf13cfa6beb641151b2d1540a4566f743c9ea648af70b2a622cdd301a44",
+      "src/openhisto/segmentation/engine.py": "d7eff74cb142f045aee454a83a4d894ade3a349ccd0b0badf079d6da9dbc43d5",
+      "src/openhisto/segmentation/semantic/registry.py": "92bc89d0c363e9d5222879768a5a5b6c57f57983a24139b6e4395d8bc514428d",
+      "src/openhisto/stain_transfer/README.md": "0f86aea3b69df481e939c83994543b66123ca02c725427870e7ca1b715d48560",
+      "src/openhisto/stain_transfer/config.py": "5b0012ce89ab3633a18a7913fb2404c44d7317448b6a2f2ddbe084710c04b414",
+      "src/openhisto/stain_transfer/pipeline.py": "5d6cb456bc720cf1da9a79e5f0a71052fd5452c0c3e45277f22385a9dfdea4b5",
+      "src/openhisto/vlas/README.md": "f9291c368aa9dc8940dc361b54b628d849a8c2878bdb7be1b16d9741955579bd",
+      "src/openhisto/vlas/base.py": "6883a30b7caaf1ca30a11bd6ca439c55b11cf5c03d1e2644a75287e72e9d0dc7",
+      "src/openhisto/vlas/config.py": "044b7ba1b2d403c43e84ce9da015559f2ad27b4a35b25cad2cee400bb61accf8",
+      "src/openhisto/vlas/pipeline.py": "8334630c81fe4137dd87ae410dbb424204572785dace69933113704afc6a85e3",
+      "src/openhisto/vlas/registry.py": "8659603524d65ed85ce35843312a64f7c82f04672b67528a03de8bca66019d34"
+    }
+  },
+  "summary": {
+    "total": 79,
+    "counts": {
+      "encoders": 8,
+      "mil": 34,
+      "segmentation": 6,
+      "vla": 5,
+      "datasets": 4,
+      "normalization": 6,
+      "heads": 3,
+      "survival": 2,
+      "classifiers": 11
+    }
+  },
+  "notes": [
+    "Catalogue support describes package interfaces, not pretrained scientific accuracy.",
+    "Install commands run from an authorized local OpenHisto package checkout; they do not assume a published PyPI release.",
+    "Examples require the caller-supplied inputs/artifacts noted in their comments and input contracts; they are not scientific training recipes.",
+    "MIL profiles and shared task heads run on CPU float32; fitted classical classifiers retain their own numeric policy.",
+    "Native MIL tasks and attached shared-head tasks are reported separately.",
+    "79 entries include datasets, normalization methods and heads as well as model backends.",
+    "Checkpoint access and license/use terms are separate; consult the linked source terms."
+  ],
+  "categories": {
+    "encoders": [
+      {
+        "id": "nova_multimodal",
+        "name": "Amazon Nova Multimodal Embeddings",
+        "category": "encoders",
+        "family": "multimodal_api",
+        "module": "openhisto.feature_encoder",
+        "tasks": [
+          "patch_embedding"
+        ],
+        "access": "api",
+        "access_note": "Provider credentials/entitlement required; selected patches are sent to the provider and requests may incur charges.",
+        "dimensions": {
+          "default": 3072,
+          "supported": [
+            256,
+            384,
+            1024,
+            3072
+          ]
+        },
+        "description": "Official checkpoint preprocessing and one image per embedding; one vector per selected patch.",
+        "input_contract": "Indexed patch-extraction HDF5 archive or explicit CSV/JSONL RGB patch manifest, with stable source/slide identities and magnification.",
+        "extra": "feature-encoder-aws",
+        "install": "python -m pip install -e \".[feature-encoder-aws]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/feature_encoder/README.md",
+        "source": "https://aws.amazon.com/service-terms/",
+        "example": "from openhisto.feature_encoder import EncodeConfig, EncoderSpec, SourceSpec, encode_slide\n\nreport = encode_slide(\n    inputs=[SourceSpec(\"patches/slide.h5\", source_id=\"grid-20x\")],\n    output=\"features/slide.h5ad\",\n    models=[EncoderSpec('nova_multimodal')],\n    config=EncodeConfig(slide_id=\"slide-a\"),\n)\n",
+        "provider": "aws",
+        "model_name": "amazon.nova-2-multimodal-embeddings-v1:0",
+        "source_revision": null,
+        "preprocessing": {
+          "input": "one RGB image per embedding",
+          "auth": "AWS standard credential chain"
+        },
+        "approval_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-access.html",
+        "license_url": "https://aws.amazon.com/service-terms/",
+        "evidence_sources": [
+          "src/openhisto/feature_encoder/registry.py",
+          "src/openhisto/feature_encoder/README.md"
+        ]
+      },
+      {
+        "id": "cohere_embed_5_fast",
+        "name": "Cohere Embed v5 Fast",
+        "category": "encoders",
+        "family": "multimodal_api",
+        "module": "openhisto.feature_encoder",
+        "tasks": [
+          "patch_embedding"
+        ],
+        "access": "api",
+        "access_note": "Provider credentials/entitlement required; selected patches are sent to the provider and requests may incur charges.",
+        "dimensions": {
+          "default": 2048,
+          "supported": [
+            256,
+            512,
+            768,
+            1024,
+            1536,
+            2048
+          ]
+        },
+        "description": "Official checkpoint preprocessing and one image per embedding; one vector per selected patch.",
+        "input_contract": "Indexed patch-extraction HDF5 archive or explicit CSV/JSONL RGB patch manifest, with stable source/slide identities and magnification.",
+        "extra": "feature-encoder-cohere",
+        "install": "python -m pip install -e \".[feature-encoder-cohere]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/feature_encoder/README.md",
+        "source": "https://cohere.com/terms-of-use",
+        "example": "from openhisto.feature_encoder import EncodeConfig, EncoderSpec, SourceSpec, encode_slide\n\nreport = encode_slide(\n    inputs=[SourceSpec(\"patches/slide.h5\", source_id=\"grid-20x\")],\n    output=\"features/slide.h5ad\",\n    models=[EncoderSpec('cohere_embed_5_fast')],\n    config=EncodeConfig(slide_id=\"slide-a\"),\n)\n",
+        "provider": "cohere",
+        "model_name": "embed-v5.0-fast",
+        "source_revision": null,
+        "preprocessing": {
+          "input": "one RGB image per embedding"
+        },
+        "approval_url": "https://dashboard.cohere.com/api-keys",
+        "license_url": "https://cohere.com/terms-of-use",
+        "evidence_sources": [
+          "src/openhisto/feature_encoder/registry.py",
+          "src/openhisto/feature_encoder/README.md"
+        ]
+      },
+      {
+        "id": "cohere_embed_5_pro",
+        "name": "Cohere Embed v5 Pro",
+        "category": "encoders",
+        "family": "multimodal_api",
+        "module": "openhisto.feature_encoder",
+        "tasks": [
+          "patch_embedding"
+        ],
+        "access": "api",
+        "access_note": "Provider credentials/entitlement required; selected patches are sent to the provider and requests may incur charges.",
+        "dimensions": {
+          "default": 2048,
+          "supported": [
+            256,
+            512,
+            768,
+            1024,
+            1536,
+            2048
+          ]
+        },
+        "description": "Official checkpoint preprocessing and one image per embedding; one vector per selected patch.",
+        "input_contract": "Indexed patch-extraction HDF5 archive or explicit CSV/JSONL RGB patch manifest, with stable source/slide identities and magnification.",
+        "extra": "feature-encoder-cohere",
+        "install": "python -m pip install -e \".[feature-encoder-cohere]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/feature_encoder/README.md",
+        "source": "https://cohere.com/terms-of-use",
+        "example": "from openhisto.feature_encoder import EncodeConfig, EncoderSpec, SourceSpec, encode_slide\n\nreport = encode_slide(\n    inputs=[SourceSpec(\"patches/slide.h5\", source_id=\"grid-20x\")],\n    output=\"features/slide.h5ad\",\n    models=[EncoderSpec('cohere_embed_5_pro')],\n    config=EncodeConfig(slide_id=\"slide-a\"),\n)\n",
+        "provider": "cohere",
+        "model_name": "embed-v5.0-pro",
+        "source_revision": null,
+        "preprocessing": {
+          "input": "one RGB image per embedding"
+        },
+        "approval_url": "https://dashboard.cohere.com/api-keys",
+        "license_url": "https://cohere.com/terms-of-use",
+        "evidence_sources": [
+          "src/openhisto/feature_encoder/registry.py",
+          "src/openhisto/feature_encoder/README.md"
+        ]
+      },
+      {
+        "id": "conch15_titan",
+        "name": "CONCH v1.5 (TITAN patch representation)",
+        "category": "encoders",
+        "family": "pathology_checkpoint",
+        "module": "openhisto.feature_encoder",
+        "tasks": [
+          "patch_embedding"
+        ],
+        "access": "gated",
+        "access_note": "Approval and matching Hugging Face account authorization are required.",
+        "dimensions": {
+          "default": 768,
+          "supported": [
+            768
+          ]
+        },
+        "description": "Official checkpoint preprocessing and attentional_pooler; one vector per selected patch.",
+        "input_contract": "Indexed patch-extraction HDF5 archive or explicit CSV/JSONL RGB patch manifest, with stable source/slide identities and magnification.",
+        "extra": "feature-encoder-local",
+        "install": "python -m pip install -e \".[feature-encoder-local]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/feature_encoder/README.md",
+        "source": "https://huggingface.co/MahmoodLab/TITAN",
+        "example": "from openhisto.feature_encoder import EncodeConfig, EncoderSpec, SourceSpec, encode_slide\n\nreport = encode_slide(\n    inputs=[SourceSpec(\"patches/slide.h5\", source_id=\"grid-20x\")],\n    output=\"features/slide.h5ad\",\n    models=[EncoderSpec('conch15_titan')],\n    config=EncodeConfig(slide_id=\"slide-a\"),\n)\n",
+        "provider": "hf",
+        "model_name": "MahmoodLab/TITAN",
+        "source_revision": "dac6773d9961cfc75503440676ff157a2c6e8d2e",
+        "preprocessing": {
+          "processor": "TITAN CONCH v1.5 resize/center crop",
+          "input_size": 448,
+          "source_patch_size": 512,
+          "source_mag": 20,
+          "pooling": "attentional_pooler",
+          "default_revision": "dac6773d9961cfc75503440676ff157a2c6e8d2e"
+        },
+        "approval_url": "https://huggingface.co/MahmoodLab/TITAN",
+        "license_url": "https://huggingface.co/MahmoodLab/TITAN",
+        "evidence_sources": [
+          "src/openhisto/feature_encoder/registry.py",
+          "src/openhisto/feature_encoder/README.md"
+        ]
+      },
+      {
+        "id": "gemini_embedding_2",
+        "name": "Gemini Embedding 2",
+        "category": "encoders",
+        "family": "multimodal_api",
+        "module": "openhisto.feature_encoder",
+        "tasks": [
+          "patch_embedding"
+        ],
+        "access": "api",
+        "access_note": "Provider credentials/entitlement required; selected patches are sent to the provider and requests may incur charges.",
+        "dimensions": {
+          "default": 3072,
+          "supported": [
+            768,
+            1536,
+            3072
+          ],
+          "range": [
+            128,
+            3072
+          ]
+        },
+        "description": "Official checkpoint preprocessing and one image per embedding; one vector per selected patch.",
+        "input_contract": "Indexed patch-extraction HDF5 archive or explicit CSV/JSONL RGB patch manifest, with stable source/slide identities and magnification.",
+        "extra": "feature-encoder-google",
+        "install": "python -m pip install -e \".[feature-encoder-google]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/feature_encoder/README.md",
+        "source": "https://ai.google.dev/gemini-api/terms",
+        "example": "from openhisto.feature_encoder import EncodeConfig, EncoderSpec, SourceSpec, encode_slide\n\nreport = encode_slide(\n    inputs=[SourceSpec(\"patches/slide.h5\", source_id=\"grid-20x\")],\n    output=\"features/slide.h5ad\",\n    models=[EncoderSpec('gemini_embedding_2')],\n    config=EncodeConfig(slide_id=\"slide-a\"),\n)\n",
+        "provider": "google",
+        "model_name": "gemini-embedding-2",
+        "source_revision": null,
+        "preprocessing": {
+          "input": "one RGB image per embedding",
+          "dimension_range": [
+            128,
+            3072
+          ]
+        },
+        "approval_url": "https://aistudio.google.com/api-keys",
+        "license_url": "https://ai.google.dev/gemini-api/terms",
+        "evidence_sources": [
+          "src/openhisto/feature_encoder/registry.py",
+          "src/openhisto/feature_encoder/README.md"
+        ]
+      },
+      {
+        "id": "phikon",
+        "name": "Phikon",
+        "category": "encoders",
+        "family": "pathology_checkpoint",
+        "module": "openhisto.feature_encoder",
+        "tasks": [
+          "patch_embedding"
+        ],
+        "access": "public",
+        "access_note": "Public checkpoint; an explicit encoding/preparation call may download weights.",
+        "dimensions": {
+          "default": 768,
+          "supported": [
+            768
+          ]
+        },
+        "description": "Official checkpoint preprocessing and cls_token; one vector per selected patch.",
+        "input_contract": "Indexed patch-extraction HDF5 archive or explicit CSV/JSONL RGB patch manifest, with stable source/slide identities and magnification.",
+        "extra": "feature-encoder-local",
+        "install": "python -m pip install -e \".[feature-encoder-local]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/feature_encoder/README.md",
+        "source": "https://huggingface.co/owkin/phikon",
+        "example": "from openhisto.feature_encoder import EncodeConfig, EncoderSpec, SourceSpec, encode_slide\n\nreport = encode_slide(\n    inputs=[SourceSpec(\"patches/slide.h5\", source_id=\"grid-20x\")],\n    output=\"features/slide.h5ad\",\n    models=[EncoderSpec('phikon')],\n    config=EncodeConfig(slide_id=\"slide-a\"),\n)\n",
+        "provider": "hf",
+        "model_name": "owkin/phikon",
+        "source_revision": "057cc0295895c2df3dd7681a89680da6015cbefe",
+        "preprocessing": {
+          "processor": "checkpoint AutoImageProcessor",
+          "input_size": 224,
+          "pooling": "cls_token",
+          "default_revision": "057cc0295895c2df3dd7681a89680da6015cbefe"
+        },
+        "approval_url": null,
+        "license_url": "https://huggingface.co/owkin/phikon",
+        "evidence_sources": [
+          "src/openhisto/feature_encoder/registry.py",
+          "src/openhisto/feature_encoder/README.md"
+        ]
+      },
+      {
+        "id": "phikon_v2",
+        "name": "Phikon-v2",
+        "category": "encoders",
+        "family": "pathology_checkpoint",
+        "module": "openhisto.feature_encoder",
+        "tasks": [
+          "patch_embedding"
+        ],
+        "access": "public",
+        "access_note": "Public checkpoint; an explicit encoding/preparation call may download weights.",
+        "dimensions": {
+          "default": 1024,
+          "supported": [
+            1024
+          ]
+        },
+        "description": "Official checkpoint preprocessing and cls_token; one vector per selected patch.",
+        "input_contract": "Indexed patch-extraction HDF5 archive or explicit CSV/JSONL RGB patch manifest, with stable source/slide identities and magnification.",
+        "extra": "feature-encoder-local",
+        "install": "python -m pip install -e \".[feature-encoder-local]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/feature_encoder/README.md",
+        "source": "https://huggingface.co/owkin/phikon-v2",
+        "example": "from openhisto.feature_encoder import EncodeConfig, EncoderSpec, SourceSpec, encode_slide\n\nreport = encode_slide(\n    inputs=[SourceSpec(\"patches/slide.h5\", source_id=\"grid-20x\")],\n    output=\"features/slide.h5ad\",\n    models=[EncoderSpec('phikon_v2')],\n    config=EncodeConfig(slide_id=\"slide-a\"),\n)\n",
+        "provider": "hf",
+        "model_name": "owkin/phikon-v2",
+        "source_revision": "2ae989a9c40cffaa27f0a6cb29cc94d1d6f9a5fd",
+        "preprocessing": {
+          "processor": "checkpoint AutoImageProcessor",
+          "input_size": 224,
+          "pooling": "cls_token",
+          "default_revision": "2ae989a9c40cffaa27f0a6cb29cc94d1d6f9a5fd"
+        },
+        "approval_url": null,
+        "license_url": "https://huggingface.co/owkin/phikon-v2",
+        "evidence_sources": [
+          "src/openhisto/feature_encoder/registry.py",
+          "src/openhisto/feature_encoder/README.md"
+        ]
+      },
+      {
+        "id": "uni_v1",
+        "name": "UNI v1",
+        "category": "encoders",
+        "family": "pathology_checkpoint",
+        "module": "openhisto.feature_encoder",
+        "tasks": [
+          "patch_embedding"
+        ],
+        "access": "gated",
+        "access_note": "Approval and matching Hugging Face account authorization are required.",
+        "dimensions": {
+          "default": 1024,
+          "supported": [
+            1024
+          ]
+        },
+        "description": "Official checkpoint preprocessing and cls_token; one vector per selected patch.",
+        "input_contract": "Indexed patch-extraction HDF5 archive or explicit CSV/JSONL RGB patch manifest, with stable source/slide identities and magnification.",
+        "extra": "feature-encoder-local",
+        "install": "python -m pip install -e \".[feature-encoder-local]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/feature_encoder/README.md",
+        "source": "https://huggingface.co/MahmoodLab/UNI",
+        "example": "from openhisto.feature_encoder import EncodeConfig, EncoderSpec, SourceSpec, encode_slide\n\nreport = encode_slide(\n    inputs=[SourceSpec(\"patches/slide.h5\", source_id=\"grid-20x\")],\n    output=\"features/slide.h5ad\",\n    models=[EncoderSpec('uni_v1')],\n    config=EncodeConfig(slide_id=\"slide-a\"),\n)\n",
+        "provider": "hf",
+        "model_name": "MahmoodLab/UNI",
+        "source_revision": "b55a5ec6cade1a39edfe6534189a9b8ca7a022f0",
+        "preprocessing": {
+          "processor": "checkpoint timm pretrained_cfg",
+          "input_size": 224,
+          "pooling": "cls_token",
+          "default_revision": "b55a5ec6cade1a39edfe6534189a9b8ca7a022f0"
+        },
+        "approval_url": "https://huggingface.co/MahmoodLab/UNI",
+        "license_url": "https://huggingface.co/MahmoodLab/UNI",
+        "evidence_sources": [
+          "src/openhisto/feature_encoder/registry.py",
+          "src/openhisto/feature_encoder/README.md"
+        ]
+      }
+    ],
+    "mil": [
+      {
+        "id": "abmil",
+        "name": "ABMIL",
+        "category": "mil",
+        "family": "attention",
+        "module": "openhisto.mil.models.code_bases",
+        "tasks": [
+          "classification"
+        ],
+        "access": "local",
+        "access_note": "Vendored source; random initialization unless explicit compatible local weights are supplied. No bundled trained weights.",
+        "dimensions": {
+          "input": "configurable D",
+          "representation": "resolve with representation_dimension(backbone)"
+        },
+        "description": "Native attention pooling with an explicit feature-to-500 projection when needed.",
+        "input_contract": "Nonempty float32 feature bag[N,D] or [1,N,D]; native ordering and model-specific minimum sizes apply.",
+        "extra": "mil-attention",
+        "install": "python -m pip install -e \".[mil-attention]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/mil/models/code_bases/README.md",
+        "source": "https://github.com/AMLab-Amsterdam/AttentionDeepMIL",
+        "example": "from openhisto.mil.models.code_bases import create_model\n\n# Supply patch_features using the documented native input contract.\nmodel = create_model(\"abmil\", input_dim=768, num_classes=3, device=\"cpu\")\nmodel.eval()\noutput = model(patch_features)\n",
+        "source_revision": "eb0434ba2795711a45d693d60120ae53532b1b93",
+        "devices": [
+          "cpu"
+        ],
+        "dtype": "float32",
+        "input_kind": "feature_bag",
+        "attached_tasks": [
+          "neural_classification",
+          "frozen_vector_classification",
+          "cox",
+          "discrete_hazard"
+        ],
+        "evidence_sources": [
+          "src/openhisto/mil/models/code_bases/registry.py",
+          "src/openhisto/mil/models/code_bases/README.md"
+        ]
+      },
+      {
+        "id": "acmil",
+        "name": "ACMIL",
+        "category": "mil",
+        "family": "attention",
+        "module": "openhisto.mil.models.code_bases",
+        "tasks": [
+          "classification"
+        ],
+        "access": "local",
+        "access_note": "Vendored source; random initialization unless explicit compatible local weights are supplied. No bundled trained weights.",
+        "dimensions": {
+          "input": "configurable D",
+          "representation": "resolve with representation_dimension(backbone)"
+        },
+        "description": "Attention branches and native patch masking; branch outputs remain available.",
+        "input_contract": "Nonempty float32 feature bag[N,D] or [1,N,D]; native ordering and model-specific minimum sizes apply.",
+        "extra": "mil-attention",
+        "install": "python -m pip install -e \".[mil-attention]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/mil/models/code_bases/README.md",
+        "source": "https://github.com/dazhangyu123/ACMIL",
+        "example": "from openhisto.mil.models.code_bases import create_model\n\n# Supply patch_features using the documented native input contract.\nmodel = create_model(\"acmil\", input_dim=768, num_classes=3, device=\"cpu\")\nmodel.eval()\noutput = model(patch_features)\n",
+        "source_revision": "e53d19c81f3892256d41962ffc4352cc91a4f834",
+        "devices": [
+          "cpu"
+        ],
+        "dtype": "float32",
+        "input_kind": "feature_bag",
+        "attached_tasks": [
+          "neural_classification",
+          "frozen_vector_classification",
+          "cox",
+          "discrete_hazard"
+        ],
+        "evidence_sources": [
+          "src/openhisto/mil/models/code_bases/registry.py",
+          "src/openhisto/mil/models/code_bases/README.md"
+        ]
+      },
+      {
+        "id": "asmil",
+        "name": "ASMIL",
+        "category": "mil",
+        "family": "attention",
+        "module": "openhisto.mil.models.code_bases",
+        "tasks": [
+          "classification"
+        ],
+        "access": "local",
+        "access_note": "Vendored source; random initialization unless explicit compatible local weights are supplied. No bundled trained weights.",
+        "dimensions": {
+          "input": "configurable D",
+          "representation": "resolve with representation_dimension(backbone)"
+        },
+        "description": "Attention model with a frozen anchor and an explicit update_anchor hook.",
+        "input_contract": "Nonempty float32 feature bag[N,D] or [1,N,D]; native ordering and model-specific minimum sizes apply.",
+        "extra": "mil-attention",
+        "install": "python -m pip install -e \".[mil-attention]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/mil/models/code_bases/README.md",
+        "source": "https://github.com/Linfeng-Ye/ASMIL",
+        "example": "from openhisto.mil.models.code_bases import create_model\n\n# Supply patch_features using the documented native input contract.\nmodel = create_model(\"asmil\", input_dim=768, num_classes=3, device=\"cpu\")\nmodel.eval()\noutput = model(patch_features)\n",
+        "source_revision": "5d062271e1626b27a955c309d10add902311865c",
+        "devices": [
+          "cpu"
+        ],
+        "dtype": "float32",
+        "input_kind": "feature_bag",
+        "attached_tasks": [
+          "neural_classification",
+          "frozen_vector_classification",
+          "cox",
+          "discrete_hazard"
+        ],
+        "evidence_sources": [
+          "src/openhisto/mil/models/code_bases/registry.py",
+          "src/openhisto/mil/models/code_bases/README.md"
+        ]
+      },
+      {
+        "id": "caprmil",
+        "name": "CAPRMIL",
+        "category": "mil",
+        "family": "transformers",
+        "module": "openhisto.mil.models.code_bases",
+        "tasks": [
+          "classification"
+        ],
+        "access": "local",
+        "access_note": "Vendored source; random initialization unless explicit compatible local weights are supplied. No bundled trained weights.",
+        "dimensions": {
+          "input": "configurable D",
+          "representation": "resolve with representation_dimension(backbone)"
+        },
+        "description": "Native cluster/transformer model with explicit profile options.",
+        "input_contract": "Nonempty float32 feature bag[N,D] or [1,N,D]; native ordering and model-specific minimum sizes apply.",
+        "extra": "mil-transformers",
+        "install": "python -m pip install -e \".[mil-transformers]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/mil/models/code_bases/README.md",
+        "source": "https://github.com/mandlos/CAPRMIL",
+        "example": "from openhisto.mil.models.code_bases import create_model\n\n# Supply patch_features using the documented native input contract.\nmodel = create_model(\"caprmil\", input_dim=768, num_classes=3, device=\"cpu\")\nmodel.eval()\noutput = model(patch_features)\n",
+        "source_revision": "b1f21a25e21d889a90bd604d29887abb3c1dbeeb",
+        "devices": [
+          "cpu"
+        ],
+        "dtype": "float32",
+        "input_kind": "feature_bag",
+        "attached_tasks": [
+          "neural_classification",
+          "frozen_vector_classification",
+          "cox",
+          "discrete_hazard"
+        ],
+        "evidence_sources": [
+          "src/openhisto/mil/models/code_bases/registry.py",
+          "src/openhisto/mil/models/code_bases/README.md"
+        ]
+      },
+      {
+        "id": "clam_mb",
+        "name": "CLAM-MB",
+        "category": "mil",
+        "family": "attention",
+        "module": "openhisto.mil.models.code_bases",
+        "tasks": [
+          "classification"
+        ],
+        "access": "local",
+        "access_note": "Vendored source; random initialization unless explicit compatible local weights are supplied. No bundled trained weights.",
+        "dimensions": {
+          "input": "configurable D",
+          "representation": "resolve with representation_dimension(backbone)"
+        },
+        "description": "Multiple-branch CLAM; class-conditioned representations preserve native class order.",
+        "input_contract": "Float32 feature bag[N,D]; instance_eval=True also requires a label and at least k_sample patches.",
+        "extra": "mil-attention",
+        "install": "python -m pip install -e \".[mil-attention]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/mil/models/code_bases/README.md",
+        "source": "https://github.com/mahmoodlab/CLAM",
+        "example": "from openhisto.mil.models.code_bases import create_model\n\n# Supply patch_features using the documented native input contract.\nmodel = create_model(\"clam_mb\", input_dim=768, num_classes=3, device=\"cpu\")\nmodel.eval()\noutput = model(patch_features)\n",
+        "source_revision": "53e2409d4a8189c682c173382964a85f114f923c",
+        "devices": [
+          "cpu"
+        ],
+        "dtype": "float32",
+        "input_kind": "feature_bag",
+        "attached_tasks": [
+          "neural_classification",
+          "frozen_vector_classification",
+          "cox",
+          "discrete_hazard"
+        ],
+        "evidence_sources": [
+          "src/openhisto/mil/models/code_bases/registry.py",
+          "src/openhisto/mil/models/code_bases/README.md"
+        ]
+      },
+      {
+        "id": "clam_sb",
+        "name": "CLAM-SB",
+        "category": "mil",
+        "family": "attention",
+        "module": "openhisto.mil.models.code_bases",
+        "tasks": [
+          "classification"
+        ],
+        "access": "local",
+        "access_note": "Vendored source; random initialization unless explicit compatible local weights are supplied. No bundled trained weights.",
+        "dimensions": {
+          "input": "configurable D",
+          "representation": "resolve with representation_dimension(backbone)"
+        },
+        "description": "Single-branch CLAM with optional labelled instance-level evaluation and loss.",
+        "input_contract": "Float32 feature bag[N,D]; instance_eval=True also requires a label and at least k_sample patches.",
+        "extra": "mil-attention",
+        "install": "python -m pip install -e \".[mil-attention]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/mil/models/code_bases/README.md",
+        "source": "https://github.com/mahmoodlab/CLAM",
+        "example": "from openhisto.mil.models.code_bases import create_model\n\n# Supply patch_features using the documented native input contract.\nmodel = create_model(\"clam_sb\", input_dim=768, num_classes=3, device=\"cpu\")\nmodel.eval()\noutput = model(patch_features)\n",
+        "source_revision": "53e2409d4a8189c682c173382964a85f114f923c",
+        "devices": [
+          "cpu"
+        ],
+        "dtype": "float32",
+        "input_kind": "feature_bag",
+        "attached_tasks": [
+          "neural_classification",
+          "frozen_vector_classification",
+          "cox",
+          "discrete_hazard"
+        ],
+        "evidence_sources": [
+          "src/openhisto/mil/models/code_bases/registry.py",
+          "src/openhisto/mil/models/code_bases/README.md"
+        ]
+      },
+      {
+        "id": "cs_mil",
+        "name": "CS-MIL",
+        "category": "mil",
+        "family": "graph_multiscale",
+        "module": "openhisto.mil.models.code_bases",
+        "tasks": [
+          "independent_sigmoid"
+        ],
+        "access": "local",
+        "access_note": "Vendored source; random initialization unless explicit compatible local weights are supplied. No bundled trained weights.",
+        "dimensions": {
+          "input": "configurable D",
+          "representation": "resolve with representation_dimension(backbone)"
+        },
+        "description": "Corresponding three-scale clusters with native independent sigmoid heads.",
+        "input_contract": "Dictionary: clusters is a list of [P_i,D,3,1] tensors at three corresponding scales; optional mask[1,sum(P_i)].",
+        "extra": "mil-graph-multiscale",
+        "install": "python -m pip install -e \".[mil-graph-multiscale]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/mil/models/code_bases/README.md",
+        "source": "https://github.com/hrlblab/CS-MIL",
+        "example": "from openhisto.mil.models.code_bases import create_model\n\n# Supply prepared_hierarchy using the documented native input contract.\nmodel = create_model(\"cs_mil\", input_dim=768, num_classes=1, device=\"cpu\")\nmodel.eval()\noutput = model(prepared_hierarchy)\n",
+        "source_revision": "d51b97f411caeff092e397427003021d1b23f00f",
+        "devices": [
+          "cpu"
+        ],
+        "dtype": "float32",
+        "input_kind": "prepared_hierarchy",
+        "attached_tasks": [
+          "neural_classification",
+          "frozen_vector_classification",
+          "cox",
+          "discrete_hazard"
+        ],
+        "evidence_sources": [
+          "src/openhisto/mil/models/code_bases/registry.py",
+          "src/openhisto/mil/models/code_bases/README.md"
+        ]
+      },
+      {
+        "id": "dgr_mil",
+        "name": "DGR-MIL",
+        "category": "mil",
+        "family": "transformers",
+        "module": "openhisto.mil.models.code_bases",
+        "tasks": [
+          "classification"
+        ],
+        "access": "local",
+        "access_note": "Vendored source; random initialization unless explicit compatible local weights are supplied. No bundled trained weights.",
+        "dimensions": {
+          "input": "configurable D",
+          "representation": "resolve with representation_dimension(backbone)"
+        },
+        "description": "Native lesion/center computations and auxiliary outputs remain available.",
+        "input_contract": "Nonempty float32 feature bag[N,D] or [1,N,D]; native ordering and model-specific minimum sizes apply.",
+        "extra": "mil-transformers",
+        "install": "python -m pip install -e \".[mil-transformers]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/mil/models/code_bases/README.md",
+        "source": "https://github.com/ChongQingNoSubway/DGR-MIL",
+        "example": "from openhisto.mil.models.code_bases import create_model\n\n# Supply patch_features using the documented native input contract.\nmodel = create_model(\"dgr_mil\", input_dim=768, num_classes=3, device=\"cpu\")\nmodel.eval()\noutput = model(patch_features)\n",
+        "source_revision": "ac6257ffa768f154c52ac8b01e2086e5d3a714bf",
+        "devices": [
+          "cpu"
+        ],
+        "dtype": "float32",
+        "input_kind": "feature_bag",
+        "attached_tasks": [
+          "neural_classification",
+          "frozen_vector_classification",
+          "cox",
+          "discrete_hazard"
+        ],
+        "evidence_sources": [
+          "src/openhisto/mil/models/code_bases/registry.py",
+          "src/openhisto/mil/models/code_bases/README.md"
+        ]
+      },
+      {
+        "id": "dsmil",
+        "name": "DSMIL",
+        "category": "mil",
+        "family": "attention",
+        "module": "openhisto.mil.models.code_bases",
+        "tasks": [
+          "classification"
+        ],
+        "access": "local",
+        "access_note": "Vendored source; random initialization unless explicit compatible local weights are supplied. No bundled trained weights.",
+        "dimensions": {
+          "input": "configurable D",
+          "representation": "resolve with representation_dimension(backbone)"
+        },
+        "description": "Dual instance/bag streams; native inference averages their independent sigmoid scores.",
+        "input_contract": "Nonempty float32 feature bag[N,D] or [1,N,D]; native ordering and model-specific minimum sizes apply.",
+        "extra": "mil-attention",
+        "install": "python -m pip install -e \".[mil-attention]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/mil/models/code_bases/README.md",
+        "source": "https://github.com/binli123/dsmil-wsi",
+        "example": "from openhisto.mil.models.code_bases import create_model\n\n# Supply patch_features using the documented native input contract.\nmodel = create_model(\"dsmil\", input_dim=768, num_classes=3, device=\"cpu\")\nmodel.eval()\noutput = model(patch_features)\n",
+        "source_revision": "80465ed534ac49b5e550833da56c27936f0b9440",
+        "devices": [
+          "cpu"
+        ],
+        "dtype": "float32",
+        "input_kind": "feature_bag",
+        "attached_tasks": [
+          "neural_classification",
+          "frozen_vector_classification",
+          "cox",
+          "discrete_hazard"
+        ],
+        "evidence_sources": [
+          "src/openhisto/mil/models/code_bases/registry.py",
+          "src/openhisto/mil/models/code_bases/README.md"
+        ]
+      },
+      {
+        "id": "dtfd_mil",
+        "name": "DTFD-MIL",
+        "category": "mil",
+        "family": "attention",
+        "module": "openhisto.mil.models.code_bases",
+        "tasks": [
+          "classification"
+        ],
+        "access": "local",
+        "access_note": "Vendored source; random initialization unless explicit compatible local weights are supplied. No bundled trained weights.",
+        "dimensions": {
+          "input": "configurable D",
+          "representation": "resolve with representation_dimension(backbone)"
+        },
+        "description": "Two-tier distillation; pseudo-bag logits and AFS/MaxS/MaxMinS modes remain exposed.",
+        "input_contract": "Float32 feature bag[N,D], with at least num_groups instances.",
+        "extra": "mil-attention",
+        "install": "python -m pip install -e \".[mil-attention]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/mil/models/code_bases/README.md",
+        "source": "https://github.com/hrzhang1123/DTFD-MIL",
+        "example": "from openhisto.mil.models.code_bases import create_model\n\n# Supply patch_features using the documented native input contract.\nmodel = create_model(\"dtfd_mil\", input_dim=768, num_classes=3, device=\"cpu\")\nmodel.eval()\noutput = model(patch_features)\n",
+        "source_revision": "10964f4dcc27c65ce110a0e9a3b9240bff58da8a",
+        "devices": [
+          "cpu"
+        ],
+        "dtype": "float32",
+        "input_kind": "feature_bag",
+        "attached_tasks": [
+          "neural_classification",
+          "frozen_vector_classification",
+          "cox",
+          "discrete_hazard"
+        ],
+        "evidence_sources": [
+          "src/openhisto/mil/models/code_bases/registry.py",
+          "src/openhisto/mil/models/code_bases/README.md"
+        ]
+      },
+      {
+        "id": "gated_abmil",
+        "name": "Gated ABMIL",
+        "category": "mil",
+        "family": "attention",
+        "module": "openhisto.mil.models.code_bases",
+        "tasks": [
+          "classification"
+        ],
+        "access": "local",
+        "access_note": "Vendored source; random initialization unless explicit compatible local weights are supplied. No bundled trained weights.",
+        "dimensions": {
+          "input": "configurable D",
+          "representation": "resolve with representation_dimension(backbone)"
+        },
+        "description": "Native gated attention pooling and classifier with the same feature projection policy as ABMIL.",
+        "input_contract": "Nonempty float32 feature bag[N,D] or [1,N,D]; native ordering and model-specific minimum sizes apply.",
+        "extra": "mil-attention",
+        "install": "python -m pip install -e \".[mil-attention]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/mil/models/code_bases/README.md",
+        "source": "https://github.com/AMLab-Amsterdam/AttentionDeepMIL",
+        "example": "from openhisto.mil.models.code_bases import create_model\n\n# Supply patch_features using the documented native input contract.\nmodel = create_model(\"gated_abmil\", input_dim=768, num_classes=3, device=\"cpu\")\nmodel.eval()\noutput = model(patch_features)\n",
+        "source_revision": "eb0434ba2795711a45d693d60120ae53532b1b93",
+        "devices": [
+          "cpu"
+        ],
+        "dtype": "float32",
+        "input_kind": "feature_bag",
+        "attached_tasks": [
+          "neural_classification",
+          "frozen_vector_classification",
+          "cox",
+          "discrete_hazard"
+        ],
+        "evidence_sources": [
+          "src/openhisto/mil/models/code_bases/registry.py",
+          "src/openhisto/mil/models/code_bases/README.md"
+        ]
+      },
+      {
+        "id": "gfr_mil",
+        "name": "GFR-MIL",
+        "category": "mil",
+        "family": "graph_multiscale",
+        "module": "openhisto.mil.models.code_bases",
+        "tasks": [
+          "classification",
+          "discrete_survival"
+        ],
+        "access": "local",
+        "access_note": "Vendored source; random initialization unless explicit compatible local weights are supplied. No bundled trained weights.",
+        "dimensions": {
+          "input": "configurable D",
+          "representation": "resolve with representation_dimension(backbone)"
+        },
+        "description": "Corresponding low/high features with native coordinate quantization and auxiliary loss; native survival is optional.",
+        "input_contract": "Dictionary: features, coords, high_features, high_coords, long region_labels; aligned low/high rows and native 448/3584 coordinates.",
+        "extra": "mil-graph-multiscale",
+        "install": "python -m pip install -e \".[mil-graph-multiscale]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/mil/models/code_bases/README.md",
+        "source": "https://github.com/longger-z/GFR-MIL",
+        "example": "from openhisto.mil.models.code_bases import create_model\n\n# Supply prepared_hierarchy using the documented native input contract.\nmodel = create_model(\"gfr_mil\", input_dim=768, num_classes=3, device=\"cpu\")\nmodel.eval()\noutput = model(prepared_hierarchy)\n",
+        "source_revision": "25c9b1e24a8544619b5d4405c9fa70eba9c5cd0f",
+        "devices": [
+          "cpu"
+        ],
+        "dtype": "float32",
+        "input_kind": "prepared_hierarchy",
+        "attached_tasks": [
+          "neural_classification",
+          "frozen_vector_classification",
+          "cox",
+          "discrete_hazard"
+        ],
+        "evidence_sources": [
+          "src/openhisto/mil/models/code_bases/registry.py",
+          "src/openhisto/mil/models/code_bases/README.md"
+        ]
+      },
+      {
+        "id": "hag_mil",
+        "name": "HAG-MIL",
+        "category": "mil",
+        "family": "graph_multiscale",
+        "module": "openhisto.mil.models.code_bases",
+        "tasks": [
+          "classification"
+        ],
+        "access": "local",
+        "access_note": "Vendored source; random initialization unless explicit compatible local weights are supplied. No bundled trained weights.",
+        "dimensions": {
+          "input": "configurable D",
+          "representation": "resolve with representation_dimension(backbone)"
+        },
+        "description": "Three native IAT models and a selection cascade with four children per parent.",
+        "input_contract": "Dictionary: levels=(low,middle,high), four contiguous children per parent at both hierarchy levels.",
+        "extra": "mil-graph-multiscale",
+        "install": "python -m pip install -e \".[mil-graph-multiscale]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/mil/models/code_bases/README.md",
+        "source": "https://github.com/BearCleverProud/HAG-MIL",
+        "example": "from openhisto.mil.models.code_bases import create_model\n\n# Supply prepared_hierarchy using the documented native input contract.\nmodel = create_model(\"hag_mil\", input_dim=768, num_classes=3, device=\"cpu\")\nmodel.eval()\noutput = model(prepared_hierarchy)\n",
+        "source_revision": "9fec1ca4390346b958212801d2d5a14c7ce36d6f",
+        "devices": [
+          "cpu"
+        ],
+        "dtype": "float32",
+        "input_kind": "prepared_hierarchy",
+        "attached_tasks": [
+          "neural_classification",
+          "frozen_vector_classification",
+          "cox",
+          "discrete_hazard"
+        ],
+        "evidence_sources": [
+          "src/openhisto/mil/models/code_bases/registry.py",
+          "src/openhisto/mil/models/code_bases/README.md"
+        ]
+      },
+      {
+        "id": "hipt",
+        "name": "HIPT",
+        "category": "mil",
+        "family": "graph_multiscale",
+        "module": "openhisto.mil.models.code_bases",
+        "tasks": [
+          "classification"
+        ],
+        "access": "local",
+        "access_note": "Vendored source; random initialization unless explicit compatible local weights are supplied. No bundled trained weights.",
+        "dimensions": {
+          "input": "configurable D",
+          "native_hipt": {
+            "lgp": 384,
+            "gp": 192
+          }
+        },
+        "description": "Native LGP/GP hierarchy contracts and a separately named no-transformer ablation; generic vectors do not replace DINO.",
+        "input_contract": "LGP: raster-ordered native DINO fine features[regions,256,384]; GP: native region features[regions,192]; none ablation: [regions,patches,D].",
+        "extra": "mil-graph-multiscale",
+        "install": "python -m pip install -e \".[mil-graph-multiscale]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/mil/models/code_bases/README.md",
+        "source": "https://github.com/mahmoodlab/HIPT",
+        "example": "from openhisto.mil.models.code_bases import create_model\n\n# Supply prepared_hierarchy using the documented native input contract.\nmodel = create_model(\"hipt\", input_dim=384, num_classes=3, device=\"cpu\")\nmodel.eval()\noutput = model(prepared_hierarchy)\n",
+        "source_revision": "780fafaed2e5b112bc1ed6e78852af1fe6714342",
+        "devices": [
+          "cpu"
+        ],
+        "dtype": "float32",
+        "input_kind": "prepared_hierarchy",
+        "attached_tasks": [
+          "neural_classification",
+          "frozen_vector_classification",
+          "cox",
+          "discrete_hazard"
+        ],
+        "evidence_sources": [
+          "src/openhisto/mil/models/code_bases/registry.py",
+          "src/openhisto/mil/models/code_bases/README.md"
+        ]
+      },
+      {
+        "id": "h2_mil",
+        "name": "H²-MIL",
+        "category": "mil",
+        "family": "graph_multiscale",
+        "module": "openhisto.mil.models.code_bases",
+        "tasks": [
+          "classification"
+        ],
+        "access": "local",
+        "access_note": "Vendored source; random initialization unless explicit compatible local weights are supplied. No bundled trained weights.",
+        "dimensions": {
+          "input": "configurable D",
+          "representation": "resolve with representation_dimension(backbone)"
+        },
+        "description": "Native hierarchical pooling over ordered root, coarse and fine graph nodes.",
+        "input_contract": "PyG graph plus edge_index_tree_8nb, long node_type 0/1/2, node_tree, normalized x_y_index[N,2]; ordered root/coarse/fine.",
+        "extra": "mil-graph-multiscale",
+        "install": "python -m pip install -e \".[mil-graph-multiscale]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/mil/models/code_bases/README.md",
+        "source": "https://github.com/lin-lcx/H2-MIL",
+        "example": "from openhisto.mil.models.code_bases import create_model\n\n# Supply prepared_graph using the documented native input contract.\nmodel = create_model(\"h2_mil\", input_dim=768, num_classes=3, device=\"cpu\")\nmodel.eval()\noutput = model(prepared_graph)\n",
+        "source_revision": "ea472fefd5eab553c58041a5acc203ac7d467d06",
+        "devices": [
+          "cpu"
+        ],
+        "dtype": "float32",
+        "input_kind": "prepared_graph",
+        "attached_tasks": [
+          "neural_classification",
+          "frozen_vector_classification",
+          "cox",
+          "discrete_hazard"
+        ],
+        "evidence_sources": [
+          "src/openhisto/mil/models/code_bases/registry.py",
+          "src/openhisto/mil/models/code_bases/README.md"
+        ]
+      },
+      {
+        "id": "ilra",
+        "name": "ILRA",
+        "category": "mil",
+        "family": "transformers",
+        "module": "openhisto.mil.models.code_bases",
+        "tasks": [
+          "classification"
+        ],
+        "access": "local",
+        "access_note": "Vendored source; random initialization unless explicit compatible local weights are supplied. No bundled trained weights.",
+        "dimensions": {
+          "input": "configurable D",
+          "representation": "resolve with representation_dimension(backbone)"
+        },
+        "description": "Native low-rank attention model operating on feature bags.",
+        "input_contract": "Nonempty float32 feature bag[N,D] or [1,N,D]; native ordering and model-specific minimum sizes apply.",
+        "extra": "mil-transformers",
+        "install": "python -m pip install -e \".[mil-transformers]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/mil/models/code_bases/README.md",
+        "source": "https://github.com/jinxixiang/low_rank_wsi",
+        "example": "from openhisto.mil.models.code_bases import create_model\n\n# Supply patch_features using the documented native input contract.\nmodel = create_model(\"ilra\", input_dim=768, num_classes=3, device=\"cpu\")\nmodel.eval()\noutput = model(patch_features)\n",
+        "source_revision": "bb45b9ba9d4a7096d473f9ee171a6252eb736570",
+        "devices": [
+          "cpu"
+        ],
+        "dtype": "float32",
+        "input_kind": "feature_bag",
+        "attached_tasks": [
+          "neural_classification",
+          "frozen_vector_classification",
+          "cox",
+          "discrete_hazard"
+        ],
+        "evidence_sources": [
+          "src/openhisto/mil/models/code_bases/registry.py",
+          "src/openhisto/mil/models/code_bases/README.md"
+        ]
+      },
+      {
+        "id": "lin_mil",
+        "name": "Lin-MIL",
+        "category": "mil",
+        "family": "transformers",
+        "module": "openhisto.mil.models.code_bases",
+        "tasks": [
+          "classification"
+        ],
+        "access": "local",
+        "access_note": "Vendored source; random initialization unless explicit compatible local weights are supplied. No bundled trained weights.",
+        "dimensions": {
+          "input": "configurable D",
+          "representation": "resolve with representation_dimension(backbone)"
+        },
+        "description": "Native linear-attention MIL; optional CUDA attention ablations are outside the CPU profile.",
+        "input_contract": "Nonempty float32 feature bag[N,D] or [1,N,D]; native ordering and model-specific minimum sizes apply.",
+        "extra": "mil-transformers",
+        "install": "python -m pip install -e \".[mil-transformers]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/mil/models/code_bases/README.md",
+        "source": "https://github.com/charlotterchtr/Lin-MIL",
+        "example": "from openhisto.mil.models.code_bases import create_model\n\n# Supply patch_features using the documented native input contract.\nmodel = create_model(\"lin_mil\", input_dim=768, num_classes=3, device=\"cpu\")\nmodel.eval()\noutput = model(patch_features)\n",
+        "source_revision": "82a00672cfebd7a6cedbd5384b47700a4db5da27",
+        "devices": [
+          "cpu"
+        ],
+        "dtype": "float32",
+        "input_kind": "feature_bag",
+        "attached_tasks": [
+          "neural_classification",
+          "frozen_vector_classification",
+          "cox",
+          "discrete_hazard"
+        ],
+        "evidence_sources": [
+          "src/openhisto/mil/models/code_bases/registry.py",
+          "src/openhisto/mil/models/code_bases/README.md"
+        ]
+      },
+      {
+        "id": "mamba_mil",
+        "name": "MambaMIL",
+        "category": "mil",
+        "family": "transformers",
+        "module": "openhisto.mil.models.code_bases",
+        "tasks": [
+          "classification"
+        ],
+        "access": "local",
+        "access_note": "Vendored source; random initialization unless explicit compatible local weights are supplied. No bundled trained weights.",
+        "dimensions": {
+          "input": "configurable D",
+          "representation": "resolve with representation_dimension(backbone)"
+        },
+        "description": "Classification profile using differentiable Torch reference convolution/scan and native SR padding/transposition.",
+        "input_contract": "Nonempty float32 feature bag[N,D] or [1,N,D]; native ordering and model-specific minimum sizes apply.",
+        "extra": "mil-transformers",
+        "install": "python -m pip install -e \".[mil-transformers]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/mil/models/code_bases/README.md",
+        "source": "https://github.com/isyangshu/MambaMIL",
+        "example": "from openhisto.mil.models.code_bases import create_model\n\n# Supply patch_features using the documented native input contract.\nmodel = create_model(\"mamba_mil\", input_dim=768, num_classes=3, device=\"cpu\")\nmodel.eval()\noutput = model(patch_features)\n",
+        "source_revision": "9aea39efc13fdcd3703b5b54c28a64887b4acbd7",
+        "devices": [
+          "cpu"
+        ],
+        "dtype": "float32",
+        "input_kind": "feature_bag",
+        "attached_tasks": [
+          "neural_classification",
+          "frozen_vector_classification",
+          "cox",
+          "discrete_hazard"
+        ],
+        "evidence_sources": [
+          "src/openhisto/mil/models/code_bases/registry.py",
+          "src/openhisto/mil/models/code_bases/README.md"
+        ]
+      },
+      {
+        "id": "max_mil",
+        "name": "MaxMIL",
+        "category": "mil",
+        "family": "baselines",
+        "module": "openhisto.mil.models.code_bases",
+        "tasks": [
+          "classification"
+        ],
+        "access": "local",
+        "access_note": "Vendored source; random initialization unless explicit compatible local weights are supplied. No bundled trained weights.",
+        "dimensions": {
+          "input": "configurable D",
+          "representation": "resolve with representation_dimension(backbone)"
+        },
+        "description": "Featurewise maximum pooling with the package's classifier.",
+        "input_contract": "Nonempty float32 feature bag[N,D] or [1,N,D]; native ordering and model-specific minimum sizes apply.",
+        "extra": "mil",
+        "install": "python -m pip install -e \".[mil]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/mil/models/code_bases/README.md",
+        "source": null,
+        "example": "from openhisto.mil.models.code_bases import create_model\n\n# Supply patch_features using the documented native input contract.\nmodel = create_model(\"max_mil\", input_dim=768, num_classes=3, device=\"cpu\")\nmodel.eval()\noutput = model(patch_features)\n",
+        "source_revision": null,
+        "devices": [
+          "cpu"
+        ],
+        "dtype": "float32",
+        "input_kind": "feature_bag",
+        "attached_tasks": [
+          "neural_classification",
+          "frozen_vector_classification",
+          "cox",
+          "discrete_hazard"
+        ],
+        "evidence_sources": [
+          "src/openhisto/mil/models/code_bases/registry.py",
+          "src/openhisto/mil/models/code_bases/README.md"
+        ]
+      },
+      {
+        "id": "mean_mil",
+        "name": "MeanMIL",
+        "category": "mil",
+        "family": "baselines",
+        "module": "openhisto.mil.models.code_bases",
+        "tasks": [
+          "classification"
+        ],
+        "access": "local",
+        "access_note": "Vendored source; random initialization unless explicit compatible local weights are supplied. No bundled trained weights.",
+        "dimensions": {
+          "input": "configurable D",
+          "representation": "resolve with representation_dimension(backbone)"
+        },
+        "description": "Featurewise mean pooling with the package's classifier.",
+        "input_contract": "Nonempty float32 feature bag[N,D] or [1,N,D]; native ordering and model-specific minimum sizes apply.",
+        "extra": "mil",
+        "install": "python -m pip install -e \".[mil]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/mil/models/code_bases/README.md",
+        "source": null,
+        "example": "from openhisto.mil.models.code_bases import create_model\n\n# Supply patch_features using the documented native input contract.\nmodel = create_model(\"mean_mil\", input_dim=768, num_classes=3, device=\"cpu\")\nmodel.eval()\noutput = model(patch_features)\n",
+        "source_revision": null,
+        "devices": [
+          "cpu"
+        ],
+        "dtype": "float32",
+        "input_kind": "feature_bag",
+        "attached_tasks": [
+          "neural_classification",
+          "frozen_vector_classification",
+          "cox",
+          "discrete_hazard"
+        ],
+        "evidence_sources": [
+          "src/openhisto/mil/models/code_bases/registry.py",
+          "src/openhisto/mil/models/code_bases/README.md"
+        ]
+      },
+      {
+        "id": "mean_std_mil",
+        "name": "MeanStdMIL",
+        "category": "mil",
+        "family": "baselines",
+        "module": "openhisto.mil.models.code_bases",
+        "tasks": [
+          "classification"
+        ],
+        "access": "local",
+        "access_note": "Vendored source; random initialization unless explicit compatible local weights are supplied. No bundled trained weights.",
+        "dimensions": {
+          "input": "configurable D",
+          "representation": "resolve with representation_dimension(backbone)"
+        },
+        "description": "Concatenated mean and population standard deviation; singleton bags remain finite.",
+        "input_contract": "Nonempty float32 feature bag[N,D] or [1,N,D]; native ordering and model-specific minimum sizes apply.",
+        "extra": "mil",
+        "install": "python -m pip install -e \".[mil]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/mil/models/code_bases/README.md",
+        "source": null,
+        "example": "from openhisto.mil.models.code_bases import create_model\n\n# Supply patch_features using the documented native input contract.\nmodel = create_model(\"mean_std_mil\", input_dim=768, num_classes=3, device=\"cpu\")\nmodel.eval()\noutput = model(patch_features)\n",
+        "source_revision": null,
+        "devices": [
+          "cpu"
+        ],
+        "dtype": "float32",
+        "input_kind": "feature_bag",
+        "attached_tasks": [
+          "neural_classification",
+          "frozen_vector_classification",
+          "cox",
+          "discrete_hazard"
+        ],
+        "evidence_sources": [
+          "src/openhisto/mil/models/code_bases/registry.py",
+          "src/openhisto/mil/models/code_bases/README.md"
+        ]
+      },
+      {
+        "id": "mhim_v1",
+        "name": "MHIM v1",
+        "category": "mil",
+        "family": "transformers",
+        "module": "openhisto.mil.models.code_bases",
+        "tasks": [
+          "classification"
+        ],
+        "access": "local",
+        "access_note": "Vendored source; random initialization unless explicit compatible local weights are supplied. No bundled trained weights.",
+        "dimensions": {
+          "input": "configurable D",
+          "representation": "resolve with representation_dimension(backbone)"
+        },
+        "description": "MHIM student/EMA teacher with native masking, distillation loss and explicit teacher updates.",
+        "input_contract": "Nonempty float32 feature bag[N,D] or [1,N,D]; native ordering and model-specific minimum sizes apply.",
+        "extra": "mil-transformers",
+        "install": "python -m pip install -e \".[mil-transformers]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/mil/models/code_bases/README.md",
+        "source": "https://github.com/DearCaat/MHIM-MIL",
+        "example": "from openhisto.mil.models.code_bases import create_model\n\n# Supply patch_features using the documented native input contract.\nmodel = create_model(\"mhim_v1\", input_dim=768, num_classes=3, device=\"cpu\")\nmodel.eval()\noutput = model(patch_features)\n",
+        "source_revision": "5377eb6014bbd24eda1185628b864e8ef3622a08",
+        "devices": [
+          "cpu"
+        ],
+        "dtype": "float32",
+        "input_kind": "feature_bag",
+        "attached_tasks": [
+          "neural_classification",
+          "frozen_vector_classification",
+          "cox",
+          "discrete_hazard"
+        ],
+        "evidence_sources": [
+          "src/openhisto/mil/models/code_bases/registry.py",
+          "src/openhisto/mil/models/code_bases/README.md"
+        ]
+      },
+      {
+        "id": "mhim_v2",
+        "name": "MHIM v2",
+        "category": "mil",
+        "family": "transformers",
+        "module": "openhisto.mil.models.code_bases",
+        "tasks": [
+          "classification"
+        ],
+        "access": "local",
+        "access_note": "Vendored source; random initialization unless explicit compatible local weights are supplied. No bundled trained weights.",
+        "dimensions": {
+          "input": "configurable D",
+          "representation": "resolve with representation_dimension(backbone)"
+        },
+        "description": "Second MHIM source track retaining token merging, masking and checkpointed EMA teacher state.",
+        "input_contract": "Nonempty float32 feature bag[N,D] or [1,N,D]; native ordering and model-specific minimum sizes apply.",
+        "extra": "mil-transformers",
+        "install": "python -m pip install -e \".[mil-transformers]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/mil/models/code_bases/README.md",
+        "source": "https://github.com/DearCaat/MHIM-MIL",
+        "example": "from openhisto.mil.models.code_bases import create_model\n\n# Supply patch_features using the documented native input contract.\nmodel = create_model(\"mhim_v2\", input_dim=768, num_classes=3, device=\"cpu\")\nmodel.eval()\noutput = model(patch_features)\n",
+        "source_revision": "9d0c91abeb1b39f91c161b47cf14bc44f5a89da3",
+        "devices": [
+          "cpu"
+        ],
+        "dtype": "float32",
+        "input_kind": "feature_bag",
+        "attached_tasks": [
+          "neural_classification",
+          "frozen_vector_classification",
+          "cox",
+          "discrete_hazard"
+        ],
+        "evidence_sources": [
+          "src/openhisto/mil/models/code_bases/registry.py",
+          "src/openhisto/mil/models/code_bases/README.md"
+        ]
+      },
+      {
+        "id": "nnmil",
+        "name": "nnMIL",
+        "category": "mil",
+        "family": "transformers",
+        "module": "openhisto.mil.models.code_bases",
+        "tasks": [
+          "classification"
+        ],
+        "access": "local",
+        "access_note": "Vendored source; random initialization unless explicit compatible local weights are supplied. No bundled trained weights.",
+        "dimensions": {
+          "input": "configurable D",
+          "representation": "resolve with representation_dimension(backbone)"
+        },
+        "description": "Native training sampling and evaluation-window ensemble; returned mean window features support attached heads.",
+        "input_contract": "Nonempty float32 feature bag[N,D] or [1,N,D]; native ordering and model-specific minimum sizes apply.",
+        "extra": "mil-transformers",
+        "install": "python -m pip install -e \".[mil-transformers]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/mil/models/code_bases/README.md",
+        "source": "https://github.com/Luoxd1996/nnMIL",
+        "example": "from openhisto.mil.models.code_bases import create_model\n\n# Supply patch_features using the documented native input contract.\nmodel = create_model(\"nnmil\", input_dim=768, num_classes=3, device=\"cpu\")\nmodel.eval()\noutput = model(patch_features)\n",
+        "source_revision": "e92e8a0cf72dc1beb2a5915e27ca128af45fcb40",
+        "devices": [
+          "cpu"
+        ],
+        "dtype": "float32",
+        "input_kind": "feature_bag",
+        "attached_tasks": [
+          "neural_classification",
+          "frozen_vector_classification",
+          "cox",
+          "discrete_hazard"
+        ],
+        "evidence_sources": [
+          "src/openhisto/mil/models/code_bases/registry.py",
+          "src/openhisto/mil/models/code_bases/README.md"
+        ]
+      },
+      {
+        "id": "panther",
+        "name": "PANTHER",
+        "category": "mil",
+        "family": "attention",
+        "module": "openhisto.mil.models.code_bases",
+        "tasks": [
+          "representation",
+          "classification_with_adapter_head"
+        ],
+        "access": "local",
+        "access_note": "Vendored source; random initialization unless explicit compatible local weights are supplied. No bundled trained weights.",
+        "dimensions": {
+          "input": "configurable D",
+          "representation": "resolve with representation_dimension(backbone)"
+        },
+        "description": "Prototype/EM representation with an added downstream linear classifier; requires training-fitted prototypes.",
+        "input_contract": "Nonempty float32 feature bag[N,D] and finite training-fitted .npy prototype matrix[P,D].",
+        "extra": "mil-attention",
+        "install": "python -m pip install -e \".[mil-attention]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/mil/models/code_bases/README.md",
+        "source": "https://github.com/mahmoodlab/PANTHER",
+        "example": "from openhisto.mil.models.code_bases import create_model\n\n# Supply patch_features using the documented native input contract.\nmodel = create_model(\"panther\", input_dim=768, num_classes=3, device=\"cpu\", prototype_path=\"training_prototypes.npy\")\nmodel.eval()\noutput = model(patch_features)\n",
+        "source_revision": "e7ffae402e146363fe1ca3813ffe68d248ec570f",
+        "devices": [
+          "cpu"
+        ],
+        "dtype": "float32",
+        "input_kind": "feature_bag",
+        "attached_tasks": [
+          "neural_classification",
+          "frozen_vector_classification",
+          "cox",
+          "discrete_hazard"
+        ],
+        "evidence_sources": [
+          "src/openhisto/mil/models/code_bases/registry.py",
+          "src/openhisto/mil/models/code_bases/README.md"
+        ]
+      },
+      {
+        "id": "patch_gcn",
+        "name": "Patch-GCN",
+        "category": "mil",
+        "family": "graph_multiscale",
+        "module": "openhisto.mil.models.code_bases",
+        "tasks": [
+          "discrete_survival"
+        ],
+        "access": "local",
+        "access_note": "Vendored source; random initialization unless explicit compatible local weights are supplied. No bundled trained weights.",
+        "dimensions": {
+          "input": "configurable D",
+          "representation": "resolve with representation_dimension(backbone)"
+        },
+        "description": "Prepared graph with native discrete-survival hazards; native num_classes denotes time bins.",
+        "input_contract": "PyG Data: x[N,D], long edge_index[2,E]; edge_latent when selected. Supports [2,0] edges and singleton nodes.",
+        "extra": "mil-graph-multiscale",
+        "install": "python -m pip install -e \".[mil-graph-multiscale]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/mil/models/code_bases/README.md",
+        "source": "https://github.com/mahmoodlab/Patch-GCN",
+        "example": "from openhisto.mil.models.code_bases import create_model\n\n# Supply prepared_graph using the documented native input contract.\nmodel = create_model(\"patch_gcn\", input_dim=768, num_classes=3, device=\"cpu\")\nmodel.eval()\noutput = model(prepared_graph)\n",
+        "source_revision": "823addaee5b8f4cc2bec3ea8e5e0077b2a5115a4",
+        "devices": [
+          "cpu"
+        ],
+        "dtype": "float32",
+        "input_kind": "prepared_graph",
+        "attached_tasks": [
+          "neural_classification",
+          "frozen_vector_classification",
+          "cox",
+          "discrete_hazard"
+        ],
+        "evidence_sources": [
+          "src/openhisto/mil/models/code_bases/registry.py",
+          "src/openhisto/mil/models/code_bases/README.md"
+        ]
+      },
+      {
+        "id": "resgat",
+        "name": "ResGAT",
+        "category": "mil",
+        "family": "graph_multiscale",
+        "module": "openhisto.mil.models.code_bases",
+        "tasks": [
+          "classification"
+        ],
+        "access": "local",
+        "access_note": "Vendored source; random initialization unless explicit compatible local weights are supplied. No bundled trained weights.",
+        "dimensions": {
+          "input": "configurable D",
+          "representation": "resolve with representation_dimension(backbone)"
+        },
+        "description": "Native residual graph-attention computation on a caller-prepared graph.",
+        "input_contract": "PyG Data: x[N,D], long edge_index[2,E]; optional long all-zero batch. Supports [2,0] edges and singleton nodes.",
+        "extra": "mil-graph-multiscale",
+        "install": "python -m pip install -e \".[mil-graph-multiscale]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/mil/models/code_bases/README.md",
+        "source": "https://github.com/maiziezhoulab/ResGAT",
+        "example": "from openhisto.mil.models.code_bases import create_model\n\n# Supply prepared_graph using the documented native input contract.\nmodel = create_model(\"resgat\", input_dim=768, num_classes=3, device=\"cpu\")\nmodel.eval()\noutput = model(prepared_graph)\n",
+        "source_revision": "65e2833c6207b7d13de2baf649a6eeece63ce71c",
+        "devices": [
+          "cpu"
+        ],
+        "dtype": "float32",
+        "input_kind": "prepared_graph",
+        "attached_tasks": [
+          "neural_classification",
+          "frozen_vector_classification",
+          "cox",
+          "discrete_hazard"
+        ],
+        "evidence_sources": [
+          "src/openhisto/mil/models/code_bases/registry.py",
+          "src/openhisto/mil/models/code_bases/README.md"
+        ]
+      },
+      {
+        "id": "rrt_mil",
+        "name": "RRT-MIL / R²T-MIL",
+        "category": "mil",
+        "family": "transformers",
+        "module": "openhisto.mil.models.code_bases",
+        "tasks": [
+          "classification"
+        ],
+        "access": "local",
+        "access_note": "Vendored source; random initialization unless explicit compatible local weights are supplied. No bundled trained weights.",
+        "dimensions": {
+          "input": "configurable D",
+          "representation": "resolve with representation_dimension(backbone)"
+        },
+        "description": "Native regional transformer; feature bags support none/peg/ppeg positions and attention/average pooling.",
+        "input_contract": "Nonempty float32 feature bag[N,D] or [1,N,D]; native ordering and model-specific minimum sizes apply.",
+        "extra": "mil-transformers",
+        "install": "python -m pip install -e \".[mil-transformers]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/mil/models/code_bases/README.md",
+        "source": "https://github.com/DearCaat/RRT-MIL",
+        "example": "from openhisto.mil.models.code_bases import create_model\n\n# Supply patch_features using the documented native input contract.\nmodel = create_model(\"rrt_mil\", input_dim=768, num_classes=3, device=\"cpu\")\nmodel.eval()\noutput = model(patch_features)\n",
+        "source_revision": "3320b6616b2c3d96ddc5bcd1aecea865a064987f",
+        "devices": [
+          "cpu"
+        ],
+        "dtype": "float32",
+        "input_kind": "feature_bag",
+        "attached_tasks": [
+          "neural_classification",
+          "frozen_vector_classification",
+          "cox",
+          "discrete_hazard"
+        ],
+        "evidence_sources": [
+          "src/openhisto/mil/models/code_bases/registry.py",
+          "src/openhisto/mil/models/code_bases/README.md"
+        ]
+      },
+      {
+        "id": "slidegraph_plus",
+        "name": "SlideGraph+",
+        "category": "mil",
+        "family": "graph_multiscale",
+        "module": "openhisto.mil.models.code_bases",
+        "tasks": [
+          "classification"
+        ],
+        "access": "local",
+        "access_note": "Vendored source; random initialization unless explicit compatible local weights are supplied. No bundled trained weights.",
+        "dimensions": {
+          "input": "configurable D",
+          "representation": "resolve with representation_dimension(backbone)"
+        },
+        "description": "Clustered-region graph with released EdgeConv aggregation; GIN is an explicit alternative.",
+        "input_contract": "Caller-prepared clustered-region PyG graph with feature-aligned long edges; one graph per call.",
+        "extra": "mil-graph-multiscale",
+        "install": "python -m pip install -e \".[mil-graph-multiscale]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/mil/models/code_bases/README.md",
+        "source": "https://github.com/wenqi006/SlideGraph",
+        "example": "from openhisto.mil.models.code_bases import create_model\n\n# Supply prepared_graph using the documented native input contract.\nmodel = create_model(\"slidegraph_plus\", input_dim=768, num_classes=3, device=\"cpu\")\nmodel.eval()\noutput = model(prepared_graph)\n",
+        "source_revision": "23fbf58371a86525ea2daf0eb0232b379b1b8831",
+        "devices": [
+          "cpu"
+        ],
+        "dtype": "float32",
+        "input_kind": "prepared_graph",
+        "attached_tasks": [
+          "neural_classification",
+          "frozen_vector_classification",
+          "cox",
+          "discrete_hazard"
+        ],
+        "evidence_sources": [
+          "src/openhisto/mil/models/code_bases/registry.py",
+          "src/openhisto/mil/models/code_bases/README.md"
+        ]
+      },
+      {
+        "id": "tad_graph",
+        "name": "TAD-Graph",
+        "category": "mil",
+        "family": "graph_multiscale",
+        "module": "openhisto.mil.models.code_bases",
+        "tasks": [
+          "classification",
+          "discrete_survival"
+        ],
+        "access": "local",
+        "access_note": "Vendored source; random initialization unless explicit compatible local weights are supplied. No bundled trained weights.",
+        "dimensions": {
+          "input": "configurable D",
+          "representation": "resolve with representation_dimension(backbone)"
+        },
+        "description": "Prepared causal/trivial graphs, normalized edge descriptors and information loss; native survival is optional.",
+        "input_contract": "PyG Data: x[N,D], long edge_index[2,E], normalized distance/angle edge_attr[E,2] in [0,1]; one graph.",
+        "extra": "mil-graph-multiscale",
+        "install": "python -m pip install -e \".[mil-graph-multiscale]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/mil/models/code_bases/README.md",
+        "source": "https://github.com/HKU-MedAI/TAD-Graph",
+        "example": "from openhisto.mil.models.code_bases import create_model\n\n# Supply prepared_graph using the documented native input contract.\nmodel = create_model(\"tad_graph\", input_dim=768, num_classes=3, device=\"cpu\")\nmodel.eval()\noutput = model(prepared_graph)\n",
+        "source_revision": "696f2196adc38edfd18468869f7a5a5b0a0d3abb",
+        "devices": [
+          "cpu"
+        ],
+        "dtype": "float32",
+        "input_kind": "prepared_graph",
+        "attached_tasks": [
+          "neural_classification",
+          "frozen_vector_classification",
+          "cox",
+          "discrete_hazard"
+        ],
+        "evidence_sources": [
+          "src/openhisto/mil/models/code_bases/registry.py",
+          "src/openhisto/mil/models/code_bases/README.md"
+        ]
+      },
+      {
+        "id": "transmil",
+        "name": "TransMIL",
+        "category": "mil",
+        "family": "transformers",
+        "module": "openhisto.mil.models.code_bases",
+        "tasks": [
+          "classification"
+        ],
+        "access": "local",
+        "access_note": "Vendored source; random initialization unless explicit compatible local weights are supplied. No bundled trained weights.",
+        "dimensions": {
+          "input": "configurable D",
+          "representation": "resolve with representation_dimension(backbone)"
+        },
+        "description": "Native transformer MIL computation with a device-local class token.",
+        "input_contract": "Nonempty float32 feature bag[N,D] or [1,N,D]; native ordering and model-specific minimum sizes apply.",
+        "extra": "mil-transformers",
+        "install": "python -m pip install -e \".[mil-transformers]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/mil/models/code_bases/README.md",
+        "source": "https://github.com/szc19990412/TransMIL",
+        "example": "from openhisto.mil.models.code_bases import create_model\n\n# Supply patch_features using the documented native input contract.\nmodel = create_model(\"transmil\", input_dim=768, num_classes=3, device=\"cpu\")\nmodel.eval()\noutput = model(patch_features)\n",
+        "source_revision": "9d6aee57c7c72375fb9132dc58cd8c9b0f0a949c",
+        "devices": [
+          "cpu"
+        ],
+        "dtype": "float32",
+        "input_kind": "feature_bag",
+        "attached_tasks": [
+          "neural_classification",
+          "frozen_vector_classification",
+          "cox",
+          "discrete_hazard"
+        ],
+        "evidence_sources": [
+          "src/openhisto/mil/models/code_bases/registry.py",
+          "src/openhisto/mil/models/code_bases/README.md"
+        ]
+      },
+      {
+        "id": "varpool",
+        "name": "VarPool",
+        "category": "mil",
+        "family": "attention",
+        "module": "openhisto.mil.models.code_bases",
+        "tasks": [
+          "classification"
+        ],
+        "access": "local",
+        "access_note": "Vendored source; random initialization unless explicit compatible local weights are supplied. No bundled trained weights.",
+        "dimensions": {
+          "input": "configurable D",
+          "representation": "resolve with representation_dimension(backbone)"
+        },
+        "description": "Native attention mean/variance pooling with configurable variance readout.",
+        "input_contract": "Nonempty float32 feature bag[N,D] or [1,N,D]; native ordering and model-specific minimum sizes apply.",
+        "extra": "mil-attention",
+        "install": "python -m pip install -e \".[mil-attention]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/mil/models/code_bases/README.md",
+        "source": "https://github.com/mahmoodlab/varpool",
+        "example": "from openhisto.mil.models.code_bases import create_model\n\n# Supply patch_features using the documented native input contract.\nmodel = create_model(\"varpool\", input_dim=768, num_classes=3, device=\"cpu\")\nmodel.eval()\noutput = model(patch_features)\n",
+        "source_revision": "2e40ab4d9a129e430fdb7dcf3304f55388f2ad88",
+        "devices": [
+          "cpu"
+        ],
+        "dtype": "float32",
+        "input_kind": "feature_bag",
+        "attached_tasks": [
+          "neural_classification",
+          "frozen_vector_classification",
+          "cox",
+          "discrete_hazard"
+        ],
+        "evidence_sources": [
+          "src/openhisto/mil/models/code_bases/registry.py",
+          "src/openhisto/mil/models/code_bases/README.md"
+        ]
+      },
+      {
+        "id": "wikg",
+        "name": "WiKG",
+        "category": "mil",
+        "family": "graph_multiscale",
+        "module": "openhisto.mil.models.code_bases",
+        "tasks": [
+          "classification"
+        ],
+        "access": "local",
+        "access_note": "Vendored source; random initialization unless explicit compatible local weights are supplied. No bundled trained weights.",
+        "dimensions": {
+          "input": "configurable D",
+          "representation": "resolve with representation_dimension(backbone)"
+        },
+        "description": "Learns a graph from feature bags; the released network requires no patch coordinates.",
+        "input_contract": "Float32 feature bag[N,D], with at least topk instances; no coordinates required by the released network.",
+        "extra": "mil-graph-multiscale",
+        "install": "python -m pip install -e \".[mil-graph-multiscale]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/mil/models/code_bases/README.md",
+        "source": "https://github.com/WonderLandxD/WiKG",
+        "example": "from openhisto.mil.models.code_bases import create_model\n\n# Supply patch_features using the documented native input contract.\nmodel = create_model(\"wikg\", input_dim=768, num_classes=3, device=\"cpu\")\nmodel.eval()\noutput = model(patch_features)\n",
+        "source_revision": "eb3144fb8267f525c57e71ced5c5b2b6a1c42a93",
+        "devices": [
+          "cpu"
+        ],
+        "dtype": "float32",
+        "input_kind": "feature_bag",
+        "attached_tasks": [
+          "neural_classification",
+          "frozen_vector_classification",
+          "cox",
+          "discrete_hazard"
+        ],
+        "evidence_sources": [
+          "src/openhisto/mil/models/code_bases/registry.py",
+          "src/openhisto/mil/models/code_bases/README.md"
+        ]
+      },
+      {
+        "id": "zoommil",
+        "name": "ZoomMIL",
+        "category": "mil",
+        "family": "graph_multiscale",
+        "module": "openhisto.mil.models.code_bases",
+        "tasks": [
+          "classification"
+        ],
+        "access": "local",
+        "access_note": "Vendored source; random initialization unless explicit compatible local weights are supplied. No bundled trained weights.",
+        "dimensions": {
+          "input": "configurable D",
+          "representation": "resolve with representation_dimension(backbone)"
+        },
+        "description": "Native three-level zoom selection over parent-major multiscale features.",
+        "input_contract": "Dictionary: levels=(low,middle,high), contiguous parent-major ordering with integer child-count ratios.",
+        "extra": "mil-graph-multiscale",
+        "install": "python -m pip install -e \".[mil-graph-multiscale]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/mil/models/code_bases/README.md",
+        "source": "https://github.com/histocartography/zoommil",
+        "example": "from openhisto.mil.models.code_bases import create_model\n\n# Supply prepared_hierarchy using the documented native input contract.\nmodel = create_model(\"zoommil\", input_dim=768, num_classes=3, device=\"cpu\")\nmodel.eval()\noutput = model(prepared_hierarchy)\n",
+        "source_revision": "da7bb7fa71629d34e9b04859c1db791ac8330f5d",
+        "devices": [
+          "cpu"
+        ],
+        "dtype": "float32",
+        "input_kind": "prepared_hierarchy",
+        "attached_tasks": [
+          "neural_classification",
+          "frozen_vector_classification",
+          "cox",
+          "discrete_hazard"
+        ],
+        "evidence_sources": [
+          "src/openhisto/mil/models/code_bases/registry.py",
+          "src/openhisto/mil/models/code_bases/README.md"
+        ]
+      }
+    ],
+    "segmentation": [
+      {
+        "id": "deeplabv3",
+        "name": "DeepLabV3",
+        "category": "segmentation",
+        "family": "standard",
+        "module": "openhisto.segmentation",
+        "tasks": [
+          "binary_semantic_segmentation",
+          "multiclass_semantic_segmentation"
+        ],
+        "access": "public_checkpoint",
+        "access_note": "No trained pathology checkpoint is bundled; default initialization is described explicitly.",
+        "dimensions": {
+          "output": "labels[H,W]; optional scores/probabilities[C,H,W]"
+        },
+        "description": "torchvision pretrained ResNet50 with a replaced class head and pixel cross-entropy.",
+        "input_contract": "RGB patches/arrays, explicit manifests or patch archives; labelled masks for training; binary/multiclass semantic labels with an explicit mask schema.",
+        "extra": "segmentation-torch",
+        "install": "python -m pip install -e \".[segmentation-torch]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/segmentation/README.md",
+        "source": null,
+        "example": "from openhisto.segmentation import ModelConfig, prepare_model\n\nmodel = prepare_model(ModelConfig(model=\"deeplabv3\", num_classes=2), device=\"cpu\")\n",
+        "default_initialization": "DeepLabV3_ResNet50_Weights.DEFAULT",
+        "supports_logits": true,
+        "evidence_sources": [
+          "src/openhisto/segmentation/semantic/registry.py",
+          "src/openhisto/segmentation/README.md"
+        ]
+      },
+      {
+        "id": "mask2former",
+        "name": "Mask2Former",
+        "category": "segmentation",
+        "family": "standard",
+        "module": "openhisto.segmentation",
+        "tasks": [
+          "binary_semantic_segmentation",
+          "multiclass_semantic_segmentation"
+        ],
+        "access": "public_checkpoint",
+        "access_note": "No trained pathology checkpoint is bundled; default initialization is described explicitly.",
+        "dimensions": {
+          "output": "labels[H,W]; optional scores/probabilities[C,H,W]"
+        },
+        "description": "Native query classification with matched mask BCE and Dice; exports summed query-class mask scores, not class logits.",
+        "input_contract": "RGB patches/arrays, explicit manifests or patch archives; labelled masks for training; binary/multiclass semantic labels with an explicit mask schema.",
+        "extra": "segmentation-transformers",
+        "install": "python -m pip install -e \".[segmentation-transformers]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/segmentation/README.md",
+        "source": "https://huggingface.co/facebook/mask2former-swin-tiny-ade-semantic",
+        "example": "from openhisto.segmentation import ModelConfig, prepare_model\n\nmodel = prepare_model(ModelConfig(model=\"mask2former\", num_classes=2), device=\"cpu\")\n",
+        "default_initialization": "facebook/mask2former-swin-tiny-ade-semantic",
+        "supports_logits": false,
+        "evidence_sources": [
+          "src/openhisto/segmentation/semantic/registry.py",
+          "src/openhisto/segmentation/README.md"
+        ]
+      },
+      {
+        "id": "sam2",
+        "name": "SAM 2",
+        "category": "segmentation",
+        "family": "special",
+        "module": "openhisto.segmentation",
+        "tasks": [
+          "binary_semantic_segmentation"
+        ],
+        "access": "public_checkpoint",
+        "access_note": "SAM 2 additionally requires a separately installed pinned official source.",
+        "dimensions": {
+          "output": "labels[H,W]; optional scores/probabilities[C,H,W]"
+        },
+        "description": "Official prompt-conditioned image model with binary BCE and Dice; explicit prompts are required at inference.",
+        "input_contract": "RGB patches/arrays, explicit manifests or patch archives; labelled masks for training; user-supplied prompts for binary inference.",
+        "extra": "segmentation-sam2",
+        "install": "python -m pip install -e \".[segmentation-sam2]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/segmentation/README.md",
+        "source": "https://github.com/facebookresearch/sam2",
+        "example": "from openhisto.segmentation import ModelConfig, prepare_model\n\n# Install the pinned source from requirements-sam2.txt first.\nmodel = prepare_model(ModelConfig(\n    model=\"sam2\", num_classes=2,\n    model_name_or_path=\"facebook/sam2-hiera-large\",\n), device=\"cpu\")\n# Prediction samples must provide explicit prompts.\n",
+        "default_initialization": "explicit official checkpoint/config",
+        "supports_logits": true,
+        "evidence_sources": [
+          "src/openhisto/segmentation/semantic/registry.py",
+          "src/openhisto/segmentation/README.md"
+        ]
+      },
+      {
+        "id": "segdiff",
+        "name": "SegDiff",
+        "category": "segmentation",
+        "family": "special",
+        "module": "openhisto.segmentation",
+        "tasks": [
+          "binary_semantic_segmentation",
+          "multiclass_semantic_segmentation"
+        ],
+        "access": "local",
+        "access_note": "No trained pathology checkpoint is bundled; default initialization is described explicitly.",
+        "dimensions": {
+          "output": "labels[H,W]; optional scores/probabilities[C,H,W]"
+        },
+        "description": "Random embedding-conditioned mask diffusion; noise MSE plus CE and Dice, with explicit embedding alignment.",
+        "input_contract": "RGB patches/arrays, explicit manifests or patch archives; labelled masks for training; aligned embeddings for SegDiff.",
+        "extra": "segmentation-segdiff",
+        "install": "python -m pip install -e \".[segmentation-segdiff]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/segmentation/README.md",
+        "source": null,
+        "example": "from openhisto.segmentation import ModelConfig, prepare_model\n\nmodel = prepare_model(ModelConfig(model=\"segdiff\", num_classes=2), device=\"cpu\")\n# Training and prediction samples must supply aligned patch embeddings.\n",
+        "default_initialization": "random_embedding_conditioned_diffusion",
+        "supports_logits": true,
+        "evidence_sources": [
+          "src/openhisto/segmentation/semantic/registry.py",
+          "src/openhisto/segmentation/README.md"
+        ]
+      },
+      {
+        "id": "segformer",
+        "name": "SegFormer",
+        "category": "segmentation",
+        "family": "standard",
+        "module": "openhisto.segmentation",
+        "tasks": [
+          "binary_semantic_segmentation",
+          "multiclass_semantic_segmentation"
+        ],
+        "access": "public_checkpoint",
+        "access_note": "No trained pathology checkpoint is bundled; default initialization is described explicitly.",
+        "dimensions": {
+          "output": "labels[H,W]; optional scores/probabilities[C,H,W]"
+        },
+        "description": "Pretrained semantic backbone with pixel cross-entropy and a task-specific class head.",
+        "input_contract": "RGB patches/arrays, explicit manifests or patch archives; labelled masks for training; binary/multiclass semantic labels with an explicit mask schema.",
+        "extra": "segmentation-transformers",
+        "install": "python -m pip install -e \".[segmentation-transformers]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/segmentation/README.md",
+        "source": "https://huggingface.co/nvidia/segformer-b5-finetuned-ade-640-640",
+        "example": "from openhisto.segmentation import ModelConfig, prepare_model\n\nmodel = prepare_model(ModelConfig(model=\"segformer\", num_classes=2), device=\"cpu\")\n",
+        "default_initialization": "nvidia/segformer-b5-finetuned-ade-640-640",
+        "supports_logits": true,
+        "evidence_sources": [
+          "src/openhisto/segmentation/semantic/registry.py",
+          "src/openhisto/segmentation/README.md"
+        ]
+      },
+      {
+        "id": "upernet",
+        "name": "UPerNet",
+        "category": "segmentation",
+        "family": "standard",
+        "module": "openhisto.segmentation",
+        "tasks": [
+          "binary_semantic_segmentation",
+          "multiclass_semantic_segmentation"
+        ],
+        "access": "local",
+        "access_note": "No trained pathology checkpoint is bundled; default initialization is described explicitly.",
+        "dimensions": {
+          "output": "labels[H,W]; optional scores/probabilities[C,H,W]"
+        },
+        "description": "Random ConvNeXt initialization by default; an explicit model path selects pretrained initialization.",
+        "input_contract": "RGB patches/arrays, explicit manifests or patch archives; labelled masks for training; binary/multiclass semantic labels with an explicit mask schema.",
+        "extra": "segmentation-transformers",
+        "install": "python -m pip install -e \".[segmentation-transformers]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/segmentation/README.md",
+        "source": "https://huggingface.co/openmmlab/upernet-swin-tiny",
+        "example": "from openhisto.segmentation import ModelConfig, prepare_model\n\nmodel = prepare_model(ModelConfig(model=\"upernet\", num_classes=2), device=\"cpu\")\n",
+        "default_initialization": "random_convnext",
+        "supports_logits": true,
+        "evidence_sources": [
+          "src/openhisto/segmentation/semantic/registry.py",
+          "src/openhisto/segmentation/README.md"
+        ]
+      }
+    ],
+    "vla": [
+      {
+        "id": "pa_llava",
+        "name": "PA-LLaVA / Pathology-LLaVA",
+        "category": "vla",
+        "family": "pathology_vision_language",
+        "module": "openhisto.vlas",
+        "tasks": [
+          "prompted_patch_description"
+        ],
+        "access": "restricted_artifacts",
+        "access_note": "Public XTuner checkpoint; prepared adapters, custom PLIP encoder and authorized Llama 3 base model required. This integration is experimental; prepared-asset and real-model validation remain required.",
+        "dimensions": null,
+        "description": "Our experimental PA-LLaVA integration supports prompt-conditioned patch descriptions using prepared stage-2 adapters, PLIP and an authorized Llama 3 base model.",
+        "input_contract": "Indexed patch HDF5 archive or explicit RGB patch manifest plus a text prompt; stable patch identities are retained.",
+        "extra": "vlas",
+        "install": "python -m pip install -e \".[vlas]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/vlas/README.md",
+        "source": "https://github.com/ddw2AIGROUP2CQUPT/PA-LLaVA",
+        "example": "from openhisto.vlas import SourceSpec, ModelSpec, DescribeConfig, describe_slide\n\n# Prepare the model's separate native environment/artifacts first.\nreport = describe_slide(\n    inputs=[SourceSpec(\"patches/slide.h5\", source_id=\"grid-20x\")],\n    output=\"descriptions/slide\",\n    models=[ModelSpec('pa_llava', python_executable=\"/path/to/backend/bin/python\")],\n    prompt=\"Describe visible tissue architecture and nuclear morphology.\",\n    config=DescribeConfig(slide_id=\"slide-a\"),\n)\n",
+        "status": "experimental",
+        "source_revision": "a5c71d31e37aa37eec4249e4c0973a80581402ef",
+        "checkpoint": "OpenFace-CQUPT/Pathology-LLaVA",
+        "checkpoint_revision": "32bb3deb9fe47c53163fc79aac011b81a8031801",
+        "license_note": "Apache-2.0 checkpoint card; Meta Llama 3 base-model terms apply",
+        "required_artifacts": [
+          "prepared llm_adapter and projector",
+          "PA-LLaVA custom PLIP encoder",
+          "Meta-Llama-3-8B-Instruct and tokenizer",
+          "native PA-LLaVA code"
+        ],
+        "worker_requirements": [
+          "requirements-pallava.txt"
+        ],
+        "evidence_sources": [
+          "src/openhisto/vlas/registry.py",
+          "src/openhisto/vlas/README.md"
+        ]
+      },
+      {
+        "id": "pathchat_plus",
+        "name": "PathChat+",
+        "category": "vla",
+        "family": "pathology_vision_language",
+        "module": "openhisto.vlas",
+        "tasks": [
+          "prompted_patch_description"
+        ],
+        "access": "unavailable",
+        "access_note": "This profile currently records model provenance and access requirements. We need the complete checkpoint and compatible inference artifacts before enabling inference.",
+        "dimensions": null,
+        "description": "We plan to add complete PathChat+ inference support in a future release.",
+        "input_contract": "Indexed patch HDF5 archive or explicit RGB patch manifest plus a text prompt; stable patch identities are retained.",
+        "extra": "vlas",
+        "install": "python -m pip install -e \".[vlas]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/vlas/README.md",
+        "source": "https://arxiv.org/abs/2506.20964",
+        "example": "from openhisto.vlas import model_info\n\n# Inspect profile metadata and access requirements.\nprint(model_info(\"pathchat_plus\"))\n",
+        "status": "unavailable",
+        "source_revision": "2506.20964v2",
+        "checkpoint": null,
+        "checkpoint_revision": null,
+        "license_note": "Access and use terms must be obtained from the authors",
+        "required_artifacts": [
+          "authorized complete PathChat+ checkpoint and matching inference implementation"
+        ],
+        "worker_requirements": [],
+        "evidence_sources": [
+          "src/openhisto/vlas/registry.py",
+          "src/openhisto/vlas/README.md"
+        ]
+      },
+      {
+        "id": "pathgen_llava",
+        "name": "PathGen-LLaVA-13B",
+        "category": "vla",
+        "family": "pathology_vision_language",
+        "module": "openhisto.vlas",
+        "tasks": [
+          "prompted_patch_description"
+        ],
+        "access": "public_with_terms",
+        "access_note": "Public checkpoint; separate PathGen-CLIP visual encoder required. Our integration's real-checkpoint/native-reference acceptance remains unverified.",
+        "dimensions": null,
+        "description": "Our PathGen-LLaVA integration generates prompt-conditioned patch descriptions with its separate PathGen-CLIP visual encoder and native LLaVA environment.",
+        "input_contract": "Indexed patch HDF5 archive or explicit RGB patch manifest plus a text prompt; stable patch identities are retained.",
+        "extra": "vlas",
+        "install": "python -m pip install -e \".[vlas]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/vlas/README.md",
+        "source": "https://github.com/haotian-liu/LLaVA",
+        "example": "from openhisto.vlas import SourceSpec, ModelSpec, DescribeConfig, describe_slide\n\n# Prepare the model's separate native environment/artifacts first.\nreport = describe_slide(\n    inputs=[SourceSpec(\"patches/slide.h5\", source_id=\"grid-20x\")],\n    output=\"descriptions/slide\",\n    models=[ModelSpec('pathgen_llava', python_executable=\"/path/to/backend/bin/python\")],\n    prompt=\"Describe visible tissue architecture and nuclear morphology.\",\n    config=DescribeConfig(slide_id=\"slide-a\"),\n)\n",
+        "status": "unverified",
+        "source_revision": "c121f0432da27facab705978f83c4ada465e46fd",
+        "checkpoint": "jamessyx/PathGen-LLaVA",
+        "checkpoint_revision": "783890f0e2aca42ad0329660bea48af89829a74d",
+        "license_note": "CC-BY-4.0 model card; underlying Vicuna/LLaMA terms also apply",
+        "required_artifacts": [
+          "PathGen-LLaVA checkpoint",
+          "PathGen-CLIP visual encoder",
+          "native LLaVA code"
+        ],
+        "worker_requirements": [
+          "requirements-pathgen.txt"
+        ],
+        "evidence_sources": [
+          "src/openhisto/vlas/registry.py",
+          "src/openhisto/vlas/README.md"
+        ]
+      },
+      {
+        "id": "patho_r1_7b",
+        "name": "Patho-R1-7B",
+        "category": "vla",
+        "family": "pathology_vision_language",
+        "module": "openhisto.vlas",
+        "tasks": [
+          "prompted_patch_description"
+        ],
+        "access": "public_with_terms",
+        "access_note": "Public files currently; model card requires individual institutional registration and prohibits output-derived datasets without written approval. Our integration's real-checkpoint/native-reference acceptance remains unverified.",
+        "dimensions": null,
+        "description": "Our Patho-R1 integration generates prompt-conditioned patch descriptions through the native Qwen2.5-VL processor and model.",
+        "input_contract": "Indexed patch HDF5 archive or explicit RGB patch manifest plus a text prompt; stable patch identities are retained.",
+        "extra": "vlas",
+        "install": "python -m pip install -e \".[vlas]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/vlas/README.md",
+        "source": "https://github.com/Wenchuan-Zhang/Patho-R1",
+        "example": "from openhisto.vlas import SourceSpec, ModelSpec, DescribeConfig, describe_slide\n\n# Prepare the model's separate native environment/artifacts first.\nreport = describe_slide(\n    inputs=[SourceSpec(\"patches/slide.h5\", source_id=\"grid-20x\")],\n    output=\"descriptions/slide\",\n    models=[ModelSpec('patho_r1_7b', python_executable=\"/path/to/backend/bin/python\")],\n    prompt=\"Describe visible tissue architecture and nuclear morphology.\",\n    config=DescribeConfig(slide_id=\"slide-a\"),\n)\n",
+        "status": "unverified",
+        "source_revision": "bb34a4e73c6d384aadf51169b877829302a60649",
+        "checkpoint": "WenchuanZhang/Patho-R1-7B",
+        "checkpoint_revision": "7a69eb299bde72a4c3b8ec26fe0b17515346ef73",
+        "license_note": "CC-BY-NC-ND-4.0; additional model-card research-use terms",
+        "required_artifacts": [
+          "model and processor checkpoint"
+        ],
+        "worker_requirements": [
+          "requirements-patho-r1.txt"
+        ],
+        "evidence_sources": [
+          "src/openhisto/vlas/registry.py",
+          "src/openhisto/vlas/README.md"
+        ]
+      },
+      {
+        "id": "quilt_llava_7b",
+        "name": "Quilt-LLaVA-7B",
+        "category": "vla",
+        "family": "pathology_vision_language",
+        "module": "openhisto.vlas",
+        "tasks": [
+          "prompted_patch_description"
+        ],
+        "access": "public_with_terms",
+        "access_note": "Public checkpoint; native Quilt-LLaVA environment required. Our integration's real-checkpoint/native-reference acceptance remains unverified.",
+        "dimensions": null,
+        "description": "Our Quilt-LLaVA integration connects prompt-conditioned patch descriptions to the native Quilt-LLaVA runtime.",
+        "input_contract": "Indexed patch HDF5 archive or explicit RGB patch manifest plus a text prompt; stable patch identities are retained.",
+        "extra": "vlas",
+        "install": "python -m pip install -e \".[vlas]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/vlas/README.md",
+        "source": "https://github.com/aldraus/quilt-llava",
+        "example": "from openhisto.vlas import SourceSpec, ModelSpec, DescribeConfig, describe_slide\n\n# Prepare the model's separate native environment/artifacts first.\nreport = describe_slide(\n    inputs=[SourceSpec(\"patches/slide.h5\", source_id=\"grid-20x\")],\n    output=\"descriptions/slide\",\n    models=[ModelSpec('quilt_llava_7b', python_executable=\"/path/to/backend/bin/python\")],\n    prompt=\"Describe visible tissue architecture and nuclear morphology.\",\n    config=DescribeConfig(slide_id=\"slide-a\"),\n)\n",
+        "status": "unverified",
+        "source_revision": "7e70fc39f792ac55de010eb37bff0a6d6f491c13",
+        "checkpoint": "wisdomik/Quilt-Llava-v1.5-7b",
+        "checkpoint_revision": "1bdf5f8b75fb26acc80b08aba7f1979e8e9b12bd",
+        "license_note": "CC-BY-NC-3.0 checkpoint; MIT upstream code; underlying base-model terms apply",
+        "required_artifacts": [
+          "Quilt-LLaVA checkpoint",
+          "configured visual encoder",
+          "Quilt-LLaVA code"
+        ],
+        "worker_requirements": [
+          "requirements-quilt.txt"
+        ],
+        "evidence_sources": [
+          "src/openhisto/vlas/registry.py",
+          "src/openhisto/vlas/README.md"
+        ]
+      }
+    ],
+    "datasets": [
+      {
+        "id": "BRACS",
+        "name": "BRACS",
+        "category": "datasets",
+        "family": "whole_slide_provider",
+        "module": "openhisto.default_datasets",
+        "tasks": [
+          "slide_acquisition",
+          "metadata_preservation"
+        ],
+        "access": "approved_local",
+        "access_note": "Obtain approved data from the provider before local import; the package does not accept agreements or implement authenticated acquisition.",
+        "dimensions": null,
+        "description": "Registers approved local SVS slides using supplied XLSX/CSV metadata; retains WSI labels, source splits and supplied patient groups; ROIs are excluded.",
+        "input_contract": "Explicit cohort selection or approved local files plus provider metadata; native WSI formats and original associations are preserved.",
+        "extra": "default-datasets",
+        "install": "python -m pip install -e \".[default-datasets]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/default_datasets/README.md",
+        "source": "https://www.bracs.icar.cnr.it/details/",
+        "example": "from openhisto.default_datasets import discover, download, import_local\n\nreport = import_local(\"BRACS\", \"/path/to/bracs\", \"metadata.xlsx\")\n",
+        "evidence_sources": [
+          "src/openhisto/default_datasets/models.py",
+          "src/openhisto/default_datasets/README.md"
+        ]
+      },
+      {
+        "id": "CAMELYON16",
+        "name": "CAMELYON16",
+        "category": "datasets",
+        "family": "whole_slide_provider",
+        "module": "openhisto.default_datasets",
+        "tasks": [
+          "slide_acquisition",
+          "metadata_preservation"
+        ],
+        "access": "public",
+        "access_note": "Public download path only; controlled data requires authorized acquisition outside this module.",
+        "dimensions": null,
+        "description": "Official anonymous AWS inventory and native TIFFs with source training/test labels; optional annotation assets retain their native semantics.",
+        "input_contract": "Explicit cohort selection or approved local files plus provider metadata; native WSI formats and original associations are preserved.",
+        "extra": "default-datasets",
+        "install": "python -m pip install -e \".[default-datasets]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/default_datasets/README.md",
+        "source": "https://registry.opendata.aws/camelyon/",
+        "example": "from openhisto.default_datasets import discover, download, import_local\n\nplan = discover(\"CAMELYON16\", {\"split\": \"train\", \"limit\": 5})\n# Discovery transfers metadata only; downloading slides is explicit.\nreport = download(plan, \"/path/to/data/camelyon16\")\n",
+        "evidence_sources": [
+          "src/openhisto/default_datasets/models.py",
+          "src/openhisto/default_datasets/README.md"
+        ]
+      },
+      {
+        "id": "KPMP",
+        "name": "KPMP",
+        "category": "datasets",
+        "family": "whole_slide_provider",
+        "module": "openhisto.default_datasets",
+        "tasks": [
+          "slide_acquisition",
+          "metadata_preservation"
+        ],
+        "access": "public_export",
+        "access_note": "Public download path only; controlled data requires authorized acquisition outside this module.",
+        "dimensions": null,
+        "description": "Public light-microscopic WSIs selected from a user-supplied Atlas repository CSV export; available participant links and clinical tables are retained.",
+        "input_contract": "Explicit cohort selection or approved local files plus provider metadata; native WSI formats and original associations are preserved.",
+        "extra": "default-datasets",
+        "install": "python -m pip install -e \".[default-datasets]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/default_datasets/README.md",
+        "source": "https://www.kpmp.org/help-docs/atlas-repository",
+        "example": "from openhisto.default_datasets import discover, download, import_local\n\nplan = discover(\"KPMP\", {\"repository_csv\": \"atlas-export.csv\", \"include_clinical\": True})\n# Discovery transfers metadata only; downloading slides is explicit.\nreport = download(plan, \"/path/to/data/kpmp\")\n",
+        "evidence_sources": [
+          "src/openhisto/default_datasets/models.py",
+          "src/openhisto/default_datasets/README.md"
+        ]
+      },
+      {
+        "id": "TCGA",
+        "name": "TCGA",
+        "category": "datasets",
+        "family": "whole_slide_provider",
+        "module": "openhisto.default_datasets",
+        "tasks": [
+          "slide_acquisition",
+          "metadata_preservation"
+        ],
+        "access": "public",
+        "access_note": "Public download path only; controlled data requires authorized acquisition outside this module.",
+        "dimensions": null,
+        "description": "Public diagnostic SVS slides through explicit GDC projects/case/file identifiers; original case-linked clinical entities are preserved, not harmonized into survival endpoints.",
+        "input_contract": "Explicit cohort selection or approved local files plus provider metadata; native WSI formats and original associations are preserved.",
+        "extra": "default-datasets",
+        "install": "python -m pip install -e \".[default-datasets]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/default_datasets/README.md",
+        "source": "https://docs.gdc.cancer.gov/API/Users_Guide/Downloading_Files/",
+        "example": "from openhisto.default_datasets import discover, download, import_local\n\nplan = discover(\"TCGA\", {\"projects\": [\"TCGA-KIRC\"], \"limit\": 5})\n# Discovery transfers metadata only; downloading slides is explicit.\nreport = download(plan, \"/path/to/data/tcga\")\n",
+        "evidence_sources": [
+          "src/openhisto/default_datasets/models.py",
+          "src/openhisto/default_datasets/README.md"
+        ]
+      }
+    ],
+    "normalization": [
+      {
+        "id": "histogram",
+        "name": "Histogram matching",
+        "category": "normalization",
+        "family": "statistical_stain_normalization",
+        "module": "openhisto.stain_transfer",
+        "tasks": [
+          "stain_normalization"
+        ],
+        "access": "local_reference",
+        "access_note": "No reference images or trained weights are bundled.",
+        "dimensions": {
+          "input": "RGB[H,W,3]",
+          "output": "RGB[H,W,3], unchanged geometry"
+        },
+        "description": "Fits a destination reference and transforms valid RGB pixels while preserving patch geometry and invalid pixels.",
+        "input_contract": "uint8 RGB[H,W,3]; individual images, recursive folders, CSV/JSONL manifests or native patch archives.",
+        "extra": "stain-transfer",
+        "install": "python -m pip install -e \".[stain-transfer]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/stain_transfer/README.md",
+        "source": null,
+        "example": "from openhisto.stain_transfer import DomainSpec, TransferConfig, normalize\n\ndestination = DomainSpec(method=\"histogram\", references=(\"reference.png\",))\nreport = normalize(\"patches.h5\", \"normalized.h5\", destination, TransferConfig())\n",
+        "evidence_sources": [
+          "src/openhisto/stain_transfer/config.py",
+          "src/openhisto/stain_transfer/README.md"
+        ]
+      },
+      {
+        "id": "macenko",
+        "name": "Macenko",
+        "category": "normalization",
+        "family": "statistical_stain_normalization",
+        "module": "openhisto.stain_transfer",
+        "tasks": [
+          "stain_normalization"
+        ],
+        "access": "local_reference",
+        "access_note": "No reference images or trained weights are bundled.",
+        "dimensions": {
+          "input": "RGB[H,W,3]",
+          "output": "RGB[H,W,3], unchanged geometry"
+        },
+        "description": "Fits a destination reference and transforms valid RGB pixels while preserving patch geometry and invalid pixels.",
+        "input_contract": "uint8 RGB[H,W,3]; individual images, recursive folders, CSV/JSONL manifests or native patch archives.",
+        "extra": "stain-transfer-spams",
+        "install": "python -m pip install -e \".[stain-transfer-spams]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/stain_transfer/README.md",
+        "source": null,
+        "example": "from openhisto.stain_transfer import DomainSpec, TransferConfig, normalize\n\ndestination = DomainSpec(method=\"macenko\", references=(\"reference.png\",))\nreport = normalize(\"patches.h5\", \"normalized.h5\", destination, TransferConfig())\n",
+        "evidence_sources": [
+          "src/openhisto/stain_transfer/config.py",
+          "src/openhisto/stain_transfer/README.md"
+        ]
+      },
+      {
+        "id": "cyclegan",
+        "name": "MultiStain CycleGAN",
+        "category": "normalization",
+        "family": "generative_stain_transfer",
+        "module": "openhisto.stain_transfer",
+        "tasks": [
+          "stain_transfer",
+          "generator_training"
+        ],
+        "access": "local_checkpoint",
+        "access_note": "No reference images or trained weights are bundled.",
+        "dimensions": {
+          "input": "RGB[H,W,3]",
+          "output": "RGB[H,W,3], unchanged geometry"
+        },
+        "description": "Generator-based appearance transfer; checkpoints/domain direction/preprocessing must match. Supports explicit native training and inference.",
+        "input_contract": "uint8 RGB[H,W,3]; individual images, recursive folders, CSV/JSONL manifests or native patch archives.",
+        "extra": "stain-transfer-gan",
+        "install": "python -m pip install -e \".[stain-transfer-gan]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/stain_transfer/README.md",
+        "source": null,
+        "example": "from openhisto.stain_transfer import DomainSpec, TransferConfig, normalize\n\ndestination = DomainSpec(method=\"cyclegan\", checkpoint=\"generator_AtoB.pth\")\nreport = normalize(\"patches.h5\", \"normalized.h5\", destination, TransferConfig())\n",
+        "evidence_sources": [
+          "src/openhisto/stain_transfer/config.py",
+          "src/openhisto/stain_transfer/README.md"
+        ]
+      },
+      {
+        "id": "pix2pix",
+        "name": "pix2pix",
+        "category": "normalization",
+        "family": "generative_stain_transfer",
+        "module": "openhisto.stain_transfer",
+        "tasks": [
+          "stain_transfer",
+          "generator_training"
+        ],
+        "access": "local_checkpoint",
+        "access_note": "No reference images or trained weights are bundled.",
+        "dimensions": {
+          "input": "RGB[H,W,3]",
+          "output": "RGB[H,W,3], unchanged geometry"
+        },
+        "description": "Generator-based appearance transfer; checkpoints/domain direction/preprocessing must match. Supports explicit native training and inference.",
+        "input_contract": "uint8 RGB[H,W,3]; individual images, recursive folders, CSV/JSONL manifests or native patch archives.",
+        "extra": "stain-transfer-gan",
+        "install": "python -m pip install -e \".[stain-transfer-gan]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/stain_transfer/README.md",
+        "source": null,
+        "example": "from openhisto.stain_transfer import DomainSpec, TransferConfig, normalize\n\ndestination = DomainSpec(method=\"pix2pix\", checkpoint=\"generator_AtoB.pth\")\nreport = normalize(\"patches.h5\", \"normalized.h5\", destination, TransferConfig())\n",
+        "evidence_sources": [
+          "src/openhisto/stain_transfer/config.py",
+          "src/openhisto/stain_transfer/README.md"
+        ]
+      },
+      {
+        "id": "reinhard",
+        "name": "Reinhard",
+        "category": "normalization",
+        "family": "statistical_stain_normalization",
+        "module": "openhisto.stain_transfer",
+        "tasks": [
+          "stain_normalization"
+        ],
+        "access": "local_reference",
+        "access_note": "No reference images or trained weights are bundled.",
+        "dimensions": {
+          "input": "RGB[H,W,3]",
+          "output": "RGB[H,W,3], unchanged geometry"
+        },
+        "description": "Fits a destination reference and transforms valid RGB pixels while preserving patch geometry and invalid pixels.",
+        "input_contract": "uint8 RGB[H,W,3]; individual images, recursive folders, CSV/JSONL manifests or native patch archives.",
+        "extra": "stain-transfer",
+        "install": "python -m pip install -e \".[stain-transfer]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/stain_transfer/README.md",
+        "source": null,
+        "example": "from openhisto.stain_transfer import DomainSpec, TransferConfig, normalize\n\ndestination = DomainSpec(method=\"reinhard\", references=(\"reference.png\",))\nreport = normalize(\"patches.h5\", \"normalized.h5\", destination, TransferConfig())\n",
+        "evidence_sources": [
+          "src/openhisto/stain_transfer/config.py",
+          "src/openhisto/stain_transfer/README.md"
+        ]
+      },
+      {
+        "id": "vahadane",
+        "name": "Vahadane",
+        "category": "normalization",
+        "family": "statistical_stain_normalization",
+        "module": "openhisto.stain_transfer",
+        "tasks": [
+          "stain_normalization"
+        ],
+        "access": "local_reference",
+        "access_note": "No reference images or trained weights are bundled.",
+        "dimensions": {
+          "input": "RGB[H,W,3]",
+          "output": "RGB[H,W,3], unchanged geometry"
+        },
+        "description": "Fits a destination reference and transforms valid RGB pixels while preserving patch geometry and invalid pixels.",
+        "input_contract": "uint8 RGB[H,W,3]; individual images, recursive folders, CSV/JSONL manifests or native patch archives.",
+        "extra": "stain-transfer-spams",
+        "install": "python -m pip install -e \".[stain-transfer-spams]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/stain_transfer/README.md",
+        "source": null,
+        "example": "from openhisto.stain_transfer import DomainSpec, TransferConfig, normalize\n\ndestination = DomainSpec(method=\"vahadane\", references=(\"reference.png\",))\nreport = normalize(\"patches.h5\", \"normalized.h5\", destination, TransferConfig())\n",
+        "evidence_sources": [
+          "src/openhisto/stain_transfer/config.py",
+          "src/openhisto/stain_transfer/README.md"
+        ]
+      }
+    ],
+    "heads": [
+      {
+        "id": "bayesian_mlp",
+        "name": "Bayesian MLP head",
+        "category": "heads",
+        "family": "neural_classification",
+        "module": "openhisto.mil.classification",
+        "tasks": [
+          "binary_classification",
+          "multiclass_classification"
+        ],
+        "access": "local",
+        "access_note": "Local CPU float32 neural head; fitting uses caller-supplied slide vectors and labels. No pretrained head weights are bundled.",
+        "dimensions": {
+          "input": "configurable D",
+          "output": "logits[N,C]"
+        },
+        "description": "Variational Gaussian weight posteriors, analytic KL/full-training-size scaling, posterior-mean evaluation and Monte Carlo uncertainty.",
+        "input_contract": "CPU float32 slide vectors[N,D]; binary or multiclass single-label targets.",
+        "extra": "mil",
+        "install": "python -m pip install -e \".[mil]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/mil/heads/README.md",
+        "source": null,
+        "example": "from openhisto.mil.classification import create_neural_head\nfrom openhisto.mil.heads import attach_head, representation_dimension\n\n# backbone is a constructed MIL profile.\nhead = create_neural_head(\"bayesian_mlp\", input_dim=representation_dimension(backbone), num_classes=3)\nmodel = attach_head(backbone, head, train_backbone=False)\n",
+        "devices": [
+          "cpu"
+        ],
+        "dtype": "float32",
+        "evidence_sources": [
+          "src/openhisto/mil/classification/__init__.py",
+          "src/openhisto/mil/heads/README.md"
+        ]
+      },
+      {
+        "id": "linear",
+        "name": "Linear head",
+        "category": "heads",
+        "family": "neural_classification",
+        "module": "openhisto.mil.classification",
+        "tasks": [
+          "binary_classification",
+          "multiclass_classification"
+        ],
+        "access": "local",
+        "access_note": "Local CPU float32 neural head; fitting uses caller-supplied slide vectors and labels. No pretrained head weights are bundled.",
+        "dimensions": {
+          "input": "configurable D",
+          "output": "logits[N,C]"
+        },
+        "description": "Differentiable fixed-vector classification head; attach at the profile's declared MIL representation boundary.",
+        "input_contract": "CPU float32 slide vectors[N,D]; binary or multiclass single-label targets.",
+        "extra": "mil",
+        "install": "python -m pip install -e \".[mil]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/mil/heads/README.md",
+        "source": null,
+        "example": "from openhisto.mil.classification import create_neural_head\nfrom openhisto.mil.heads import attach_head, representation_dimension\n\n# backbone is a constructed MIL profile.\nhead = create_neural_head(\"linear\", input_dim=representation_dimension(backbone), num_classes=3)\nmodel = attach_head(backbone, head, train_backbone=False)\n",
+        "devices": [
+          "cpu"
+        ],
+        "dtype": "float32",
+        "evidence_sources": [
+          "src/openhisto/mil/classification/__init__.py",
+          "src/openhisto/mil/heads/README.md"
+        ]
+      },
+      {
+        "id": "mlp",
+        "name": "MLP head",
+        "category": "heads",
+        "family": "neural_classification",
+        "module": "openhisto.mil.classification",
+        "tasks": [
+          "binary_classification",
+          "multiclass_classification"
+        ],
+        "access": "local",
+        "access_note": "Local CPU float32 neural head; fitting uses caller-supplied slide vectors and labels. No pretrained head weights are bundled.",
+        "dimensions": {
+          "input": "configurable D",
+          "output": "logits[N,C]"
+        },
+        "description": "Differentiable fixed-vector classification head; attach at the profile's declared MIL representation boundary.",
+        "input_contract": "CPU float32 slide vectors[N,D]; binary or multiclass single-label targets.",
+        "extra": "mil",
+        "install": "python -m pip install -e \".[mil]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/mil/heads/README.md",
+        "source": null,
+        "example": "from openhisto.mil.classification import create_neural_head\nfrom openhisto.mil.heads import attach_head, representation_dimension\n\n# backbone is a constructed MIL profile.\nhead = create_neural_head(\"mlp\", input_dim=representation_dimension(backbone), num_classes=3)\nmodel = attach_head(backbone, head, train_backbone=False)\n",
+        "devices": [
+          "cpu"
+        ],
+        "dtype": "float32",
+        "evidence_sources": [
+          "src/openhisto/mil/classification/__init__.py",
+          "src/openhisto/mil/heads/README.md"
+        ]
+      }
+    ],
+    "survival": [
+      {
+        "id": "cox",
+        "name": "Cox proportional hazards",
+        "category": "survival",
+        "family": "right_censored_survival",
+        "module": "openhisto.mil.survival",
+        "tasks": [
+          "right_censored_survival"
+        ],
+        "access": "local",
+        "access_note": "Local CPU float32 linear/MLP head. Fit with caller-supplied outcomes and use training-only baseline/grid calibration; no pretrained head is bundled.",
+        "dimensions": {
+          "input": "configurable D",
+          "output": "scalar log-relative risk"
+        },
+        "description": "Linear/MLP log-relative-risk head; cohort risk-set loss with Efron/Breslow ties and training-only Breslow absolute-survival calibration.",
+        "input_contract": "CPU float32 slide embeddings[N,D]; finite nonnegative durations in a consistent unit; event=1 observed, event=0 right-censored.",
+        "extra": "mil",
+        "install": "python -m pip install -e \".[mil]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/mil/survival/README.md",
+        "source": null,
+        "example": "from openhisto.mil.survival import create_survival_head\n\nhead = create_survival_head(\"cox\", input_dim=768, network=\"mlp\")\n# After training, fit absolute-survival calibration on training data only.\nhead.fit_baseline(training_embeddings, durations, events, split=\"train\")\n",
+        "devices": [
+          "cpu"
+        ],
+        "dtype": "float32",
+        "networks": [
+          "linear",
+          "mlp"
+        ],
+        "evidence_sources": [
+          "src/openhisto/mil/survival/__init__.py",
+          "src/openhisto/mil/survival/README.md"
+        ]
+      },
+      {
+        "id": "discrete_hazard",
+        "name": "Discrete hazards",
+        "category": "survival",
+        "family": "right_censored_survival",
+        "module": "openhisto.mil.survival",
+        "tasks": [
+          "right_censored_survival"
+        ],
+        "access": "local",
+        "access_note": "Local CPU float32 linear/MLP head. Fit with caller-supplied outcomes and use training-only baseline/grid calibration; no pretrained head is bundled.",
+        "dimensions": {
+          "input": "configurable D",
+          "output": "num_bins conditional-hazard logits"
+        },
+        "description": "Linear/MLP conditional-hazard logits on a training-fitted positive-width grid; explicit censoring/boundary/truncation semantics.",
+        "input_contract": "CPU float32 slide embeddings[N,D]; finite nonnegative durations in a consistent unit; event=1 observed, event=0 right-censored.",
+        "extra": "mil",
+        "install": "python -m pip install -e \".[mil]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/mil/survival/README.md",
+        "source": null,
+        "example": "from openhisto.mil.survival import create_survival_head\n\nhead = create_survival_head(\"discrete_hazard\", input_dim=768, network=\"mlp\", num_bins=20)\nhead.fit_time_grid(training_durations, events, split=\"train\")\n",
+        "devices": [
+          "cpu"
+        ],
+        "dtype": "float32",
+        "networks": [
+          "linear",
+          "mlp"
+        ],
+        "evidence_sources": [
+          "src/openhisto/mil/survival/__init__.py",
+          "src/openhisto/mil/survival/README.md"
+        ]
+      }
+    ],
+    "classifiers": [
+      {
+        "id": "catboost",
+        "name": "CatBoost",
+        "category": "classifiers",
+        "family": "frozen_vector_classification",
+        "module": "openhisto.mil.classification",
+        "tasks": [
+          "binary_classification",
+          "multiclass_classification"
+        ],
+        "access": "local",
+        "access_note": "Local CPU estimator fitted on caller-supplied frozen slide vectors; install the selected backend extra. No pretrained classifier is bundled.",
+        "dimensions": {
+          "input": "fixed D",
+          "output": "predictions[N]; fitted probabilities[N,C] when supported/calibrated"
+        },
+        "description": "CPU fitted classifier on frozen slide vectors; preserves original labels and class-column order.",
+        "input_contract": "Finite fixed-width slide vectors[N,D] and original numeric/string/byte labels; no backbone gradients.",
+        "extra": "mil-classical-catboost",
+        "install": "python -m pip install -e \".[mil-classical-catboost]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/mil/heads/README.md",
+        "source": null,
+        "example": "from openhisto.mil.classification import create_classifier\n\n# train_vectors/test_vectors are fixed slide vectors; labels are training labels.\nclassifier = create_classifier(\"catboost\")\nclassifier.fit(train_vectors, labels)\npredictions = classifier.predict(test_vectors)\n",
+        "devices": [
+          "cpu"
+        ],
+        "dtype": "package float64 vector policy",
+        "evidence_sources": [
+          "src/openhisto/mil/classification/__init__.py",
+          "src/openhisto/mil/heads/README.md"
+        ]
+      },
+      {
+        "id": "extra_trees",
+        "name": "Extra Trees",
+        "category": "classifiers",
+        "family": "frozen_vector_classification",
+        "module": "openhisto.mil.classification",
+        "tasks": [
+          "binary_classification",
+          "multiclass_classification"
+        ],
+        "access": "local",
+        "access_note": "Local CPU estimator fitted on caller-supplied frozen slide vectors; install the selected backend extra. No pretrained classifier is bundled.",
+        "dimensions": {
+          "input": "fixed D",
+          "output": "predictions[N]; fitted probabilities[N,C] when supported/calibrated"
+        },
+        "description": "CPU fitted classifier on frozen slide vectors; preserves original labels and class-column order.",
+        "input_contract": "Finite fixed-width slide vectors[N,D] and original numeric/string/byte labels; no backbone gradients.",
+        "extra": "mil-classical",
+        "install": "python -m pip install -e \".[mil-classical]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/mil/heads/README.md",
+        "source": null,
+        "example": "from openhisto.mil.classification import create_classifier\n\n# train_vectors/test_vectors are fixed slide vectors; labels are training labels.\nclassifier = create_classifier(\"extra_trees\")\nclassifier.fit(train_vectors, labels)\npredictions = classifier.predict(test_vectors)\n",
+        "devices": [
+          "cpu"
+        ],
+        "dtype": "package float64 vector policy",
+        "evidence_sources": [
+          "src/openhisto/mil/classification/__init__.py",
+          "src/openhisto/mil/heads/README.md"
+        ]
+      },
+      {
+        "id": "gaussian_nb",
+        "name": "Gaussian Naive Bayes",
+        "category": "classifiers",
+        "family": "frozen_vector_classification",
+        "module": "openhisto.mil.classification",
+        "tasks": [
+          "binary_classification",
+          "multiclass_classification"
+        ],
+        "access": "local",
+        "access_note": "Local CPU estimator fitted on caller-supplied frozen slide vectors; install the selected backend extra. No pretrained classifier is bundled.",
+        "dimensions": {
+          "input": "fixed D",
+          "output": "predictions[N]; fitted probabilities[N,C] when supported/calibrated"
+        },
+        "description": "CPU fitted classifier on frozen slide vectors; preserves original labels and class-column order.",
+        "input_contract": "Finite fixed-width slide vectors[N,D] and original numeric/string/byte labels; no backbone gradients.",
+        "extra": "mil-classical",
+        "install": "python -m pip install -e \".[mil-classical]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/mil/heads/README.md",
+        "source": null,
+        "example": "from openhisto.mil.classification import create_classifier\n\n# train_vectors/test_vectors are fixed slide vectors; labels are training labels.\nclassifier = create_classifier(\"gaussian_nb\")\nclassifier.fit(train_vectors, labels)\npredictions = classifier.predict(test_vectors)\n",
+        "devices": [
+          "cpu"
+        ],
+        "dtype": "package float64 vector policy",
+        "evidence_sources": [
+          "src/openhisto/mil/classification/__init__.py",
+          "src/openhisto/mil/heads/README.md"
+        ]
+      },
+      {
+        "id": "hist_gradient_boosting",
+        "name": "Histogram gradient boosting",
+        "category": "classifiers",
+        "family": "frozen_vector_classification",
+        "module": "openhisto.mil.classification",
+        "tasks": [
+          "binary_classification",
+          "multiclass_classification"
+        ],
+        "access": "local",
+        "access_note": "Local CPU estimator fitted on caller-supplied frozen slide vectors; install the selected backend extra. No pretrained classifier is bundled.",
+        "dimensions": {
+          "input": "fixed D",
+          "output": "predictions[N]; fitted probabilities[N,C] when supported/calibrated"
+        },
+        "description": "CPU fitted classifier on frozen slide vectors; preserves original labels and class-column order.",
+        "input_contract": "Finite fixed-width slide vectors[N,D] and original numeric/string/byte labels; no backbone gradients.",
+        "extra": "mil-classical",
+        "install": "python -m pip install -e \".[mil-classical]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/mil/heads/README.md",
+        "source": null,
+        "example": "from openhisto.mil.classification import create_classifier\n\n# train_vectors/test_vectors are fixed slide vectors; labels are training labels.\nclassifier = create_classifier(\"hist_gradient_boosting\")\nclassifier.fit(train_vectors, labels)\npredictions = classifier.predict(test_vectors)\n",
+        "devices": [
+          "cpu"
+        ],
+        "dtype": "package float64 vector policy",
+        "evidence_sources": [
+          "src/openhisto/mil/classification/__init__.py",
+          "src/openhisto/mil/heads/README.md"
+        ]
+      },
+      {
+        "id": "knn",
+        "name": "k-nearest neighbors",
+        "category": "classifiers",
+        "family": "frozen_vector_classification",
+        "module": "openhisto.mil.classification",
+        "tasks": [
+          "binary_classification",
+          "multiclass_classification"
+        ],
+        "access": "local",
+        "access_note": "Local CPU estimator fitted on caller-supplied frozen slide vectors; install the selected backend extra. No pretrained classifier is bundled.",
+        "dimensions": {
+          "input": "fixed D",
+          "output": "predictions[N]; fitted probabilities[N,C] when supported/calibrated"
+        },
+        "description": "CPU fitted classifier on frozen slide vectors; preserves original labels and class-column order.",
+        "input_contract": "Finite fixed-width slide vectors[N,D] and original numeric/string/byte labels; no backbone gradients.",
+        "extra": "mil-classical",
+        "install": "python -m pip install -e \".[mil-classical]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/mil/heads/README.md",
+        "source": null,
+        "example": "from openhisto.mil.classification import create_classifier\n\n# train_vectors/test_vectors are fixed slide vectors; labels are training labels.\nclassifier = create_classifier(\"knn\")\nclassifier.fit(train_vectors, labels)\npredictions = classifier.predict(test_vectors)\n",
+        "devices": [
+          "cpu"
+        ],
+        "dtype": "package float64 vector policy",
+        "evidence_sources": [
+          "src/openhisto/mil/classification/__init__.py",
+          "src/openhisto/mil/heads/README.md"
+        ]
+      },
+      {
+        "id": "lightgbm",
+        "name": "LightGBM",
+        "category": "classifiers",
+        "family": "frozen_vector_classification",
+        "module": "openhisto.mil.classification",
+        "tasks": [
+          "binary_classification",
+          "multiclass_classification"
+        ],
+        "access": "local",
+        "access_note": "Local CPU estimator fitted on caller-supplied frozen slide vectors; install the selected backend extra. No pretrained classifier is bundled.",
+        "dimensions": {
+          "input": "fixed D",
+          "output": "predictions[N]; fitted probabilities[N,C] when supported/calibrated"
+        },
+        "description": "CPU fitted classifier on frozen slide vectors; preserves original labels and class-column order.",
+        "input_contract": "Finite fixed-width slide vectors[N,D] and original numeric/string/byte labels; no backbone gradients.",
+        "extra": "mil-classical-lightgbm",
+        "install": "python -m pip install -e \".[mil-classical-lightgbm]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/mil/heads/README.md",
+        "source": null,
+        "example": "from openhisto.mil.classification import create_classifier\n\n# train_vectors/test_vectors are fixed slide vectors; labels are training labels.\nclassifier = create_classifier(\"lightgbm\")\nclassifier.fit(train_vectors, labels)\npredictions = classifier.predict(test_vectors)\n",
+        "devices": [
+          "cpu"
+        ],
+        "dtype": "package float64 vector policy",
+        "evidence_sources": [
+          "src/openhisto/mil/classification/__init__.py",
+          "src/openhisto/mil/heads/README.md"
+        ]
+      },
+      {
+        "id": "logistic_regression",
+        "name": "Logistic regression",
+        "category": "classifiers",
+        "family": "frozen_vector_classification",
+        "module": "openhisto.mil.classification",
+        "tasks": [
+          "binary_classification",
+          "multiclass_classification"
+        ],
+        "access": "local",
+        "access_note": "Local CPU estimator fitted on caller-supplied frozen slide vectors; install the selected backend extra. No pretrained classifier is bundled.",
+        "dimensions": {
+          "input": "fixed D",
+          "output": "predictions[N]; fitted probabilities[N,C] when supported/calibrated"
+        },
+        "description": "CPU fitted classifier on frozen slide vectors; preserves original labels and class-column order.",
+        "input_contract": "Finite fixed-width slide vectors[N,D] and original numeric/string/byte labels; no backbone gradients.",
+        "extra": "mil-classical",
+        "install": "python -m pip install -e \".[mil-classical]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/mil/heads/README.md",
+        "source": null,
+        "example": "from openhisto.mil.classification import create_classifier\n\n# train_vectors/test_vectors are fixed slide vectors; labels are training labels.\nclassifier = create_classifier(\"logistic_regression\")\nclassifier.fit(train_vectors, labels)\npredictions = classifier.predict(test_vectors)\n",
+        "devices": [
+          "cpu"
+        ],
+        "dtype": "package float64 vector policy",
+        "evidence_sources": [
+          "src/openhisto/mil/classification/__init__.py",
+          "src/openhisto/mil/heads/README.md"
+        ]
+      },
+      {
+        "id": "random_forest",
+        "name": "Random forest",
+        "category": "classifiers",
+        "family": "frozen_vector_classification",
+        "module": "openhisto.mil.classification",
+        "tasks": [
+          "binary_classification",
+          "multiclass_classification"
+        ],
+        "access": "local",
+        "access_note": "Local CPU estimator fitted on caller-supplied frozen slide vectors; install the selected backend extra. No pretrained classifier is bundled.",
+        "dimensions": {
+          "input": "fixed D",
+          "output": "predictions[N]; fitted probabilities[N,C] when supported/calibrated"
+        },
+        "description": "CPU fitted classifier on frozen slide vectors; preserves original labels and class-column order.",
+        "input_contract": "Finite fixed-width slide vectors[N,D] and original numeric/string/byte labels; no backbone gradients.",
+        "extra": "mil-classical",
+        "install": "python -m pip install -e \".[mil-classical]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/mil/heads/README.md",
+        "source": null,
+        "example": "from openhisto.mil.classification import create_classifier\n\n# train_vectors/test_vectors are fixed slide vectors; labels are training labels.\nclassifier = create_classifier(\"random_forest\")\nclassifier.fit(train_vectors, labels)\npredictions = classifier.predict(test_vectors)\n",
+        "devices": [
+          "cpu"
+        ],
+        "dtype": "package float64 vector policy",
+        "evidence_sources": [
+          "src/openhisto/mil/classification/__init__.py",
+          "src/openhisto/mil/heads/README.md"
+        ]
+      },
+      {
+        "id": "sklearn_mlp",
+        "name": "scikit-learn MLP",
+        "category": "classifiers",
+        "family": "frozen_vector_classification",
+        "module": "openhisto.mil.classification",
+        "tasks": [
+          "binary_classification",
+          "multiclass_classification"
+        ],
+        "access": "local",
+        "access_note": "Local CPU estimator fitted on caller-supplied frozen slide vectors; install the selected backend extra. No pretrained classifier is bundled.",
+        "dimensions": {
+          "input": "fixed D",
+          "output": "predictions[N]; fitted probabilities[N,C] when supported/calibrated"
+        },
+        "description": "CPU fitted classifier on frozen slide vectors; preserves original labels and class-column order.",
+        "input_contract": "Finite fixed-width slide vectors[N,D] and original numeric/string/byte labels; no backbone gradients.",
+        "extra": "mil-classical",
+        "install": "python -m pip install -e \".[mil-classical]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/mil/heads/README.md",
+        "source": null,
+        "example": "from openhisto.mil.classification import create_classifier\n\n# train_vectors/test_vectors are fixed slide vectors; labels are training labels.\nclassifier = create_classifier(\"sklearn_mlp\")\nclassifier.fit(train_vectors, labels)\npredictions = classifier.predict(test_vectors)\n",
+        "devices": [
+          "cpu"
+        ],
+        "dtype": "package float64 vector policy",
+        "evidence_sources": [
+          "src/openhisto/mil/classification/__init__.py",
+          "src/openhisto/mil/heads/README.md"
+        ]
+      },
+      {
+        "id": "svm",
+        "name": "SVM",
+        "category": "classifiers",
+        "family": "frozen_vector_classification",
+        "module": "openhisto.mil.classification",
+        "tasks": [
+          "binary_classification",
+          "multiclass_classification"
+        ],
+        "access": "local",
+        "access_note": "Local CPU estimator fitted on caller-supplied frozen slide vectors; install the selected backend extra. SVM probabilities additionally require explicit calibration data/folds.",
+        "dimensions": {
+          "input": "fixed D",
+          "output": "predictions[N]; fitted probabilities[N,C] when supported/calibrated"
+        },
+        "description": "CPU fitted classifier on frozen slide vectors; preserves original labels and class-column order. Probabilities require explicit calibration folds or held-out calibration data.",
+        "input_contract": "Finite fixed-width slide vectors[N,D] and original numeric/string/byte labels; no backbone gradients.",
+        "extra": "mil-classical",
+        "install": "python -m pip install -e \".[mil-classical]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/mil/heads/README.md",
+        "source": null,
+        "example": "from openhisto.mil.classification import create_classifier\n\n# train_vectors/test_vectors are fixed slide vectors; labels are training labels.\nclassifier = create_classifier(\"svm\")\nclassifier.fit(train_vectors, labels)\npredictions = classifier.predict(test_vectors)\n",
+        "devices": [
+          "cpu"
+        ],
+        "dtype": "package float64 vector policy",
+        "evidence_sources": [
+          "src/openhisto/mil/classification/__init__.py",
+          "src/openhisto/mil/heads/README.md"
+        ]
+      },
+      {
+        "id": "xgboost",
+        "name": "XGBoost",
+        "category": "classifiers",
+        "family": "frozen_vector_classification",
+        "module": "openhisto.mil.classification",
+        "tasks": [
+          "binary_classification",
+          "multiclass_classification"
+        ],
+        "access": "local",
+        "access_note": "Local CPU estimator fitted on caller-supplied frozen slide vectors; install the selected backend extra. No pretrained classifier is bundled.",
+        "dimensions": {
+          "input": "fixed D",
+          "output": "predictions[N]; fitted probabilities[N,C] when supported/calibrated"
+        },
+        "description": "CPU fitted classifier on frozen slide vectors; preserves original labels and class-column order.",
+        "input_contract": "Finite fixed-width slide vectors[N,D] and original numeric/string/byte labels; no backbone gradients.",
+        "extra": "mil-classical-xgboost",
+        "install": "python -m pip install -e \".[mil-classical-xgboost]\"",
+        "docs": "https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/src/openhisto/mil/heads/README.md",
+        "source": null,
+        "example": "from openhisto.mil.classification import create_classifier\n\n# train_vectors/test_vectors are fixed slide vectors; labels are training labels.\nclassifier = create_classifier(\"xgboost\")\nclassifier.fit(train_vectors, labels)\npredictions = classifier.predict(test_vectors)\n",
+        "devices": [
+          "cpu"
+        ],
+        "dtype": "package float64 vector policy",
+        "evidence_sources": [
+          "src/openhisto/mil/classification/__init__.py",
+          "src/openhisto/mil/heads/README.md"
+        ]
+      }
+    ]
+  }
+}

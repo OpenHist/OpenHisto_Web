@@ -18,8 +18,8 @@ jobs:
     runs-on: ubuntu-22.04
     timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.1.0
         with:
           python-version: "3.12"
           cache: pip
@@ -31,7 +31,7 @@ jobs:
       - name: Check the published artifact
         run: python openhisto_site/tools/site.py check
       - name: Retain HTML for review
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7.0.2
         with:
           name: openhisto-website-html
           path: openhisto_site/_build/html/

@@ -59,8 +59,8 @@ in-progress paper/code actions disabled until genuine destinations exist.
 Snapshots retain their dates, failures and scientific limitations. Schematics
 remain labelled as illustrations.
 
-Only the generated HTML directory is a future publish artifact. Our CI builds,
-checks and uploads it without deploying. The site has no account flows,
+Only the generated HTML directory is published. Our CI builds and checks pull
+requests; successful `main` builds publish to GitHub Pages. The site has no account flows,
 analytics or model-execution controls. Operator research notes outside this
 website are not part of the repository or served output.
 

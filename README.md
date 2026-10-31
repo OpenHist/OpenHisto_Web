@@ -57,11 +57,21 @@ running its examples. Reference provenance and catalogue metadata record their
 source revision and hashes. A package checkout is needed only for this optional
 maintenance operation; its location is supplied explicitly.
 
-## Static deployment configuration
+## GitHub Pages deployment
 
-This repository is prepared for a later static deployment. No hosting provider
-has been registered and nothing has been deployed by these setup commands.
-When configuring a provider, use the following values from the repository root:
+The website is published at <https://openhist.github.io/OpenHisto_Web/>.
+GitHub Pages uses **GitHub Actions** as its publishing source. Our workflow
+builds and checks the website, then publishes only `openhisto_site/_build/html/`
+after a push to `main` or a manual workflow run on `main`. Pull requests build
+and validate without deploying. A failed build or check prevents publication.
+
+Do not select **Deploy from a branch** with the repository root: that publishes
+the README rather than the website. Deployment status and the live URL are
+available in the repository's Actions runs and `github-pages` environment.
+
+## Other static hosting providers
+
+When configuring another provider, use these values from the repository root:
 
 | Setting | Value |
 |---|---|
@@ -85,8 +95,8 @@ python openhisto_site/tools/site.py check
 Serve the contents of the publish directory, including its `_static` files and
 fonts, and retain the generated `.nojekyll` file. The published site needs no
 Python server, database, model runtime or Node build. Keep the source files and
-build output separate. CI builds/checks
-the site and uploads an HTML artifact; it does not deploy or register hosting.
+build output separate. The workflow also retains a downloadable HTML artifact
+for review.
 
 ## Content and provenance
 

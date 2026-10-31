@@ -67,5 +67,6 @@ describe the included materials.
 
 Explain the problem, the changed pages or behavior and how you checked it. Keep
 source edits separate from generated output: do not commit virtual environments,
-`_build/`, model artifacts or datasets. The website CI produces a build artifact;
-contributing a change does not deploy the site.
+`_build/`, model artifacts or datasets. Pull requests build and check the website
+without deploying it. Changes pushed or merged to `main` publish the verified
+HTML to GitHub Pages.

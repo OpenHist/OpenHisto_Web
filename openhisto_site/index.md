@@ -18,6 +18,7 @@ content/install
 content/quickstart
 content/workflows
 content/visualization
+content/citation
 ```
 
 ```{toctree}

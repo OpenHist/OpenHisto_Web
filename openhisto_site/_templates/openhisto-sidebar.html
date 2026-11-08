@@ -1,7 +1,7 @@
 <nav class="oh-doc-nav" aria-label="Documentation sections">
   <p class="oh-doc-nav-label">Start here</p>
   <ul>
-    {% for page, label in [('content/index', 'Overview'), ('content/install', 'Installation'), ('content/quickstart', 'Quickstart'), ('content/workflows', 'Workflow guide'), ('content/visualization', 'Visualization'), ('content/reference', 'APIs and sources')] %}
+    {% for page, label in [('content/index', 'Overview'), ('content/install', 'Installation'), ('content/quickstart', 'Quickstart'), ('content/workflows', 'Workflow guide'), ('content/visualization', 'Visualization'), ('content/reference', 'APIs and sources'), ('content/citation', 'Cite OpenHisto')] %}
     <li><a href="{{ pathto(page) }}"{% if oh_page == page %} aria-current="page"{% endif %}>{{ label }}</a></li>
     {% endfor %}
   </ul>

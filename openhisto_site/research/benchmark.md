@@ -1,16 +1,16 @@
-# OpenHisto end-to-end benchmark
+# OpenHisto workflow benchmark
 
-This is our first featured project in [Research & applications](../research.md).
-We use OpenHisto to connect image preparation, classification, risk and survival,
-segmentation and vision-language analysis within a reproducible study. We record
-functional tests, real checkpoint execution and scientific comparisons separately.
+This study uses OpenHisto for image preparation, classification, risk and survival
+modelling, segmentation and vision-language analysis. Functional tests, checkpoint
+execution and scientific comparisons are recorded separately. The study is listed
+under [Research & applications](../research.md).
 
 ## Dated campaign snapshot
 
-Our **30 October 2026 snapshot** records the CPU preparation campaign at that
-point in time. Counts may advance after this update. Scientific evaluation is not complete.
+The **30 October 2026 snapshot** records the CPU preparation campaign at that
+point in time. Counts may have changed since this snapshot. Scientific evaluation is not complete.
 
-<div class="oh-study-progress"><div class="oh-progress-label"><span>Patients with completed features</span><strong>96 / 897 · 10.7%</strong></div><div class="oh-progress" role="progressbar" aria-label="Patients with completed features in our 30 October 2026 campaign snapshot" aria-valuemin="0" aria-valuemax="897" aria-valuenow="96"><span style="width:10.7%"></span></div></div>
+<div class="oh-study-progress"><div class="oh-progress-label"><span>Patients with completed features</span><strong>96 / 897 · 10.7%</strong></div><div class="oh-progress" role="progressbar" aria-label="Patients with completed features in the 30 October 2026 campaign snapshot" aria-valuemin="0" aria-valuemax="897" aria-valuenow="96"><span style="width:10.7%"></span></div></div>
 
 | Measure | Snapshot |
 |---|---:|
@@ -22,8 +22,8 @@ point in time. Counts may advance after this update. Scientific evaluation is no
 | Prepared official PanNuke patches | 7,901 across all three folds |
 
 Extraction and feature counts describe different stages of a rolling pipeline;
-they are not disjoint outcome groups. A failed subjob remains a failure/pending
-recovery entry rather than disappearing from the denominator. These counts do
+they are not disjoint outcome groups. The failed subjob remains in the denominator
+with a failure/pending-recovery status. These counts do
 not establish completed cohort training, native-reference parity or held-out
 scientific performance.
 
@@ -57,7 +57,7 @@ unavailable counts/reasons.
 PanNuke keeps official fold 1 for training, fold 2 for validation and fold 3 for
 testing, matching one of the configurations on the
 [official dataset page](https://warwick.ac.uk/fac/cross_fac/tia/data/pannuke/).
-No patient mapping or additional calibration partition is invented for it.
+No patient-level mapping or additional calibration partition is defined for PanNuke.
 
 ## Annotation policy
 
@@ -67,7 +67,7 @@ complement. Pixels where multiple foreground types overlap use semantic ignore
 value 255. VLA type-presence targets mean literal annotated-type presence.
 
 The native sixth background channel is preserved for QA. Its gaps/conflicts
-do not automatically censor primary targets or prove missing annotations.
+do not automatically censor primary targets or establish missing annotations.
 `binary_valid` is explicitly a strict QA/sensitivity mask, with separately
 recorded conservative labels and eligibility. Annotation completeness remains
 unverified. The versioned policy preserves source facts separately from these
@@ -83,21 +83,22 @@ evaluates the native five foreground channels.
 | Real-model acceptance | An actual selected checkpoint/backend ran on the declared inputs |
 | Scientific comparison | Frozen cohort, representations, fitting protocol and held-out evaluation were completed |
 
-Our CPU campaign prepares raw/Reinhard appearances and public Phikon/Phikon-v2
-features. We will compare these vectors with the native model outputs and run
-the remaining scientific experiments as separate evaluation stages. Phikon's
+The CPU preparation campaign produces raw/Reinhard appearances and public
+Phikon/Phikon-v2 features. Planned evaluation includes comparison of these vectors
+with native model outputs and separate scientific experiments. Phikon's
 [model card](https://huggingface.co/owkin/phikon) and the
 [Phikon-v2 model card](https://huggingface.co/owkin/phikon-v2) report TCGA
 pretraining; this renal workflow is not evidence of an independently held-out
 foundation-model evaluation.
 
-Artifacts carry configuration, source/environment identity, hashes and status.
+Artifacts record configuration, source/environment identity, hashes and status.
 The raw cache is bounded: only benchmark-owned, verified, reconstructable inputs
-may be evicted after downstream publication checks. We preserve local input data. The 500 GB plan assigns 80 GB raw, 100 GB patches, 20 GB segmentation,
+may be evicted after downstream publication checks. Local input data are preserved.
+The 500 GB plan assigns 80 GB raw, 100 GB patches, 20 GB segmentation,
 50 GB features, 120 GB models/environments, 30 GB checkpoints, 40 GB temporary
 space, 10 GB reports and 50 GB reserve.
 
 Paid APIs and gated weights are disabled in this CPU campaign. Full scientific
 qualification, dedicated multiscale views and outstanding failure/recovery
-evidence remain explicit work. CPU input preparation is not a declaration that
+evidence remain incomplete. CPU input preparation does not establish that
 all GPU or scientific workflows have been validated.

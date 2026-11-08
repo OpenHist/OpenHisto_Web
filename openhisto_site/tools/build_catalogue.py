@@ -606,11 +606,11 @@ def build(package: Path) -> dict:
     vla_registry = "src/openhisto/vlas/registry.py"
     default_vla_status = s.field_default("src/openhisto/vlas/base.py", "ModelDescriptor", "status")
     vla_descriptions = {
-        "patho_r1_7b": "Our Patho-R1 integration generates prompt-conditioned patch descriptions through the native Qwen2.5-VL processor and model.",
-        "pathgen_llava": "Our PathGen-LLaVA integration generates prompt-conditioned patch descriptions with its separate PathGen-CLIP visual encoder and native LLaVA environment.",
-        "quilt_llava_7b": "Our Quilt-LLaVA integration connects prompt-conditioned patch descriptions to the native Quilt-LLaVA runtime.",
-        "pa_llava": "Our experimental PA-LLaVA integration supports prompt-conditioned patch descriptions using prepared stage-2 adapters, PLIP and an authorized Llama 3 base model.",
-        "pathchat_plus": "We plan to add complete PathChat+ inference support in a future release.",
+        "patho_r1_7b": "The Patho-R1 integration generates prompt-conditioned patch descriptions through the native Qwen2.5-VL processor and model.",
+        "pathgen_llava": "The PathGen-LLaVA integration generates prompt-conditioned patch descriptions with its separate PathGen-CLIP visual encoder and native LLaVA environment.",
+        "quilt_llava_7b": "The Quilt-LLaVA integration connects prompt-conditioned patch descriptions to the native Quilt-LLaVA runtime.",
+        "pa_llava": "The experimental PA-LLaVA integration supports prompt-conditioned patch descriptions using prepared stage-2 adapters, PLIP and an authorized Llama 3 base model.",
+        "pathchat_plus": "PathChat+ inference is unavailable; this profile records model provenance and access requirements.",
     }
     for item in s.descriptors(vla_registry):
         identifier = item["model_id"]
@@ -633,13 +633,13 @@ def build(package: Path) -> dict:
                 if identifier == "pa_llava"
                 else "public_with_terms",
                 access_note=(
-                    "This profile currently records model provenance and access requirements. We need the complete checkpoint and compatible inference artifacts before enabling inference."
+                    "Inference is unavailable. A complete checkpoint and compatible inference artifacts are required."
                     if status == "unavailable"
                     else item["access"]
                     + " This integration is experimental; prepared-asset and real-model validation remain required."
                     if status == "experimental"
                     else item["access"]
-                    + " Our integration's real-checkpoint/native-reference acceptance remains unverified."
+                    + " Real-checkpoint and native-reference acceptance have not been verified for this integration."
                 ),
                 status=status,
                 source=item["source_url"],

@@ -10,7 +10,7 @@
       "page": "package.md",
       "title": "Package overview",
       "source_sha256": "a99b382c6fc84558288eac9a17a7728955e3923be11cd06d3c07656656181c8c",
-      "page_sha256": "1119c48fbaa217f957373cbe5059214083dc99025f7938fd31f730656c77e773"
+      "page_sha256": "8f9a4db9e37e9b8162d080ea609e052e72cfe59d04f239a43244ae23a8ead321"
     },
     {
       "source": "src/openhisto/default_datasets/README.md",
@@ -52,7 +52,7 @@
       "page": "vla.md",
       "title": "Vision-language descriptions",
       "source_sha256": "f9291c368aa9dc8940dc361b54b628d849a8c2878bdb7be1b16d9741955579bd",
-      "page_sha256": "ec87defc6cc1e93ff50fd7bfd12bf40aaaa3fdc4fa1853bf7dbb5a13a5da9971"
+      "page_sha256": "74f2981778d4a67179f8f84980fffec9e831b8fbc265ea88391ad8675e29a1f4"
     },
     {
       "source": "src/openhisto/mil/models/code_bases/README.md",

@@ -80,8 +80,7 @@ body:is(.oh-landing, .oh-catalogue-page, .oh-research-page) .bd-main .bd-content
 .oh-hero-copy { min-width: 0; }
 .oh-hero h1 { color: var(--oh-ink); font-size: clamp(39px, 3.8vw, 52px); font-weight: 600; letter-spacing: -1.4px; line-height: 1.14; margin: 19px 0 21px; padding: 0; max-width: 530px; }
 .oh-hero-authorship { color: var(--oh-accent); font-size: 16px; line-height: 1.6; margin: -7px 0 18px; }
-.oh-hero-description { color: var(--oh-ink); font-size: 19px; line-height: 1.65; margin: 0 0 16px; }
-.oh-hero-detail { color: var(--oh-muted); font-size: 15px; line-height: 1.8; margin: 0 0 25px; }
+.oh-hero-description { color: var(--oh-ink); font-size: 17px; line-height: 1.65; margin: 0 0 20px; }
 .oh-hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 24px; }
 .oh-button { display: inline-flex; align-items: center; justify-content: center; gap: 24px; padding: 11px 20px; min-height: 45px; border: 1px solid var(--oh-line); border-radius: 2px; text-decoration: none !important; font-size: 14px; font-weight: 500; }
 .oh-button-primary { color: #fff !important; background: #a44942; border-color: #a44942; }
@@ -90,12 +89,14 @@ body:is(.oh-landing, .oh-catalogue-page, .oh-research-page) .bd-main .bd-content
 .oh-button-secondary:hover { border-color: var(--oh-accent); }
 .oh-text-link { display: inline-flex; align-items: center; gap: 12px; color: var(--oh-accent) !important; font-size: 14px; font-weight: 500; text-decoration: none; }
 .oh-text-link:hover { text-decoration: underline; }
-.oh-install { display: flex; align-items: center; border: 1px solid var(--oh-line); background: var(--oh-alt); border-radius: 2px; padding: 4px 5px 4px 12px; gap: 5px; max-width: 480px; }
-.oh-install code { background: none; color: var(--oh-ink); padding: 0; font: 11px "IBM Plex Mono", monospace; flex: 1; min-width: 0; overflow-x: auto; white-space: nowrap; }
-.oh-install button { border: 0; background: transparent; color: var(--oh-muted); padding: 9px; display: inline-flex; }
-.oh-install svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 1.3; }
-.oh-install-note { font-size: 11px; color: var(--oh-muted); margin-top: 9px; }
-.oh-install-note span { padding-inline: 5px; }
+.oh-hero-citation { border: 1px solid var(--oh-line); background: var(--oh-alt); border-radius: 2px; }
+.oh-hero-citation-bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; border-bottom: 1px solid var(--oh-line); padding: 8px 12px; color: var(--oh-muted); font: 11px "IBM Plex Mono", monospace; }
+.oh-hero-citation-bar button { border: 1px solid var(--oh-line); border-radius: 2px; background: var(--oh-surface); color: var(--oh-ink); padding: 5px 8px; font: inherit; }
+.oh-hero-citation-bar button:hover { border-color: var(--oh-accent); }
+.oh-hero-citation pre { margin: 0; padding: 14px 12px; background: transparent; border: 0; color: var(--oh-ink); font: 11px/1.7 "IBM Plex Mono", monospace; white-space: pre-wrap; overflow-wrap: anywhere; }
+.oh-hero-citation code { padding: 0; border: 0; background: none; color: inherit; font: inherit; white-space: inherit; }
+.oh-hero-citation-note { font-size: 11px; color: var(--oh-muted); margin-top: 9px; }
+.oh-hero-citation-note a { color: inherit; }
 .oh-research-figure { margin: 0; border: 1px solid var(--oh-line); background: var(--oh-surface); min-width: 0; }
 .oh-figure-title { display: flex; flex-direction: column; gap: 4px; border-bottom: 1px solid var(--oh-line); padding: 15px 18px; }
 .oh-figure-title > span:first-child { font-size: 14px; color: var(--oh-ink); font-weight: 600; }
@@ -422,12 +423,9 @@ body:is(.oh-landing, .oh-catalogue-page, .oh-research-page) .bd-main .bd-content
   .oh-mobile-docbar i { margin-right: 8px; }
   .oh-hero { grid-template-columns: minmax(0,1fr); gap: 30px; padding-block: 37px 33px; }
   .oh-hero h1 { font-size: 38px; line-height: 1.15; max-width: 530px; margin-block: 17px; }
-  .oh-hero-description { font-size: 18px; }
-  .oh-hero-detail { font-size: 14px; }
+  .oh-hero-description { font-size: 16px; }
   .oh-hero-actions { gap: 10px; margin-bottom: 19px; }
   .oh-button { font-size: 13px; padding-inline: 17px; }
-  .oh-install { max-width: none; }
-  .oh-install code { font-size: 10px; }
   .oh-research-figure { max-width: 530px; width: 100%; }
   .oh-figure-images { gap: 12px; padding-inline: 14px; }
   .oh-figure-label { font-size: 11px; }

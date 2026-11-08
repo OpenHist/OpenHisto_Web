@@ -154,7 +154,7 @@ def page_context(app, pagename, templatename, context, doctree):
     }
     if pagename in standalone_templates or pagename.startswith("research/"):
         if pagename == "index":
-            context["title"] = "One package for computational pathology"
+            context["title"] = "Computational pathology in Python"
         context["theme_secondary_sidebar_items"] = []
         context["secondary_sidebar_items"] = []
         context["sidebars"] = []

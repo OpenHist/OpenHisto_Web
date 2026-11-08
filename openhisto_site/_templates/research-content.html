@@ -1,8 +1,8 @@
 <div class="oh-research oh-wrap">
   <section class="oh-research-heading" aria-labelledby="oh-research-title">
-    <div class="oh-eyebrow">OpenHisto in use</div>
+    <div class="oh-eyebrow">Research studies</div>
     <h1 id="oh-research-title">Research &amp; applications</h1>
-    <p>Studies and projects built with OpenHisto. We share the scientific questions, workflows and resources behind our work here.</p>
+    <p>Study protocols, preparation status and dataset resources for research using OpenHisto.</p>
   </section>
   <section class="oh-research-projects" aria-label="Research projects">
     {% for project in oh_applications.projects %}
@@ -27,5 +27,5 @@
     </article>
     {% endfor %}
   </section>
-  <div class="oh-research-closing"><p>We will add further applications, publications and reproducible project resources as our work develops.</p><a class="oh-text-link" href="{{ pathto('catalogue') }}">Explore the model and method catalogue <span aria-hidden="true">→</span></a></div>
+  <div class="oh-research-closing"><p>Project pages report study status and available resources.</p><a class="oh-text-link" href="{{ pathto('catalogue') }}">Model and method catalogue <span aria-hidden="true">→</span></a></div>
 </div>

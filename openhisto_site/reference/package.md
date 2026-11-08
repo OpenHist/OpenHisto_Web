@@ -2,8 +2,8 @@
 
 # Package overview
 
-We develop OpenHisto for computational pathology workflows, from whole-slide
-images to slide-level classification and risk/survival models. Our modules cover
+OpenHisto provides methods for computational pathology, from whole-slide
+images to slide-level classification and risk/survival models. The modules cover
 dataset acquisition, patch extraction, stain transfer, feature encoding,
 semantic segmentation, vision-language descriptions and multiple-instance
 learning (MIL).
@@ -14,7 +14,7 @@ command line, outputs and current limits.
 
 ## Components
 
-| Module | What we provide |
+| Module | Function |
 |---|---|
 | [Dataset acquisition](datasets.md) | Discover and verify public TCGA/CAMELYON16 assets, select KPMP files from an Atlas export, and register approved local BRACS slides with their metadata. |
 | [Patch extraction](patch-extraction.md) | Grid or mask-centered RGB patches in one indexed HDF5 archive per slide, with coordinates, footprints and valid bounds. |
@@ -55,7 +55,7 @@ python -m pip install -e ".[patch-extraction-opencv,feature-encoder-local]"
 | MIL and task heads | `mil`, `mil-attention`, `mil-transformers`, `mil-graph-multiscale`, `mil-backbones` |
 | Classical classifiers | `mil-classical`, `mil-classical-xgboost`, `mil-classical-lightgbm`, `mil-classical-catboost`, `mil-classical-all` |
 
-We test MIL and stain-transfer GAN workflows on the Torch 2.6 / torchvision 0.21
+MIL and stain-transfer GAN workflows are tested on the Torch 2.6 / torchvision 0.21
 compatibility line. The MIL guides include exact reference lock files. GPU
 backends still need an appropriate Torch/runtime installation. The shared MIL
 factory currently uses CPU float32.
@@ -102,11 +102,11 @@ charges. Public checkpoint access does not replace its model-specific terms.
 
 ## Tests and contributions
 
-We welcome focused fixes, new adapters, documentation improvements and
+Contributions may include fixes, adapters, documentation improvements and
 reproducible bug reports. Start with [CONTRIBUTING.md](https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/CONTRIBUTING.md) for
 environment setup, relevant checks and source/provenance conventions.
 
-Our functional tests use generated inputs and mocks rather than patient data or
+Functional tests use generated inputs and mocks rather than patient data or
 real pretrained checkpoints. Install the relevant module extras, then run its
 suite from the repository root, for example:
 
@@ -119,9 +119,9 @@ the tested functional paths, not real-cohort accuracy or GPU parity.
 
 ## License and attribution
 
-We distribute our original code under the [MIT License](https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/LICENSE), copyright
+Original OpenHisto code is distributed under the [MIT License](https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/LICENSE), copyright
 2026 Abteen Arab. Vendored model sources and adapted third-party implementations
-retain their own licenses, attribution and source inventories. Our project
+retain their own licenses, attribution and source inventories. The project
 license does not replace those notices or the terms of external model weights
 and datasets. See [THIRD_PARTY_NOTICES.md](https://github.com/OpenHist/OpenHistology_Package/blob/01b42d6c3913a6b5d0f3e727baf55efcdb59dfc0/THIRD_PARTY_NOTICES.md) for the
 recorded source/license inventory and any unresolved notice information.

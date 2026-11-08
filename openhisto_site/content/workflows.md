@@ -1,14 +1,14 @@
 # Workflows
 
-We provide modules for image preparation, representation learning, segmentation,
-vision-language descriptions and slide-level classification or risk/survival
-modeling. Use them independently or connect them with explicit manifests. Keep
+OpenHisto provides modules for image preparation, representation learning,
+segmentation, vision-language descriptions and slide-level classification or
+risk/survival modeling. Use them independently or connect them with explicit manifests. Keep
 stable slide/source IDs, extraction geometry and cohort split information when
 joining patch archives, feature stores and description records.
 
 ## Dataset acquisition
 
-Our acquisition API separates catalogue discovery from image transfer. The example
+The acquisition API separates catalogue discovery from image transfer. The example
 below queries public GDC metadata for at most one matching slide and saves the
 plan; it does not download the slide:
 
@@ -77,10 +77,10 @@ print(report.to_dict())
 The module also accepts images, folders and CSV/JSONL manifests. Histogram
 matching is available in the classical environment; Vahadane/Macenko need SPAMS.
 For CycleGAN/Pix2Pix, use an explicit generator checkpoint or train a generator
-with our training API. Provide a reference or checkpoint for the appearance you
-want to produce. Give each derived
-appearance its own identity and retain its parent. Fit references on the training
-partition when conducting a held-out comparison.
+with the training API. Specify the reference or checkpoint used to define the
+target appearance. Give each derived appearance its own identity and retain its
+parent. Fit references on the training partition when conducting a held-out
+comparison.
 
 ## Feature encoding
 
@@ -131,8 +131,8 @@ its 1,024-dimensional CLS representation and noncommercial model terms.
 
 ## Semantic segmentation
 
-Our segmentation API trains, predicts and evaluates semantic class maps. We
-provide six backend profiles with their own initialization and input requirements.
+The segmentation API trains, predicts and evaluates semantic class maps. Six
+backend profiles have distinct initialization and input requirements.
 Data preparation is separate from downloading/preparing a model:
 
 ```python
@@ -150,8 +150,8 @@ the configured ignore index. Image/mask CSV fields and mask geometry must match
 the package's data contract. Use disjoint training/validation/test inputs before
 calling `prepare_model`, `train`, `predict` or `evaluate`; selected pretrained
 backends may download weights. SAM2 is prompted binary segmentation, not a
-six-class replacement. Our instance-segmentation namespace is reserved; the
-implemented training workflow targets semantic masks. See our [reference](reference.md) for mask
+six-class replacement. The instance-segmentation namespace is reserved; the
+implemented training workflow targets semantic masks. See the [reference](reference.md) for mask
 formats, training jobs, prediction exports and backend differences.
 
 ## Patch descriptions
@@ -167,16 +167,16 @@ python -m openhisto.vlas models patho_r1_7b
 Use `describe_slide` or `describe --job` after configuring the selected worker's
 interpreter, checkpoint and prompt. Keep the same `slide_id`, `source_id` and
 patch sources as feature encoding; description generation does not run an
-embedding model. Native environments and model terms differ. Our PA-LLaVA adapter
-is experimental and uses converted stage-2 artifacts; we plan real-checkpoint GPU
-validation. PathChat+ is not currently available in our integration. Our planned
-support depends on integrating an authorized complete checkpoint and its matching
-implementation. We retain generated descriptions as model outputs, separately
+embedding model. Native environments and model terms differ. The PA-LLaVA adapter
+is experimental and uses converted stage-2 artifacts; real-checkpoint GPU
+validation is planned. PathChat+ is not currently available in the integration.
+Planned support requires an authorized complete checkpoint and its matching
+implementation. Generated descriptions are retained as model outputs, separately
 from annotation-derived labels and pathologist assessment.
 
 ## Multiple-instance learning
 
-Our common MIL API exposes 34 model profiles on CPU float32. Read a selected
+The common MIL API exposes 34 model profiles on CPU float32. Read a selected
 feature run, then pass its patch vectors explicitly:
 
 ```python
@@ -201,29 +201,29 @@ inputs.
 
 ## Classification and risk/survival modeling
 
-We expose neural linear, MLP and Bayesian heads through
+Neural linear, MLP and Bayesian heads are available through
 `openhisto.mil.classification`, alongside classical classifiers for frozen
 slide-level vectors. Use `openhisto.mil.heads` to attach a task head, select the
 declared representation boundary and preserve native model outputs and auxiliary
-objectives. The complete head guide in our [reference](reference.md) covers
+objectives. The complete head guide in the [reference](reference.md) covers
 training, calibration, persistence and label ordering.
 
-Our survival API provides Cox and discrete-hazard heads through
+The survival API provides Cox and discrete-hazard heads through
 `openhisto.mil.survival`. Risk outputs and calibrated survival curves have
 different meanings: Cox curves require a fitted training baseline, while
 discrete hazards require a fitted training time grid. Keep event/censoring
-definitions and time units explicit. We provide these components; cohort
+definitions and time units explicit. The API provides model components; cohort
 partitioning, training and scientific model selection must follow your study
 protocol.
 
 ## Visualization
 
-We currently provide segmentation label/probability exports, overlays and
-QuPath-compatible semantic polygons. These exports support inspection of model
+Current visualization outputs include segmentation label/probability exports,
+overlays and QuPath-compatible semantic polygons. These exports support inspection of model
 predictions with their recorded geometry; they are not an instance-segmentation
 training workflow.
 
-We plan a dedicated visualization workflow for linked slide, patch and
-model-output inspection. That broader integration is not yet available. Our
-[research and applications](../research.md) page describes our work with these
-components and the evidence available for it.
+A dedicated visualization workflow for linked slide, patch and model-output
+inspection is planned. That broader integration is not yet available. The
+[research and applications](../research.md) page describes studies using these
+components and the available evidence.

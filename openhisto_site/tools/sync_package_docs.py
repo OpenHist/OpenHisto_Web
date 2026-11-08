@@ -174,7 +174,7 @@ def render_guide(text: str, guide: Guide, source_ref: str, mapping: dict[str, st
             rendered.append(f"# {guide.title}\n")
             first_heading = False
         else:
-            rendered.append(rewrite_prose(project_voice(line, guide), guide, source_ref, mapping))
+            rendered.append(rewrite_prose(scientific_prose(line, guide), guide, source_ref, mapping))
     if first_heading:
         rendered.insert(0, f"# {guide.title}\n\n")
     footer = (
@@ -189,16 +189,23 @@ def render_guide(text: str, guide: Guide, source_ref: str, mapping: dict[str, st
     )
 
 
-def project_voice(line: str, guide: Guide) -> str:
-    """Adapt website prose while retaining examples and upstream attribution."""
+def scientific_prose(line: str, guide: Guide) -> str:
+    """Use neutral website prose while retaining examples and attribution."""
     replacements = {
         "package.md": {
-            "OpenHisto's original code is maintained by Abteen Arab and distributed under": "We maintain OpenHisto's original code and distribute it under",
+            "We develop OpenHisto for computational pathology workflows, from whole-slide": "OpenHisto provides methods for computational pathology, from whole-slide",
+            "images to slide-level classification and risk/survival models. Our modules cover": "images to slide-level classification and risk/survival models. The modules cover",
+            "What we provide": "Function",
+            "We test MIL and stain-transfer GAN workflows on the Torch 2.6 / torchvision 0.21": "MIL and stain-transfer GAN workflows are tested on the Torch 2.6 / torchvision 0.21",
+            "We welcome focused fixes, new adapters, documentation improvements and": "Contributions may include fixes, adapters, documentation improvements and",
+            "Our functional tests use": "Functional tests use",
+            "We distribute our original code under": "Original OpenHisto code is distributed under",
+            "Our project": "The project",
         },
         "vla.md": {
-            "Authors' complete checkpoint and matching implementation required": "We plan to add complete PathChat+ inference support in a future release",
-            "Unavailable; selecting it explains the access requirement": "Planned integration; built-in inference is not yet available",
-            "PathChat+ requires direct access from its authors": "Our planned PathChat+ integration depends on restricted model access",
+            "Authors' complete checkpoint and matching implementation required": "Complete PathChat+ checkpoint and matching implementation required",
+            "Unavailable; selecting it explains the access requirement": "Unavailable; built-in inference is not implemented",
+            "PathChat+ requires direct access from its authors": "PathChat+ inference requires restricted model artifacts",
             "the authors' conversion workflow": "the upstream conversion workflow",
             "authors' extracted PLIP directory": "prepared upstream PLIP directory",
             "with the actual author artifacts on the target GPU.": "with the prepared model artifacts on the target GPU.",

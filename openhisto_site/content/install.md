@@ -1,6 +1,6 @@
 # Installation
 
-We currently document installation from a source checkout. Use your existing
+The documented installation uses a source checkout. Use an existing
 OpenHisto checkout; the commands below install that source tree in editable mode.
 
 ## Create the main environment
@@ -14,7 +14,7 @@ python -m pip install -e ".[default-datasets,patch-extraction-opencv,stain-trans
 ```
 
 This selection supports public dataset acquisition, patch extraction and
-Reinhard/histogram normalization. Our main package requires **Python 3.12+**.
+Reinhard/histogram normalization. The main package requires **Python 3.12+**.
 Foundation-model inference is a separate step with its own selected backend.
 
 ## Choose additional workflows
@@ -50,24 +50,24 @@ system OpenSlide installation is another supported route; see the
 Use one compatible OpenCV distribution in an environment. The base extraction
 extra lets an existing `cv2` installation be reused.
 
-We test MIL and stain-transfer GAN workflows on the Torch 2.6 / torchvision
-0.21 compatibility line. We record exact reference environments in the MIL
+MIL and stain-transfer GAN workflows are tested on the Torch 2.6 / torchvision
+0.21 compatibility line. Exact reference environments are recorded in the MIL
 `requirements-tested.lock.txt` files. A GPU environment still needs a
 Torch/torchvision build compatible with its driver and runtime.
 
 ## Isolated backends
 
-We integrate SAM2 through a separate pinned installation of its official source,
-alongside the SAM2 extra. Follow the full segmentation guide in our
+SAM2 requires a separate pinned installation of its official source,
+alongside the SAM2 extra. Follow the full segmentation guide in the
 [package reference](reference.md) to install the complete runtime.
 
 Vision-language models run in their own environments. The coordinator uses
 Python 3.12+, while legacy worker requirements may specify Python 3.10. PathGen
 and Quilt have incompatible native `llava` environments, so install the selected
-worker's `requirements-*.txt` separately. Our PA-LLaVA integration is experimental
-and uses converted stage-2 checkpoints; we plan further validation with real model
-artifacts on the target GPU. PathChat+ is not currently available in our
-integration. We plan to support it when we can integrate an authorized complete
+worker's `requirements-*.txt` separately. The PA-LLaVA integration is experimental
+and uses converted stage-2 checkpoints; further validation with real model
+artifacts on the target GPU is planned. PathChat+ is not currently available in the
+integration. Planned support requires an authorized complete
 checkpoint and its matching runtime. See the
 [VLA workflow](workflows.md#patch-descriptions).
 

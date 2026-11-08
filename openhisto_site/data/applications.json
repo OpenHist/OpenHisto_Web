@@ -2,10 +2,10 @@
   "projects": [
     {
       "id": "end-to-end-benchmark",
-      "title": "OpenHisto end-to-end benchmark",
+      "title": "OpenHisto workflow benchmark",
       "category": "Method evaluation",
       "status": "In progress",
-      "summary": "We use TCGA renal slides and official PanNuke folds to study connected pathology workflows, from image preparation and representations to classification, survival, segmentation and VLM-derived labels.",
+      "summary": "This study uses TCGA renal slides and official PanNuke folds to evaluate image preparation, feature representations, classification, survival modelling, segmentation and VLM-derived labels.",
       "detail": "research/benchmark",
       "cohorts": [
         "TCGA renal histology",
@@ -17,7 +17,7 @@
         "Segmentation",
         "VLM labels"
       ],
-      "progress": "Our CPU campaign is preparing slides and features. Full scientific comparisons will follow the predefined study protocol.",
+      "progress": "The 30 October 2026 snapshot records CPU-based slide and feature preparation. Scientific comparisons remain planned under the study protocol.",
       "links": [],
       "resources": [
         {
@@ -38,7 +38,7 @@
           "label": "Paper (in-progress)"
         },
         {
-          "label": "Project code (coming-soon)"
+          "label": "Project code (not yet available)"
         }
       ]
     }

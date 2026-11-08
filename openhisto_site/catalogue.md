@@ -4,7 +4,7 @@ html_theme.sidebar_secondary.remove: true
 
 # Model catalogue
 
-Explore package components by model name, task, native input contract and access requirements.
+Package component profiles by model name, task, input format and access requirements.
 
 **Amazon Nova Multimodal Embeddings** (`nova_multimodal`) — Official checkpoint preprocessing and one image per embedding; one vector per selected patch.
 Category: encoders. Tasks: patch_embedding. Access: api.
@@ -150,19 +150,19 @@ Category: segmentation. Tasks: binary_semantic_segmentation, multiclass_semantic
 **UPerNet** (`upernet`) — Random ConvNeXt initialization by default; an explicit model path selects pretrained initialization.
 Category: segmentation. Tasks: binary_semantic_segmentation, multiclass_semantic_segmentation. Access: local.
 
-**PA-LLaVA / Pathology-LLaVA** (`pa_llava`) — Our experimental PA-LLaVA integration supports prompt-conditioned patch descriptions using prepared stage-2 adapters, PLIP and an authorized Llama 3 base model.
+**PA-LLaVA / Pathology-LLaVA** (`pa_llava`) — The experimental PA-LLaVA integration supports prompt-conditioned patch descriptions using prepared stage-2 adapters, PLIP and an authorized Llama 3 base model.
 Category: vla. Tasks: prompted_patch_description. Access: restricted_artifacts.
 
-**PathChat+** (`pathchat_plus`) — We plan to add complete PathChat+ inference support in a future release.
+**PathChat+** (`pathchat_plus`) — PathChat+ inference is unavailable; this profile records model provenance and access requirements.
 Category: vla. Tasks: prompted_patch_description. Access: unavailable.
 
-**PathGen-LLaVA-13B** (`pathgen_llava`) — Our PathGen-LLaVA integration generates prompt-conditioned patch descriptions with its separate PathGen-CLIP visual encoder and native LLaVA environment.
+**PathGen-LLaVA-13B** (`pathgen_llava`) — The PathGen-LLaVA integration generates prompt-conditioned patch descriptions with its separate PathGen-CLIP visual encoder and native LLaVA environment.
 Category: vla. Tasks: prompted_patch_description. Access: public_with_terms.
 
-**Patho-R1-7B** (`patho_r1_7b`) — Our Patho-R1 integration generates prompt-conditioned patch descriptions through the native Qwen2.5-VL processor and model.
+**Patho-R1-7B** (`patho_r1_7b`) — The Patho-R1 integration generates prompt-conditioned patch descriptions through the native Qwen2.5-VL processor and model.
 Category: vla. Tasks: prompted_patch_description. Access: public_with_terms.
 
-**Quilt-LLaVA-7B** (`quilt_llava_7b`) — Our Quilt-LLaVA integration connects prompt-conditioned patch descriptions to the native Quilt-LLaVA runtime.
+**Quilt-LLaVA-7B** (`quilt_llava_7b`) — The Quilt-LLaVA integration connects prompt-conditioned patch descriptions to the native Quilt-LLaVA runtime.
 Category: vla. Tasks: prompted_patch_description. Access: public_with_terms.
 
 **BRACS** (`BRACS`) — Registers approved local SVS slides using supplied XLSX/CSV metadata; retains WSI labels, source splits and supplied patient groups; ROIs are excluded.

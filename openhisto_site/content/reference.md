@@ -1,9 +1,9 @@
 # Reference and sources
 
-We maintain the [complete package reference](../reference/index.md) for module
-guides, configuration fields, command lines and source-level contracts. Our
-short guides provide a starting workflow; the reference covers each backend's
-options and limits.
+The [complete package reference](../reference/index.md) covers module interfaces,
+configuration fields, command lines and source-level contracts. The
+short guides describe example workflows; the reference covers each backend's
+options and limitations.
 
 ## Public modules
 
@@ -20,10 +20,10 @@ options and limits.
 | `openhisto.mil.survival` | Cox and discrete-hazard heads, losses and training-time calibration |
 | `openhisto.mil.heads` | Head attachment, representation specifications and persistence helpers |
 
-We also provide segmentation overlays and prediction exports for visualization.
-Our planned dedicated visualization integration is not yet a public workflow.
+Segmentation overlays and prediction exports are available for visualization.
+The planned dedicated visualization integration is not yet a public workflow.
 See [workflows](workflows.md#visualization) for the current boundary and
-[research and applications](../research.md) for our work using OpenHisto.
+[research and applications](../research.md) for studies using OpenHisto.
 
 ## Official resources
 
@@ -33,9 +33,9 @@ See [workflows](workflows.md#visualization) for the current boundary and
 - [AnnData](https://anndata.readthedocs.io/en/stable/) documents the annotated matrix format underlying feature stores.
 - [Phikon](https://huggingface.co/owkin/phikon) and [Phikon-v2](https://huggingface.co/owkin/phikon-v2) document their source checkpoints, representation and model-specific terms.
 - [OpenSlide](https://openslide.org/api/python/#installing) documents native slide-reading installation.
-- [PyData Sphinx Theme](https://pydata-sphinx-theme.readthedocs.io/en/stable/) documents the theme we use for this documentation.
+- [PyData Sphinx Theme](https://pydata-sphinx-theme.readthedocs.io/en/stable/) documents the theme used for this documentation.
 
-We checked these external references on 30 October 2026. Dataset/model terms
-belong to their respective sources. Our original code uses MIT; vendored and
+These external references were checked on 30 October 2026. Dataset/model terms
+belong to their respective sources. Original OpenHisto code uses MIT; vendored and
 adapted implementations retain their own notices. Public availability of a
 checkpoint does not replace its model terms or gated-access approval.

@@ -6,17 +6,17 @@ html_theme.sidebar_secondary.remove: true
 
 Studies and projects built with OpenHisto, with project links and research resources.
 
-## OpenHisto end-to-end benchmark
+## OpenHisto workflow benchmark
 
 In progress · Method evaluation
 
-We use TCGA renal slides and official PanNuke folds to study connected pathology workflows, from image preparation and representations to classification, survival, segmentation and VLM-derived labels.
+This study uses TCGA renal slides and official PanNuke folds to evaluate image preparation, feature representations, classification, survival modelling, segmentation and VLM-derived labels.
 
 [Study overview](research/benchmark.md)
 
 Paper (in-progress)
 
-Project code (coming-soon)
+Project code (not yet available)
 
 [TCGA · NCI Genomic Data Commons](https://gdc.cancer.gov/about-data/gdc-data-processing/resources-tcga-users)
 

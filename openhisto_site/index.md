@@ -4,9 +4,10 @@ html_theme.sidebar_secondary.remove: true
 
 # OpenHisto
 
-A modular Python toolkit for computational pathology: acquire slides, extract
-patches, normalize stain, encode features, segment tissue, describe patches and
-learn slide-level classification or survival models.
+OpenHisto is a Python package for computational pathology. Its modules cover
+slide acquisition, patch extraction, stain normalization, feature encoding,
+segmentation, vision-language descriptions and slide-level classification or
+survival modelling.
 
 ```{toctree}
 :hidden:

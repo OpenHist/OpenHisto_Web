@@ -80,7 +80,7 @@ def prepare():
         "",
         "# Model catalogue",
         "",
-        "Explore package components by model name, task, native input contract and access requirements.",
+        "Package component profiles by model name, task, input format and access requirements.",
         "",
     ]
     # This text is indexed by Sphinx; the visible explorer uses the same data.

@@ -67,7 +67,7 @@ legacy backends default to FP16. Set `max_new_tokens` higher if answers truncate
 | `pathgen_llava` | **13B** Vicuna/LLaVA, PathGen-CLIP, explicit `llava_v1` conversation | Implemented; separate native environment |
 | `quilt_llava_7b` | Official Quilt LLaVA implementation; released CLIP-L/14-336 configuration | Implemented; separate native environment |
 | `pa_llava` | PLIP, native AnyRes processing, QFormer projector, Llama-3 | Experimental; prepared stage-2 artifacts and GPU smoke required |
-| `pathchat_plus` | We plan to add complete PathChat+ inference support in a future release | Planned integration; built-in inference is not yet available |
+| `pathchat_plus` | Complete PathChat+ checkpoint and matching implementation required | Unavailable; built-in inference is not implemented |
 
 The catalogue pins upstream/model revisions and records access terms and needed
 artifacts. Runtime metadata records actual preprocessing, precision, libraries,
@@ -83,7 +83,7 @@ datasets from its outputs. Obtain that approval if using saved descriptions as
 a dataset. Public download availability does not waive those conditions.
 PathGen, Quilt, and PA checkpoints also retain their respective model and
 base-model terms; inspect `models MODEL` and the linked upstream model cards.
-[Our planned PathChat+ integration depends on restricted model access](https://github.com/mahmoodlab/viper/blob/main/docs/REPRODUCIBILITY.md#limited-access-models).
+[PathChat+ inference requires restricted model artifacts](https://github.com/mahmoodlab/viper/blob/main/docs/REPRODUCIBILITY.md#limited-access-models).
 
 ### Legacy environments
 
